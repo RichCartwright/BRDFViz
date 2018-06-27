@@ -1,0 +1,45 @@
+{
+
+    "output-file": "floor3.exr",
+    "output-width": 1280,
+    "output-height": 720,
+    "recursion-max": 2,
+    "camera": {
+        "position": [3.0, 0.9, 0.2],
+        "lookat": [0.0, 0.5, 0.0],
+        "fov": 95
+    },
+    "multisample": 200,
+    "rounds": 3,
+    "bumpscale": 2.0,
+    "clamp": 150.0,
+    "scene": [{
+        "primitive": "plane",
+        "axis": "Y",
+        "scale": [2, 1, 2],
+        "material": "floor",
+        "texture-scale": 4
+    },{
+        "file": "teapot/teapot.obj",
+        "material": "teapot",
+        "scale": [0.0, 0.0, 0.0]
+    }],
+    "materials": [{
+        "name": "floor",
+        "brdf": "diffuse",
+        "specular": [0.4, 0.4, 0.4],
+        "diffuse-texture": "floor/grid2.png",
+        "bump-map": "floor/intensity.jpg"
+    },{
+        "name": "teapot",
+        "brdf": "ltc_beckmann",
+        "specular": [0.4, 0.4, 0.4],
+        "diffuse": [0.55, 0.55, 0.55],
+        "exponent": 1500
+    }],
+    "sky": {
+        "envmap": "envmap/cloudy1.hdr",
+        "rotate": 90,
+        "intensity": 1.0
+    }
+}

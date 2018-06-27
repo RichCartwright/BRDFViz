@@ -1,0 +1,79 @@
+{
+    // The teapot model can be downloaded from http://graphics.cs.williams.edu/data/meshes.xml
+    "output-file": "teapots.exr",
+    "output-width": 1280,
+    "output-height": 720,
+    "recursion-max": 5,
+    "camera": {
+        "position": [1.0, 1.2, -2.4],
+        "lookat": [0.0, 0.3, 0.0],
+        "fov": 95
+    },
+    "multisample": 1,
+    "rounds": 1,
+    "clamp": 45.0,
+    "bumpscale": 1.0,
+    "output-scale": 1.2,
+    "scene": [{
+        "primitive": "plane",
+        "axis": "Y",
+        "scale": [2.0, 1, 2.0],
+        "texture-scale": [2.0, 2.0, 2.0],
+        "material": "floor"
+    },{
+        "file": "teapot/teapot.obj",
+        "scale": [0.01, 0.01, 0.01],
+        "translate": [1.0, 0.0, 1.0],
+        "smooth-normals": true,
+        "material": "teapot1"
+    },{
+        "file": "teapot/teapot.obj",
+        "scale": [0.01, 0.01, 0.01],
+        "translate": [0.0, 0.0, 0.0],
+        "smooth-normals": true,
+        "material": "teapot2"
+    },{
+        "file": "teapot/teapot.obj",
+        "scale": [0.01, 0.01, 0.01],
+        "translate": [-1.0, 0.0, -1.0],
+        "smooth-normals": true,
+        "material": "teapot3"
+    }],
+    "materials": [{
+        "name": "floor",
+        "brdf": "ltc_beckmann",
+        "color": [0.7, 0.7, 0.7],
+        "bump-map": "floor/intensity.jpg",
+        "exponent": 800
+    },{
+        "name": "teapot1_m1",
+        "brdf": "ltc_ggx",
+        "color": [0.2, 0.2, 0.2],
+        "exponent": 1500
+    },{
+        "name": "teapot1_m2",
+        "brdf": "diffuse",
+        "diffuse": [0.4, 0.8, 0.6]
+    },{
+        "name": "teapot1",
+        "brdf": "mix",
+        "material1": "teapot1_m1",
+        "material2": "teapot1_m2",
+        "amount": 0.5
+    },{
+        "name": "teapot2",
+        "brdf": "ltc_beckmann",
+        "color": [0.8, 0.8, 0.8],
+        "exponent": 15000
+    },{
+        "name": "teapot3",
+        "brdf": "ltc_beckmann",
+        "color": [0.8, 0.6, 0.6],
+        "exponent": 80
+    }],
+    "sky": {
+        "envmap": "envmap/cloudy1.hdr",
+        "rotate": 90,
+        "intensity": 1.0
+    }
+}

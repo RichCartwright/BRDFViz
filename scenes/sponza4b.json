@@ -1,0 +1,42 @@
+{
+    "materials": [{
+        "name": "sp_00_pod",
+        "brdf": "ltc_ggx_diffuse",
+        "specular255": [209, 197, 181],
+        "roughness": 0.1,
+        "diffuse-texture": "sponza-fixed/KAMEN.JPG",
+        "bump-map": "sponza-fixed/KAMEN-bump.jpg"
+    }],
+    "scene": [{
+        "file": "sponza-fixed/sponza.obj",
+        "import-materials": true
+    }],
+    "output-file": "sponza4.exr",
+    "output-width": 1280,
+    "output-height": 720,
+    "camera": {
+        "position": [-13, 1.8, -1.2],
+        "lookat": [3.0, 3.5, 3.2],
+        "fov": 90,
+        "lens-size": 0.02,
+        "focus-plane": 15
+    },
+    "lights": [{ // Sun lighting
+        //"position": [-5.0, 50.0, -20.0],
+        //"position": [-2.0, 50.0, -5.0],
+        "position": [-2.0, 50.0, -50.0],
+        "color": [1.0, 0.85, 0.6],
+        "intensity": 2000.0,
+        "size": 1.0
+    }],
+    "multisample": 20,
+    "rounds": 1,
+    "sky": {
+        "color255": [185, 220, 240],
+        "intensity": 0.9
+    },
+    "bumpscale": 10,
+    "clamp": 5.0,
+    "russian": -1, 
+    "recursion-max": 5
+}

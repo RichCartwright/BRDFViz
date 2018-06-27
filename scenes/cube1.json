@@ -1,0 +1,19 @@
+{
+    "model-file": "cubes/cube1.obj",
+    "output-file": "cube1.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "camera": {
+        "position": [2.5, 2.85, -3.0],
+        "lookat": [0.0, 1.0, 0.0],
+        "focal": 1.6
+    },
+    "lights": [
+        { "position": [4.5, 6.5,  3.0], "color255": [255, 255, 200], "intensity": 70.0 },
+        { "position": [4.5, 6.5,  3.1], "color255": [255, 255, 200], "intensity": 70.0 },
+        { "position": [4.5, 6.5,  3.2], "color255": [255, 255, 200], "intensity": 70.0 },
+        { "position": [4.5, 5.5, -2.3], "color255": [255, 255, 200], "intensity": 70.0 }
+    ],
+    "multisample": 20,
+    "rounds": 20
+}

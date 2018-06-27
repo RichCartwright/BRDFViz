@@ -1,0 +1,23 @@
+{
+    "model-file": "box2/box2.obj",
+    "output-file": "box2.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "recursion-max": 4,
+    "camera" : {
+        "position": [0.0, 0.0, 4.9],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.25
+    },
+    "lights" : [{
+        "position": [0.0, 2.5, 1.0],
+        "intensity": 10.0,
+        "size": 0.5
+    }],
+    "multisample": 240,
+    "rounds": 5,
+    "clamp": 2.0,
+    "russian": 0.6,
+    "reverse": 4,
+    "brdf": "cooktorr"
+}

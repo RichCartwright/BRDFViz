@@ -1,0 +1,20 @@
+{
+    "model-file": "rubiks-bump/rubiks.obj",
+    "output-file": "rubiks-bump.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "camera": {
+        "position": [3.2, 2.0, -2.3],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.6
+    },
+    "lights": [{
+        "position": [4.0, 4.0, -4.0],
+        "color255": [255, 255, 255],
+        "intensity": 300.0
+    }],
+    "multisample": 40,
+    "rounds": 10,
+    "bumpscale": 15,
+    "russian": 0.75
+}

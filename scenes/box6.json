@@ -1,0 +1,18 @@
+{
+    "model-file": "box6/box6.obj",
+    "output-file": "box6.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "recursion-max": 4,
+    "camera" : {
+        "position": [0.0, 0.0, 4.5],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.2
+    },
+    "multisample": 40,
+    "rounds": 60,
+    "clamp": 5.0,
+    "russian": 0.7,
+    "reverse": 3,
+    "brdf": "ltc_ggx"
+}

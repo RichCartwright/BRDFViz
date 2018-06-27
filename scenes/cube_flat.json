@@ -1,0 +1,16 @@
+{
+    "model-file": "cubes/cube_flat.obj",
+    "output-file": "cube_flat.exr",
+    "output-width": 800,
+    "output-height": 800,
+    "camera": {
+        "position": [4.0, 0.0, 0.0],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 2.0
+    },
+    "lights": [
+        { "position": [4.5, 1.0, 2.0], "color255": [255, 255, 200], "intensity": 150.0 }
+    ],
+    "multisample": 20,
+    "rounds": 10
+}

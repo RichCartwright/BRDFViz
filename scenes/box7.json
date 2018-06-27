@@ -1,0 +1,21 @@
+{
+    "model-file": "box7/box1.obj",
+    "output-file": "box7.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "recursion-max": 3,
+    "camera" : {
+        "position": [0.0, 0.0, 4.0],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.6
+    },
+    "lights": [{
+        "position": [0.0, 2.7, -1.5],
+        "intensity": 10.0
+    }],
+    "multisample": 40,
+    "rounds": 20,
+    "clamp": 3.0,
+    "russian": 0.75,
+    "reverse": 4
+}

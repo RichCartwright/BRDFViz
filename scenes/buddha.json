@@ -1,0 +1,19 @@
+{
+    // The buddha model can be downloaded from http://graphics.cs.williams.edu/data/meshes.xml
+    "model-file": "buddha/buddha.obj",
+    "output-file": "buddha.exr",
+    "output-width": 720,
+    "output-height": 720,
+    "recursion-max": 5,
+    "camera" : {
+        "position": [-0.3, 0.3, -0.7],
+        "lookat": [0.0, 0.1, 0.0],
+        "focal": 1.6
+    },
+    "lights": [{
+        "position": [1.0, 5.0, -5.0],
+        "color255": [255, 240, 240],
+        "intensity": 400.0
+    }],
+    "multisample": 1
+}

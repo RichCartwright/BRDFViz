@@ -1,0 +1,24 @@
+# Blender MTL File: 'floor.blend'
+# Material Count: 2
+
+newmtl Material.001
+Ns 1500.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.381936 0.381936 0.381936
+Ks 0.822581 0.822581 0.822581
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grid.png
+map_Bump intensity.jpg
+
+newmtl light
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.573627 0.684905 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.367121 0.438339 0.512000
+Ni 1.000000
+d 1.000000
+illum 2

@@ -1,0 +1,19 @@
+{
+    "model-file": "cubes/cube3.obj",
+    "output-file": "cube3.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "camera": {
+        "position": [1.5, 2.85, -4.0],
+        "lookat": [1.0, 1.0, 1.0],
+        "focal": 1.6
+    },
+    "lights": [
+        { "position": [3.0, 6.0, -2.0], "color": [255, 255, 200], "intensity": 400.0, "size": 0.4 }
+    ],
+    "multisample": 40,
+    "rounds": 20,
+    "clamp": 10.0,
+    "brdf": "ltc_beckmann",
+    "russian": 0.6
+}

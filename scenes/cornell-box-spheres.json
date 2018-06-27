@@ -1,0 +1,106 @@
+{
+    "output-file": "cornell-box-spheres.exr",
+    "output-width": 720,
+    "output-height": 720,
+    "multisample": 1,
+    "rounds": 1,
+    "russian": 0.74,
+    "recursion-max": 5,
+    "clamp": 20.0,
+    "camera": {
+        "position": [0, 1, 6.8],
+        "lookat": [0, 1, 0],
+        "fov": 19.5
+    },
+    "materials": [
+        {
+            "name": "LeftWall",
+            "diffuse": [0.63, 0.065, 0.05],
+            "brdf": "diffuse"
+        },{
+            "name": "RightWall",
+            "diffuse": [0.14, 0.45, 0.091],
+            "brdf": "diffuse"
+        },{
+            "name": "WallsAndBoxes",
+            "diffuse": [0.725, 0.71, 0.68],
+            "brdf": "diffuse"
+        },{
+            "name": "TallSphere",
+            //"diffuse": [0.725, 0.71, 0.88],
+            "specular": [0.825, 0.61, 0.63],
+            "roughness": 0.11,
+            "brdf": "ltc_beckmann"
+        }/*,{
+            "name": "SmallSphere",
+            //"diffuse": [0.725, 0.71, 0.88],
+            "specular": [0.625, 0.61, 0.88],
+            "roughness": 0,
+            "brdf": "ltc_ggx"
+        }*/,{
+            "name": "SmallSphere",
+            "brdf": "dielectric",
+            "ior": 1.5
+        },{
+            "name": "Light",
+            "emission": [17, 12, 4],
+            "brdf": "diffuse"
+        }
+    ],
+    "scene": [
+        {   //Back wall
+            "primitive": "plane",
+            "axis": "Z",
+            "translate": [0,1,-1],
+            "material": "WallsAndBoxes"
+        },{ // Bottom wall
+            "primitive": "plane",
+            "axis": "Y",
+            "translate": [0,0,0],
+            "material": "WallsAndBoxes"
+        },{ // Top wall
+            "primitive": "plane",
+            "axis": "Y",
+            "translate": [0,2,0],
+            "rotate": [180,0,0],
+            "material": "WallsAndBoxes"
+        },{ // Right wall
+            "primitive": "plane",
+            "axis": "X",
+            "translate": [1,1,0],
+            "material": "RightWall"
+        },{ // Left wall
+            "primitive": "plane",
+            "axis": "X",
+            "translate": [-1,1,0],
+            "rotate": [0,180,0],
+            "material": "LeftWall"
+        },{ // Tall sphere
+            "file": "meshes/sphere.obj",
+            "translate": [-0.335439, 0.6, -0.291415],
+            "scale": [0.3, 0.3, 0.6],
+            "rotate": [90, 180, -160.812],
+            "material": "TallSphere"
+        },{ // Small sphere
+            "file": "meshes/sphere.obj",
+            "translate": [0.328631, 0.3, 0.374592],
+            "scale": [0.3, 0.3, 0.3],
+            "rotate": [0, -163.36, 0],
+           "material": "SmallSphere"
+        },{ // Light source
+            "primitive": "tri",
+            "translate": [-0.005, 1.98, -0.03],
+            "scale": [0.235, -1.0, 0.19],
+            "rotate": [0, 180, 0],
+            //"scale": [0.5,-1,0.5],
+            "material": "Light"
+        },{ // Light source
+            "primitive": "tri",
+            "translate": [-0.005, 1.98, -0.03],
+            "scale": [0.235, -1.0, 0.19],
+            "rotate": [0, 0, 0],
+            //"scale": [0, 0, 0],
+            "material": "Light"
+        }
+    ]
+}

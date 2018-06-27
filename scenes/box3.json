@@ -1,0 +1,21 @@
+{
+    "model-file": "box3/box3.obj",
+    "output-file": "box3.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "recursion-max": 4,
+    "camera" : {
+        "position": [7.0, -1.0, 4.0],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.1
+    },
+    "lights" : [{
+        "position": [0.0, 0.0, -2.0],
+        "intensity": 5.0,
+        "size": 0.4
+    }],
+    "multisample": 40,
+    "rounds": 20,
+    "clamp": 5.0,
+    "russian": 0.6
+}

@@ -1,0 +1,17 @@
+{
+    "model-file": "box4/box4.obj",
+    "output-file": "box4.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "recursion-max": 4,
+    "camera" : {
+        "position": [0.0, 0.0, 4.5],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.2
+    },
+    "multisample": 400,
+    "rounds": 4,
+    "clamp": 2.0,
+    "russian": 0.7,
+    "brdf": "ltc_beckmann"
+}

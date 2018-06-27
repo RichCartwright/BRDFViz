@@ -1,0 +1,18 @@
+{
+    "model-file": "box8/box8.obj",
+    "output-file": "box8.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "recursion-max": 4,
+    "camera" : {
+        "position": [0.0, 0.0, 7.8],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.0
+    },
+    "multisample": 40,
+    "rounds": 40,
+    "clamp": 5.0,
+    "russian": 0.7,
+    "reverse": 2,
+    "brdf": "diffuse"
+}

@@ -1,0 +1,67 @@
+{
+    // The teapot model can be downloaded from http://graphics.cs.williams.edu/data/meshes.xml
+    "output-file": "teapot.exr",
+    "output-width": 1280,
+    "output-height": 720,
+    "recursion-max": 5,
+    "camera": {
+        "position": [1.0, 1.6, -2.4],
+        "lookat": [0.0, 0.3, 0.0],
+        "fov": 95
+    },
+    "multisample": 1,
+    "rounds": 1,
+    "clamp": 150.0,
+    "scene": [{
+        "primitive": "plane",
+        "axis": "Y",
+        "scale": [1.8, 1, 1.8],
+        "material": "floor"
+    },{
+        "file": "teapot/teapot.obj",
+        "scale": [0.01, 0.01, 0.01],
+        "translate": [1.0, 0.0, 1.0],
+        "smooth-normals": true,
+        "material": "teapot1"
+    },{
+        "file": "teapot/teapot.obj",
+        "scale": [0.01, 0.01, 0.01],
+        "translate": [0.0, 0.0, 0.0],
+        "smooth-normals": true,
+        "material": "teapot2"
+    },{
+        "file": "teapot/teapot.obj",
+        "scale": [0.01, 0.01, 0.01],
+        "translate": [-1.0, 0.0, -1.0],
+        "smooth-normals": true,
+        "material": "teapot3"
+    }],
+    "materials": [{
+        "name": "floor",
+        "brdf": "diffuse",
+        "diffuse": [0.35, 0.28, 0.2]
+    },{
+        "name": "teapot1",
+        "brdf": "ltc_ggx",
+        "specular": [0.2, 0.2, 0.2],
+        "diffuse": [0.8, 0.8, 0.8],
+        "roughness": 0.1
+    },{
+        "name": "teapot2",
+        "brdf": "ltc_beckmann",
+        "specular": [0.8, 0.8, 0.8],
+        "diffuse": [0.2, 0.2, 0.2],
+        #"roughness": 0.1
+    },{
+        "name": "teapot3",
+        "brdf": "ltc_beckmann",
+        "specular": [0.8, 0.6, 0.6],
+        "diffuse": [0.2, 0.16, 0.16],
+        #"rougnhess": 0.6
+    }],
+    "sky": {
+        "envmap": "envmap/cloudy1.hdr",
+        "rotate": 90,
+        "intensity": 1.0
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "output-file": "floor2.exr",
+    "output-width": 1280,
+    "output-height": 720,
+    "recursion-max": 2,
+    "camera": {
+        "position": [3.0, 0.9, 0.2],
+        "lookat": [0.0, 0.5, 0.0],
+        "fov": 95
+    },
+    "multisample": 400,
+    "rounds": 3,
+    "bumpscale": 0.9,
+    "clamp": 150.0,
+    "scene": [{
+        "primitive": "plane",
+        "axis": "Y",
+        "scale": [2, 1, 2],
+        "material": "floor",
+        "texture-scale": 4
+    }],
+    "materials": [{
+        "name": "floor",
+        "brdf": "ltc_beckmann",
+        "specular": [0.9, 0.9, 0.9],
+        "diffuse-texture": "floor/grid2.png",
+        "bump-map": "floor/intensity.jpg",
+        "exponent": 1500
+    }],
+    "sky": {
+        "envmap": "envmap/cloudy1.hdr",
+        "rotate": 90,
+        "intensity": 1.0
+    }
+}

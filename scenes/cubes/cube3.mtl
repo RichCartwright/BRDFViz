@@ -1,0 +1,28 @@
+# Blender MTL File: 'cube3.blend'
+# Material Count: 5
+
+newmtl Material.001
+Ns 5.764706
+Kd 0.202354 0.111246 0.008121
+Ks 0.032258 0.032258 0.032258
+
+newmtl Material.002_refl
+Ns 8000
+Ks 0.80 0.80 1.00
+Kd 0.01 0.04 0.01
+
+newmtl Material.003_refl
+Ns 8000
+Ks 1.00 1.00 0.60
+Kd 0.04 0.02 0.00
+
+newmtl Material_refl
+Ns 8000
+Ks 1.00 0.60 1.00
+Kd 0.00 0.02 0.04
+
+newmtl Material.004
+Ns 5.078431
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+

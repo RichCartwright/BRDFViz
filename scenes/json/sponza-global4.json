@@ -1,0 +1,45 @@
+{
+    "model-file": "../sponza-fixed/sponza.obj",
+    "output-file": "sponza-global4.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "multisample": 40,
+    "rounds": 40,
+    "sky": {
+        "color": [185, 220, 240],
+        "intensity": 0.9
+    },
+    "bumpscale": 20,
+    "clamp": 5.0,
+    "russian": 0.6,
+    "brdf": "ltc_ggx",
+
+    "camera": {
+        "position": [-13, 1.8, -1.2],
+        "lookat": [3.0, 3.5, 3.2],
+        "upvector": [0.0, 1.0, 0.0],
+        "focal": 1.2
+    },
+    "lights": [
+        {   // Sun light
+            "position": [-5.0, 50.0, -20.0],
+            "color": [255, 240, 200],
+            "intensity": 20000.0,
+            "size": 1.0
+        }
+    ]
+    /*
+    "materials": [
+        {
+
+        }
+    ],
+    "scene" : [
+        {
+            "file": "../sponza-fixed/sponza.obj",
+            "named-materials": true,
+            "import-materials": true
+        }
+    ]
+    */
+}

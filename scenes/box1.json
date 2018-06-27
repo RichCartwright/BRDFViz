@@ -1,0 +1,21 @@
+{
+    "model-file": "box1/box1.obj",
+    "output-file": "box1.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "camera" : {
+        "position": [0.0, 0.0, 4.0],
+        "lookat": [0.0, 0.0, 0.0],
+        "focal": 1.6
+    },
+    "lights" : [{
+        "position": [0.0, 2.5, 1.0],
+        "intensity": 1.0,
+        "size": 0.5
+    }],
+    "multisample": 40,
+    "rounds": 20,
+    "clamp": 20.0,
+    "russian": 0.75,
+    "brdf": "cooktorr"
+}

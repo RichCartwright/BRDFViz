@@ -1,0 +1,39 @@
+{
+    "scene": [{
+        "primitive": "cube",
+        "scale": [3.0, 1.0, 2.0],
+        "translate": [0, 0, 0],
+        "rotate": [0, -80, 0],
+        "material": "mat1"
+    },{
+        "primitive": "plane",
+        "scale": [5.0, 1.0, 5.0],
+        "translate": [0, -0.5, 0],
+        "material": "mat2"
+    }],
+    "materials": [{
+        "name": "mat1",
+        "brdf": "diffuse",
+        "diffuse255": [180, 200, 150]
+    },{
+        "name": "mat2",
+        "brdf": "diffuse",
+        "diffuse255": [240, 120, 80]
+    }],
+    "output-file": "primitives1.exr",
+    "output-width": 600,
+    "output-height": 360,
+    "multisample": 60,
+    "rounds": 30,
+    "russian": 0.6,
+    "sky": {
+        "envmap": "envmap/cloudy1.hdr",
+        "rotate": 40,
+        "intensity": 1.0
+    },
+    "camera": {
+        "position": [6, 2.5, 8],
+        "lookat": [0, 2, 0],
+        "fov": 90
+    }
+}

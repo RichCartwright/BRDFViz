@@ -1,0 +1,16 @@
+{
+    "model-file": "cubes/cube4.obj",
+    "output-file": "cube4.exr",
+    "output-width": 1200,
+    "output-height": 900,
+    "camera": {
+        "position": [2.5, 2.85, -2.0],
+        "lookat": [0.0, 1.0, 0.0],
+        "focal": 2.0
+    },
+    "lights": [
+        { "position": [4.5, 6.5, 3.0], "color255x": [255, 255, 200], "intensity": 15.0 }
+    ],
+    "multisample": 20,
+    "rounds": 10
+}
