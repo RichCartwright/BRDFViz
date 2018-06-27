@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 
+if(POLICY CMP0020)
+    cmake_policy(SET CMP0020 NEW)
+endif()
+
 set(PROJECT_NAME "BRDFViz")
 set(EXECUTABLE_NAME ${PROJECT_NAME})
 set(CMAKE_CXX_STANDARD 11)
@@ -9,7 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 ##set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++14")
 project(
   ${PROJECT_NAME}
-  VERSION 0.1
+  VERSION 1.0
   LANGUAGES CXX
   )
 
@@ -52,7 +56,7 @@ find_package(OpenEXR REQUIRED)
 
 add_subdirectory(src)
 
-## VTK
+## VTK & QT
 find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
 target_link_libraries(${PROJECT_NAME} ${VTK_LIBRARIES})
@@ -85,4 +89,3 @@ else()
   add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${CXX_FILES} ${UISrcs} ${MOCSrcs})
   target_link_libraries(${PROJECT_NAME} ${VTK_LIBRARIES})
 endif()
-

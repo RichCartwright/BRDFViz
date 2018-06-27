@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//the suffix for the openrave libraries
-ASSIMP_LIBRARY_SUFFIX:STRING=
-
 //Value Computed by CMake
 BRDFViz_BINARY_DIR:STATIC=/home/rich/Documents/Code/BRDFViz/build
 
@@ -172,8 +169,23 @@ JPEG_INCLUDE_DIR:PATH=/usr/include
 //Path to a library.
 JPEG_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libjpeg.so
 
-//The directory containing a CMake configuration file for OpenEXR.
-OpenEXR_DIR:PATH=OpenEXR_DIR-NOTFOUND
+//Path to a library.
+OPENEXR_HALF_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libHalf.so
+
+//Path to a library.
+OPENEXR_IEX_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libIex.so
+
+//Path to a library.
+OPENEXR_ILMIMF_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libIlmImf.so
+
+//Path to a library.
+OPENEXR_ILMTHREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libIlmThread.so
+
+//Path to a library.
+OPENEXR_IMATH_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libImath.so
+
+//Path to a file.
+OPENEXR_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
 PNG_LIBRARY_DEBUG:FILEPATH=PNG_LIBRARY_DEBUG-NOTFOUND
@@ -184,6 +196,33 @@ PNG_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libpng.so
 //Path to a file.
 PNG_PNG_INCLUDE_DIR:PATH=/usr/include
 
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Network.
+Qt5Network_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Network
+
+//The directory containing a CMake configuration file for Qt5OpenGL.
+Qt5OpenGL_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5OpenGL
+
+//The directory containing a CMake configuration file for Qt5Sql.
+Qt5Sql_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Sql
+
+//The directory containing a CMake configuration file for Qt5WebKitWidgets.
+Qt5WebKitWidgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKitWidgets
+
+//The directory containing a CMake configuration file for Qt5WebKit.
+Qt5WebKit_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5WebKit
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for VTK.
+VTK_DIR:PATH=/usr/lib/cmake/vtk-7.1
+
 //Path to a file.
 ZLIB_INCLUDE_DIR:PATH=/usr/include
 
@@ -193,8 +232,11 @@ ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
 
-//The directory containing a CMake configuration file for assimp.
-assimp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1
+//Path to a file.
+assimp_INCLUDE_DIRS:PATH=/usr/include
+
+//Path to a library.
+assimp_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libassimp.so
 
 //Path to a file.
 png++_INCLUDE_DIRS:PATH=/usr/include
@@ -204,8 +246,6 @@ png++_INCLUDE_DIRS:PATH=/usr/include
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: ASSIMP_LIBRARY_SUFFIX
-ASSIMP_LIBRARY_SUFFIX-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -284,7 +324,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -329,6 +369,8 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_GLM:INTERNAL=[/usr/include][v()]
 //Details about finding JPEG
 FIND_PACKAGE_MESSAGE_DETAILS_JPEG:INTERNAL=[/usr/lib/x86_64-linux-gnu/libjpeg.so][/usr/include][v()]
+//Details about finding OpenEXR
+FIND_PACKAGE_MESSAGE_DETAILS_OpenEXR:INTERNAL=[/usr/lib/x86_64-linux-gnu/libHalf.so;/usr/lib/x86_64-linux-gnu/libIex.so;/usr/lib/x86_64-linux-gnu/libIlmImf.so;/usr/lib/x86_64-linux-gnu/libIlmThread.so;/usr/lib/x86_64-linux-gnu/libImath.so][/usr/include][v()]
 //Details about finding PNG
 FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpng.so][/usr/include][v1.6.34()]
 //Details about finding ZLIB
@@ -339,6 +381,18 @@ FIND_PACKAGE_MESSAGE_DETAILS_png++:INTERNAL=[/usr/include][v()]
 JPEG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JPEG_LIBRARY
 JPEG_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENEXR_HALF_LIBRARY
+OPENEXR_HALF_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENEXR_IEX_LIBRARY
+OPENEXR_IEX_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENEXR_ILMIMF_LIBRARY
+OPENEXR_ILMIMF_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENEXR_ILMTHREAD_LIBRARY
+OPENEXR_ILMTHREAD_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENEXR_IMATH_LIBRARY
+OPENEXR_IMATH_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENEXR_INCLUDE_DIR
+OPENEXR_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PNG_LIBRARY_DEBUG
 PNG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PNG_LIBRARY_RELEASE
