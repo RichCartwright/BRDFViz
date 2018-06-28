@@ -6,8 +6,8 @@
 #include <stdlib.h> 
 #include <string.h>
 
-#include "NeuralNet/rtwtypes.h"
-#include "NeuralNet/SibnekLev_types.h"
+//#include "NeuralNet/rtwtypes.h"
+//#include "NeuralNet/SibnekLev_types.h"
 #include "tracer.hpp"
 #include "primitives.hpp"
 
