@@ -1,0 +1,6 @@
+/home/rich/Documents/Code/BRDFViz/src/CMakeFiles/rebuild_cache.dir
+/home/rich/Documents/Code/BRDFViz/src/CMakeFiles/edit_cache.dir
+/home/rich/Documents/Code/BRDFViz/src/src/CMakeFiles/rebuild_cache.dir
+/home/rich/Documents/Code/BRDFViz/src/src/CMakeFiles/BRDFViz.dir
+/home/rich/Documents/Code/BRDFViz/src/src/CMakeFiles/edit_cache.dir
+/home/rich/Documents/Code/BRDFViz/src/src/CMakeFiles/BRDFViz_autogen.dir

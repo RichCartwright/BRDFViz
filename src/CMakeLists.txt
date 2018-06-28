@@ -3,6 +3,7 @@ link_directories(
   ${assimp_LIBRARY_DIRS}
   ${JPEG_LIBRARY_DIRS}
   ${OPENEXR_LIBRARY_DIRS}
+  ${VTK_LIBRARY_DIRS}
   )
 
 include_directories(
@@ -31,7 +32,6 @@ file(GLOB SOURCES
   ./*.cpp
   ./LTC/*.cpp
   ./bxdf/*.cpp
-  ./NeuralNet/*.cpp
   ../external/*.cpp
   )
 
@@ -48,8 +48,18 @@ target_link_libraries(
   ${PNG_LIBRARY}
   ${JPEG_LIBRARY}
   ${OPENEXR_LIBRARIES}
+  ${VTK_LIBRARIES}
   pthread
   )
+
+file(GLOB UI_FILES *.ui)
+file(GLOB QT_WRAP *.h)
+if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
+  qt5_wrap_ui(UISrcs ${UI_FILES})
+  target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui)
+else()
+  message(FATAL_ERROR "BRDFViz requires VTK 7 (or higher) and QT 5 (or higher)")
+endif()
 
 add_custom_command(
 	TARGET ${EXECUTABLE_NAME} POST_BUILD

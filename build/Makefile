@@ -123,6 +123,19 @@ BRDFViz/fast:
 	$(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/build
 .PHONY : BRDFViz/fast
 
+#=============================================================================
+# Target rules for targets named BRDFViz_autogen
+
+# Build rule for target.
+BRDFViz_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BRDFViz_autogen
+.PHONY : BRDFViz_autogen
+
+# fast build rule for target.
+BRDFViz_autogen/fast:
+	$(MAKE) -f src/CMakeFiles/BRDFViz_autogen.dir/build.make src/CMakeFiles/BRDFViz_autogen.dir/build
+.PHONY : BRDFViz_autogen/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +145,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... BRDFViz"
+	@echo "... BRDFViz_autogen"
 .PHONY : help
 
 

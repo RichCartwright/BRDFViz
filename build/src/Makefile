@@ -125,6 +125,48 @@ BRDFViz/fast:
 	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/build
 .PHONY : BRDFViz/fast
 
+# Convenience name for target.
+src/CMakeFiles/BRDFViz_autogen.dir/rule:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/BRDFViz_autogen.dir/rule
+.PHONY : src/CMakeFiles/BRDFViz_autogen.dir/rule
+
+# Convenience name for target.
+BRDFViz_autogen: src/CMakeFiles/BRDFViz_autogen.dir/rule
+
+.PHONY : BRDFViz_autogen
+
+# fast build rule for target.
+BRDFViz_autogen/fast:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz_autogen.dir/build.make src/CMakeFiles/BRDFViz_autogen.dir/build
+.PHONY : BRDFViz_autogen/fast
+
+BRDFViz_autogen/mocs_compilation.o: BRDFViz_autogen/mocs_compilation.cpp.o
+
+.PHONY : BRDFViz_autogen/mocs_compilation.o
+
+# target to build an object file
+BRDFViz_autogen/mocs_compilation.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o
+.PHONY : BRDFViz_autogen/mocs_compilation.cpp.o
+
+BRDFViz_autogen/mocs_compilation.i: BRDFViz_autogen/mocs_compilation.cpp.i
+
+.PHONY : BRDFViz_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+BRDFViz_autogen/mocs_compilation.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.i
+.PHONY : BRDFViz_autogen/mocs_compilation.cpp.i
+
+BRDFViz_autogen/mocs_compilation.s: BRDFViz_autogen/mocs_compilation.cpp.s
+
+.PHONY : BRDFViz_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+BRDFViz_autogen/mocs_compilation.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.s
+.PHONY : BRDFViz_autogen/mocs_compilation.cpp.s
+
 LTC/ltc.o: LTC/ltc.cpp.o
 
 .PHONY : LTC/ltc.o
@@ -755,6 +797,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... BRDFViz"
 	@echo "... edit_cache"
+	@echo "... BRDFViz_autogen"
+	@echo "... BRDFViz_autogen/mocs_compilation.o"
+	@echo "... BRDFViz_autogen/mocs_compilation.i"
+	@echo "... BRDFViz_autogen/mocs_compilation.s"
 	@echo "... LTC/ltc.o"
 	@echo "... LTC/ltc.i"
 	@echo "... LTC/ltc.s"

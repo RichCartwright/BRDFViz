@@ -56,7 +56,6 @@ find_package(JPEG REQUIRED)
 
 ## OpenEXR
 find_package(OpenEXR REQUIRED)
-add_subdirectory(src)
 
 if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
     set(CMAKE_AUTOMOC ON)
@@ -65,12 +64,15 @@ else()
     message([FATAL_ERROR] "BRDFViz requires VTK 7 and QT 5 or higher. \n Exiting processing and generation") 
 endif()
 
+#include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 #file(GLOB UI_FILES *.ui)
-
+#file(GLOB QT_WRAP *.h)
 #if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
 #    qt5_wrap_ui(UISrcs ${UI_FILES})
-    #add_executable(${PROJECT_NAME} MACOSX_BUNDLE src)
-    #    qt5_use_modules(${PROJECT_NAME} Core Gui)
-    #else()
-    #   message([FATAL_ERROR] "BRDFViz requires VTK 7 and QT 5 or higher. \n Exiting processing and generation")
-    #endif()
+#    target_link_libraries(${PROJECT_NAME} Gt5::Core Qt5::Gui) 
+#else()
+#    message([FATAL_ERROR] "BRDFViz requires VTK 7 and QT 5 or higher. \n Exiting processing and generation")
+#endif()
+
+add_subdirectory(src)
+#target_link_libraries(${PROJECT_NAME} ${VTK_LIBRARIES})

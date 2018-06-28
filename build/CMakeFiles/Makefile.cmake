@@ -156,6 +156,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake"
+  "/usr/share/cmake-3.10/Modules/AutogenInfo.cmake.in"
   "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake"
@@ -193,4 +194,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/BRDFViz.dir/DependInfo.cmake"
+  "src/CMakeFiles/BRDFViz_autogen.dir/DependInfo.cmake"
   )

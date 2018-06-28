@@ -2,7 +2,6 @@
 #include <sstream>
 
 #include <getopt.h>
-
 #include "global_config.hpp"
 
 #include "scene.hpp"

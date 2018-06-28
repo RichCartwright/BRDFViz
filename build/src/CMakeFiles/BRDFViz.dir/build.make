@@ -609,6 +609,30 @@ src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o.provides: src/CMakeFiles/BR
 src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o
 
 
+src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
+src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o: src/BRDFViz_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o -c /home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/mocs_compilation.cpp
+
+src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.i"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/mocs_compilation.cpp > CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.i
+
+src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.s"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/mocs_compilation.cpp -o CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.s
+
+src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.requires
+
+src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.provides: src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.provides.build
+.PHONY : src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.provides
+
+src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o
+
+
 # Object files for target BRDFViz
 BRDFViz_OBJECTS = \
 "CMakeFiles/BRDFViz.dir/brdf.cpp.o" \
@@ -633,7 +657,8 @@ BRDFViz_OBJECTS = \
 "CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o" \
 "CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o" \
 "CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o" \
-"CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o"
+"CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o" \
+"CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o"
 
 # External object files for target BRDFViz
 BRDFViz_EXTERNAL_OBJECTS =
@@ -661,6 +686,7 @@ src/BRDFViz: src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o
+src/BRDFViz: src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/build.make
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libassimp.so
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libpng.so
@@ -670,8 +696,136 @@ src/BRDFViz: /usr/lib/x86_64-linux-gnu/libIex.so
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libIlmImf.so
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libIlmThread.so
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libImath.so
+src/BRDFViz: /opt/VTK8.1/lib/libvtkDomainsChemistryOpenGL2-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersFlowPaths-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersGeneric-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersHyperTree-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersParallelImaging-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersPoints-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersProgrammable-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersSMP-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersSelection-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersTopology-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersVerdict-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkGUISupportQtSQL-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkGeovisCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOAMR-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOEnSight-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOExodus-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOExportOpenGL2-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOImport-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOInfovis-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOLSDyna-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOMINC-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOMovie-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOPLY-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOParallel-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOParallelXML-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOTecplotTable-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOVideo-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingMorphological-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingStatistics-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingStencil-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkInteractionImage-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingContextOpenGL2-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingImage-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingLOD-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingQt-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingVolumeOpenGL2-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkViewsContext2D-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkViewsQt-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkDomainsChemistry-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkverdict-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOSQL-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtksqlite-8.1.so.1
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.9.5
+src/BRDFViz: /opt/VTK8.1/lib/libvtkproj4-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersAMR-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOExport-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingGL2PSOpenGL2-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkgl2ps-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtklibharu-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtklibxml2-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkoggtheora-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersParallel-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkexoIIc-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOGeometry-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIONetCDF-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtknetcdfcpp-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkNetCDF-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkhdf5_hl-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkhdf5-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkjsoncpp-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkParallelCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOLegacy-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersTexture-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingMath-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkGUISupportQt-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingOpenGL2-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkglew-8.1.so.1
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libSM.so
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libICE.so
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libX11.so
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libXext.so
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libXt.so
+src/BRDFViz: /opt/VTK8.1/lib/libvtkViewsInfovis-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkChartsCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingContext2D-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersImaging-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkInfovisLayout-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkInfovisCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkViewsCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkInteractionWidgets-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersHybrid-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingGeneral-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingSources-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersModeling-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkInteractionStyle-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersExtraction-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersStatistics-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingFourier-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkalglib-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingHybrid-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOImage-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkDICOMParser-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkmetaio-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkpng-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtktiff-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkjpeg-8.1.so.1
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libm.so
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingAnnotation-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingColor-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingVolume-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkImagingCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOXML-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOXMLParser-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkIOCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtklz4-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkexpat-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingLabel-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingFreeType-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkRenderingCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonColor-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersGeometry-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersSources-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersGeneral-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonComputationalGeometry-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkFiltersCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonExecutionModel-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonDataModel-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonMisc-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonSystem-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtksys-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonTransforms-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonMath-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkCommonCore-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkfreetype-8.1.so.1
+src/BRDFViz: /opt/VTK8.1/lib/libvtkzlib-8.1.so.1
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
+src/BRDFViz: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable BRDFViz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable BRDFViz"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BRDFViz.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/cmake -E copy /home/rich/Documents/Code/BRDFViz/build/src/./BRDFViz /home/rich/Documents/Code/BRDFViz/build/
 
@@ -703,6 +857,7 @@ src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o.requires
+src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.requires
 
 .PHONY : src/CMakeFiles/BRDFViz.dir/requires
 

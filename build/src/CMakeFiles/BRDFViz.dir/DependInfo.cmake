@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/mocs_compilation.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/LTC/ltc_beckmann.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/LTC/ltc_ggx.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o"
@@ -32,6 +33,11 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "QT_CORE_LIB"
+  "QT_GUI_LIB"
+  "QT_NO_DEBUG"
+  "QT_SQL_LIB"
+  "QT_WIDGETS_LIB"
   "vtkDomainsChemistry_AUTOINIT=1(vtkDomainsChemistryOpenGL2)"
   "vtkIOExport_AUTOINIT=1(vtkIOExportOpenGL2)"
   "vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL2)"
@@ -42,6 +48,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "src/BRDFViz_autogen/include"
   "/opt/VTK8.1/Utilities/KWIML"
   "/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML"
   "/opt/VTK8.1/Utilities/KWSys"
@@ -298,6 +305,15 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/rich/Downloads/VTK-8.1.1/Views/Qt"
   "/usr/include/OpenEXR"
   "../src/../external"
+  "/usr/include/x86_64-linux-gnu/qt5"
+  "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
+  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
+  "/usr/include/x86_64-linux-gnu/qt5/QtCore"
+  "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
+  "/usr/include/x86_64-linux-gnu/qt5/QtSql"
+  "/opt/VTK8.1/ThirdParty/hdf5/vtkhdf5/hl/src"
+  "/opt/VTK8.1/ThirdParty/hdf5/vtkhdf5/src"
+  "/opt/VTK8.1/ThirdParty/netcdfcpp/vtknetcdfcpp"
   )
 
 # Targets to which this target links.
