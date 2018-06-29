@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/LTC/ltc_beckmann.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/LTC/ltc_ggx.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o"
+  "/home/rich/Documents/Code/BRDFViz/src/VTKWindow.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/external/jsoncpp.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/brdf.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/brdf.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o"
@@ -17,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rich/Documents/Code/BRDFViz/src/global_config.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/global_config.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/jsonutils.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/main.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/main.cpp.o"
+  "/home/rich/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/out.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/out.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/path_tracer.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.o"
   "/home/rich/Documents/Code/BRDFViz/src/primitives.cpp" "/home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/primitives.cpp.o"
@@ -48,6 +50,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "src"
+  "../src"
   "src/BRDFViz_autogen/include"
   "/opt/VTK8.1/Utilities/KWIML"
   "/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML"

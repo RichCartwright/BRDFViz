@@ -2,6 +2,7 @@
 #include <vtkSmartPointer.h>
 #include <vtkDelimitedTextReader.h>
 #include <vtkVersion.h> 
+#include <vtkGenericOpenGLRenderWindow.h>
 
 #include <vtkProperty.h>
 #include <vtkPolyDataMapper.h>

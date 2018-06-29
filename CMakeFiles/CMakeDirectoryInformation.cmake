@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/rich/Documents/Code/BRDFViz")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/rich/Documents/Code/BRDFViz/src")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/rich/Documents/Code/BRDFViz")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

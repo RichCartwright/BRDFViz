@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
   "BRDFViz_autogen"
   "CMakeFiles/BRDFViz_autogen.dir/AutogenOldSettings.cmake"
+  "moc_HoradamGenerator.cpp"
+  "ui_VTKWindow.h"
+  "CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o"
   "CMakeFiles/BRDFViz.dir/brdf.cpp.o"
   "CMakeFiles/BRDFViz.dir/camera.cpp.o"
   "CMakeFiles/BRDFViz.dir/config.cpp.o"
@@ -24,6 +27,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o"
   "CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o"
   "CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o"
+  "CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o"
   "CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o"
   "BRDFViz.pdb"
   "BRDFViz"

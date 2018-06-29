@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/rich/Documents/Code/BRDFViz
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rich/Documents/Code/BRDFViz/src
+CMAKE_BINARY_DIR = /home/rich/Documents/Code/BRDFViz
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rich/Documents/Code/BRDFViz/src/CMakeFiles /home/rich/Documents/Code/BRDFViz/src/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rich/Documents/Code/BRDFViz/src/CMakeFiles 0
+	cd /home/rich/Documents/Code/BRDFViz && $(CMAKE_COMMAND) -E cmake_progress_start /home/rich/Documents/Code/BRDFViz/CMakeFiles /home/rich/Documents/Code/BRDFViz/src/CMakeFiles/progress.marks
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rich/Documents/Code/BRDFViz/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,723 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/rich/Documents/Code/BRDFViz && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named BRDFViz
+# Convenience name for target.
+src/CMakeFiles/BRDFViz.dir/rule:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/BRDFViz.dir/rule
+.PHONY : src/CMakeFiles/BRDFViz.dir/rule
 
-# Build rule for target.
-BRDFViz: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BRDFViz
+# Convenience name for target.
+BRDFViz: src/CMakeFiles/BRDFViz.dir/rule
+
 .PHONY : BRDFViz
 
 # fast build rule for target.
 BRDFViz/fast:
-	$(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/build
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/build
 .PHONY : BRDFViz/fast
 
-#=============================================================================
-# Target rules for targets named BRDFViz_autogen
+# Convenience name for target.
+src/CMakeFiles/BRDFViz_autogen.dir/rule:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/BRDFViz_autogen.dir/rule
+.PHONY : src/CMakeFiles/BRDFViz_autogen.dir/rule
 
-# Build rule for target.
-BRDFViz_autogen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BRDFViz_autogen
+# Convenience name for target.
+BRDFViz_autogen: src/CMakeFiles/BRDFViz_autogen.dir/rule
+
 .PHONY : BRDFViz_autogen
 
 # fast build rule for target.
 BRDFViz_autogen/fast:
-	$(MAKE) -f src/CMakeFiles/BRDFViz_autogen.dir/build.make src/CMakeFiles/BRDFViz_autogen.dir/build
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz_autogen.dir/build.make src/CMakeFiles/BRDFViz_autogen.dir/build
 .PHONY : BRDFViz_autogen/fast
+
+BRDFViz_autogen/mocs_compilation.o: BRDFViz_autogen/mocs_compilation.cpp.o
+
+.PHONY : BRDFViz_autogen/mocs_compilation.o
+
+# target to build an object file
+BRDFViz_autogen/mocs_compilation.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o
+.PHONY : BRDFViz_autogen/mocs_compilation.cpp.o
+
+BRDFViz_autogen/mocs_compilation.i: BRDFViz_autogen/mocs_compilation.cpp.i
+
+.PHONY : BRDFViz_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+BRDFViz_autogen/mocs_compilation.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.i
+.PHONY : BRDFViz_autogen/mocs_compilation.cpp.i
+
+BRDFViz_autogen/mocs_compilation.s: BRDFViz_autogen/mocs_compilation.cpp.s
+
+.PHONY : BRDFViz_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+BRDFViz_autogen/mocs_compilation.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.s
+.PHONY : BRDFViz_autogen/mocs_compilation.cpp.s
+
+LTC/ltc.o: LTC/ltc.cpp.o
+
+.PHONY : LTC/ltc.o
+
+# target to build an object file
+LTC/ltc.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o
+.PHONY : LTC/ltc.cpp.o
+
+LTC/ltc.i: LTC/ltc.cpp.i
+
+.PHONY : LTC/ltc.i
+
+# target to preprocess a source file
+LTC/ltc.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.i
+.PHONY : LTC/ltc.cpp.i
+
+LTC/ltc.s: LTC/ltc.cpp.s
+
+.PHONY : LTC/ltc.s
+
+# target to generate assembly for a file
+LTC/ltc.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.s
+.PHONY : LTC/ltc.cpp.s
+
+LTC/ltc_beckmann.o: LTC/ltc_beckmann.cpp.o
+
+.PHONY : LTC/ltc_beckmann.o
+
+# target to build an object file
+LTC/ltc_beckmann.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o
+.PHONY : LTC/ltc_beckmann.cpp.o
+
+LTC/ltc_beckmann.i: LTC/ltc_beckmann.cpp.i
+
+.PHONY : LTC/ltc_beckmann.i
+
+# target to preprocess a source file
+LTC/ltc_beckmann.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.i
+.PHONY : LTC/ltc_beckmann.cpp.i
+
+LTC/ltc_beckmann.s: LTC/ltc_beckmann.cpp.s
+
+.PHONY : LTC/ltc_beckmann.s
+
+# target to generate assembly for a file
+LTC/ltc_beckmann.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.s
+.PHONY : LTC/ltc_beckmann.cpp.s
+
+LTC/ltc_ggx.o: LTC/ltc_ggx.cpp.o
+
+.PHONY : LTC/ltc_ggx.o
+
+# target to build an object file
+LTC/ltc_ggx.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o
+.PHONY : LTC/ltc_ggx.cpp.o
+
+LTC/ltc_ggx.i: LTC/ltc_ggx.cpp.i
+
+.PHONY : LTC/ltc_ggx.i
+
+# target to preprocess a source file
+LTC/ltc_ggx.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.i
+.PHONY : LTC/ltc_ggx.cpp.i
+
+LTC/ltc_ggx.s: LTC/ltc_ggx.cpp.s
+
+.PHONY : LTC/ltc_ggx.s
+
+# target to generate assembly for a file
+LTC/ltc_ggx.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.s
+.PHONY : LTC/ltc_ggx.cpp.s
+
+VTKWindow.o: VTKWindow.cpp.o
+
+.PHONY : VTKWindow.o
+
+# target to build an object file
+VTKWindow.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o
+.PHONY : VTKWindow.cpp.o
+
+VTKWindow.i: VTKWindow.cpp.i
+
+.PHONY : VTKWindow.i
+
+# target to preprocess a source file
+VTKWindow.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.i
+.PHONY : VTKWindow.cpp.i
+
+VTKWindow.s: VTKWindow.cpp.s
+
+.PHONY : VTKWindow.s
+
+# target to generate assembly for a file
+VTKWindow.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.s
+.PHONY : VTKWindow.cpp.s
+
+__/external/jsoncpp.o: __/external/jsoncpp.cpp.o
+
+.PHONY : __/external/jsoncpp.o
+
+# target to build an object file
+__/external/jsoncpp.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o
+.PHONY : __/external/jsoncpp.cpp.o
+
+__/external/jsoncpp.i: __/external/jsoncpp.cpp.i
+
+.PHONY : __/external/jsoncpp.i
+
+# target to preprocess a source file
+__/external/jsoncpp.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.i
+.PHONY : __/external/jsoncpp.cpp.i
+
+__/external/jsoncpp.s: __/external/jsoncpp.cpp.s
+
+.PHONY : __/external/jsoncpp.s
+
+# target to generate assembly for a file
+__/external/jsoncpp.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.s
+.PHONY : __/external/jsoncpp.cpp.s
+
+brdf.o: brdf.cpp.o
+
+.PHONY : brdf.o
+
+# target to build an object file
+brdf.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/brdf.cpp.o
+.PHONY : brdf.cpp.o
+
+brdf.i: brdf.cpp.i
+
+.PHONY : brdf.i
+
+# target to preprocess a source file
+brdf.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/brdf.cpp.i
+.PHONY : brdf.cpp.i
+
+brdf.s: brdf.cpp.s
+
+.PHONY : brdf.s
+
+# target to generate assembly for a file
+brdf.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/brdf.cpp.s
+.PHONY : brdf.cpp.s
+
+bxdf/bxdf.o: bxdf/bxdf.cpp.o
+
+.PHONY : bxdf/bxdf.o
+
+# target to build an object file
+bxdf/bxdf.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o
+.PHONY : bxdf/bxdf.cpp.o
+
+bxdf/bxdf.i: bxdf/bxdf.cpp.i
+
+.PHONY : bxdf/bxdf.i
+
+# target to preprocess a source file
+bxdf/bxdf.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.i
+.PHONY : bxdf/bxdf.cpp.i
+
+bxdf/bxdf.s: bxdf/bxdf.cpp.s
+
+.PHONY : bxdf/bxdf.s
+
+# target to generate assembly for a file
+bxdf/bxdf.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.s
+.PHONY : bxdf/bxdf.cpp.s
+
+camera.o: camera.cpp.o
+
+.PHONY : camera.o
+
+# target to build an object file
+camera.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/camera.cpp.o
+.PHONY : camera.cpp.o
+
+camera.i: camera.cpp.i
+
+.PHONY : camera.i
+
+# target to preprocess a source file
+camera.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/camera.cpp.i
+.PHONY : camera.cpp.i
+
+camera.s: camera.cpp.s
+
+.PHONY : camera.s
+
+# target to generate assembly for a file
+camera.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/camera.cpp.s
+.PHONY : camera.cpp.s
+
+config.o: config.cpp.o
+
+.PHONY : config.o
+
+# target to build an object file
+config.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/config.cpp.o
+.PHONY : config.cpp.o
+
+config.i: config.cpp.i
+
+.PHONY : config.i
+
+# target to preprocess a source file
+config.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/config.cpp.i
+.PHONY : config.cpp.i
+
+config.s: config.cpp.s
+
+.PHONY : config.s
+
+# target to generate assembly for a file
+config.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/config.cpp.s
+.PHONY : config.cpp.s
+
+glm.o: glm.cpp.o
+
+.PHONY : glm.o
+
+# target to build an object file
+glm.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/glm.cpp.o
+.PHONY : glm.cpp.o
+
+glm.i: glm.cpp.i
+
+.PHONY : glm.i
+
+# target to preprocess a source file
+glm.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/glm.cpp.i
+.PHONY : glm.cpp.i
+
+glm.s: glm.cpp.s
+
+.PHONY : glm.s
+
+# target to generate assembly for a file
+glm.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/glm.cpp.s
+.PHONY : glm.cpp.s
+
+global_config.o: global_config.cpp.o
+
+.PHONY : global_config.o
+
+# target to build an object file
+global_config.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/global_config.cpp.o
+.PHONY : global_config.cpp.o
+
+global_config.i: global_config.cpp.i
+
+.PHONY : global_config.i
+
+# target to preprocess a source file
+global_config.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/global_config.cpp.i
+.PHONY : global_config.cpp.i
+
+global_config.s: global_config.cpp.s
+
+.PHONY : global_config.s
+
+# target to generate assembly for a file
+global_config.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/global_config.cpp.s
+.PHONY : global_config.cpp.s
+
+jsonutils.o: jsonutils.cpp.o
+
+.PHONY : jsonutils.o
+
+# target to build an object file
+jsonutils.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.o
+.PHONY : jsonutils.cpp.o
+
+jsonutils.i: jsonutils.cpp.i
+
+.PHONY : jsonutils.i
+
+# target to preprocess a source file
+jsonutils.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.i
+.PHONY : jsonutils.cpp.i
+
+jsonutils.s: jsonutils.cpp.s
+
+.PHONY : jsonutils.s
+
+# target to generate assembly for a file
+jsonutils.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.s
+.PHONY : jsonutils.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+out.o: out.cpp.o
+
+.PHONY : out.o
+
+# target to build an object file
+out.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/out.cpp.o
+.PHONY : out.cpp.o
+
+out.i: out.cpp.i
+
+.PHONY : out.i
+
+# target to preprocess a source file
+out.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/out.cpp.i
+.PHONY : out.cpp.i
+
+out.s: out.cpp.s
+
+.PHONY : out.s
+
+# target to generate assembly for a file
+out.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/out.cpp.s
+.PHONY : out.cpp.s
+
+path_tracer.o: path_tracer.cpp.o
+
+.PHONY : path_tracer.o
+
+# target to build an object file
+path_tracer.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.o
+.PHONY : path_tracer.cpp.o
+
+path_tracer.i: path_tracer.cpp.i
+
+.PHONY : path_tracer.i
+
+# target to preprocess a source file
+path_tracer.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.i
+.PHONY : path_tracer.cpp.i
+
+path_tracer.s: path_tracer.cpp.s
+
+.PHONY : path_tracer.s
+
+# target to generate assembly for a file
+path_tracer.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.s
+.PHONY : path_tracer.cpp.s
+
+primitives.o: primitives.cpp.o
+
+.PHONY : primitives.o
+
+# target to build an object file
+primitives.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/primitives.cpp.o
+.PHONY : primitives.cpp.o
+
+primitives.i: primitives.cpp.i
+
+.PHONY : primitives.i
+
+# target to preprocess a source file
+primitives.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/primitives.cpp.i
+.PHONY : primitives.cpp.i
+
+primitives.s: primitives.cpp.s
+
+.PHONY : primitives.s
+
+# target to generate assembly for a file
+primitives.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/primitives.cpp.s
+.PHONY : primitives.cpp.s
+
+render_driver.o: render_driver.cpp.o
+
+.PHONY : render_driver.o
+
+# target to build an object file
+render_driver.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/render_driver.cpp.o
+.PHONY : render_driver.cpp.o
+
+render_driver.i: render_driver.cpp.i
+
+.PHONY : render_driver.i
+
+# target to preprocess a source file
+render_driver.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/render_driver.cpp.i
+.PHONY : render_driver.cpp.i
+
+render_driver.s: render_driver.cpp.s
+
+.PHONY : render_driver.s
+
+# target to generate assembly for a file
+render_driver.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/render_driver.cpp.s
+.PHONY : render_driver.cpp.s
+
+sampler.o: sampler.cpp.o
+
+.PHONY : sampler.o
+
+# target to build an object file
+sampler.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/sampler.cpp.o
+.PHONY : sampler.cpp.o
+
+sampler.i: sampler.cpp.i
+
+.PHONY : sampler.i
+
+# target to preprocess a source file
+sampler.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/sampler.cpp.i
+.PHONY : sampler.cpp.i
+
+sampler.s: sampler.cpp.s
+
+.PHONY : sampler.s
+
+# target to generate assembly for a file
+sampler.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/sampler.cpp.s
+.PHONY : sampler.cpp.s
+
+scene.o: scene.cpp.o
+
+.PHONY : scene.o
+
+# target to build an object file
+scene.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/scene.cpp.o
+.PHONY : scene.cpp.o
+
+scene.i: scene.cpp.i
+
+.PHONY : scene.i
+
+# target to preprocess a source file
+scene.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/scene.cpp.i
+.PHONY : scene.cpp.i
+
+scene.s: scene.cpp.s
+
+.PHONY : scene.s
+
+# target to generate assembly for a file
+scene.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/scene.cpp.s
+.PHONY : scene.cpp.s
+
+scene_intersect.o: scene_intersect.cpp.o
+
+.PHONY : scene_intersect.o
+
+# target to build an object file
+scene_intersect.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.o
+.PHONY : scene_intersect.cpp.o
+
+scene_intersect.i: scene_intersect.cpp.i
+
+.PHONY : scene_intersect.i
+
+# target to preprocess a source file
+scene_intersect.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.i
+.PHONY : scene_intersect.cpp.i
+
+scene_intersect.s: scene_intersect.cpp.s
+
+.PHONY : scene_intersect.s
+
+# target to generate assembly for a file
+scene_intersect.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.s
+.PHONY : scene_intersect.cpp.s
+
+stbi.o: stbi.cpp.o
+
+.PHONY : stbi.o
+
+# target to build an object file
+stbi.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/stbi.cpp.o
+.PHONY : stbi.cpp.o
+
+stbi.i: stbi.cpp.i
+
+.PHONY : stbi.i
+
+# target to preprocess a source file
+stbi.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/stbi.cpp.i
+.PHONY : stbi.cpp.i
+
+stbi.s: stbi.cpp.s
+
+.PHONY : stbi.s
+
+# target to generate assembly for a file
+stbi.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/stbi.cpp.s
+.PHONY : stbi.cpp.s
+
+texture.o: texture.cpp.o
+
+.PHONY : texture.o
+
+# target to build an object file
+texture.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/texture.cpp.o
+.PHONY : texture.cpp.o
+
+texture.i: texture.cpp.i
+
+.PHONY : texture.i
+
+# target to preprocess a source file
+texture.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/texture.cpp.i
+.PHONY : texture.cpp.i
+
+texture.s: texture.cpp.s
+
+.PHONY : texture.s
+
+# target to generate assembly for a file
+texture.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/texture.cpp.s
+.PHONY : texture.cpp.s
+
+tracer.o: tracer.cpp.o
+
+.PHONY : tracer.o
+
+# target to build an object file
+tracer.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/tracer.cpp.o
+.PHONY : tracer.cpp.o
+
+tracer.i: tracer.cpp.i
+
+.PHONY : tracer.i
+
+# target to preprocess a source file
+tracer.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/tracer.cpp.i
+.PHONY : tracer.cpp.i
+
+tracer.s: tracer.cpp.s
+
+.PHONY : tracer.s
+
+# target to generate assembly for a file
+tracer.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/tracer.cpp.s
+.PHONY : tracer.cpp.s
+
+utils.o: utils.cpp.o
+
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/utils.cpp.s
+.PHONY : utils.cpp.s
 
 # Help Target
 help:
@@ -143,9 +822,84 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... BRDFViz"
+	@echo "... edit_cache"
 	@echo "... BRDFViz_autogen"
+	@echo "... BRDFViz_autogen/mocs_compilation.o"
+	@echo "... BRDFViz_autogen/mocs_compilation.i"
+	@echo "... BRDFViz_autogen/mocs_compilation.s"
+	@echo "... LTC/ltc.o"
+	@echo "... LTC/ltc.i"
+	@echo "... LTC/ltc.s"
+	@echo "... LTC/ltc_beckmann.o"
+	@echo "... LTC/ltc_beckmann.i"
+	@echo "... LTC/ltc_beckmann.s"
+	@echo "... LTC/ltc_ggx.o"
+	@echo "... LTC/ltc_ggx.i"
+	@echo "... LTC/ltc_ggx.s"
+	@echo "... VTKWindow.o"
+	@echo "... VTKWindow.i"
+	@echo "... VTKWindow.s"
+	@echo "... __/external/jsoncpp.o"
+	@echo "... __/external/jsoncpp.i"
+	@echo "... __/external/jsoncpp.s"
+	@echo "... brdf.o"
+	@echo "... brdf.i"
+	@echo "... brdf.s"
+	@echo "... bxdf/bxdf.o"
+	@echo "... bxdf/bxdf.i"
+	@echo "... bxdf/bxdf.s"
+	@echo "... camera.o"
+	@echo "... camera.i"
+	@echo "... camera.s"
+	@echo "... config.o"
+	@echo "... config.i"
+	@echo "... config.s"
+	@echo "... glm.o"
+	@echo "... glm.i"
+	@echo "... glm.s"
+	@echo "... global_config.o"
+	@echo "... global_config.i"
+	@echo "... global_config.s"
+	@echo "... jsonutils.o"
+	@echo "... jsonutils.i"
+	@echo "... jsonutils.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... out.o"
+	@echo "... out.i"
+	@echo "... out.s"
+	@echo "... path_tracer.o"
+	@echo "... path_tracer.i"
+	@echo "... path_tracer.s"
+	@echo "... primitives.o"
+	@echo "... primitives.i"
+	@echo "... primitives.s"
+	@echo "... render_driver.o"
+	@echo "... render_driver.i"
+	@echo "... render_driver.s"
+	@echo "... sampler.o"
+	@echo "... sampler.i"
+	@echo "... sampler.s"
+	@echo "... scene.o"
+	@echo "... scene.i"
+	@echo "... scene.s"
+	@echo "... scene_intersect.o"
+	@echo "... scene_intersect.i"
+	@echo "... scene_intersect.s"
+	@echo "... stbi.o"
+	@echo "... stbi.i"
+	@echo "... stbi.s"
+	@echo "... texture.o"
+	@echo "... texture.i"
+	@echo "... texture.s"
+	@echo "... tracer.o"
+	@echo "... tracer.i"
+	@echo "... tracer.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 
@@ -157,6 +911,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/rich/Documents/Code/BRDFViz && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

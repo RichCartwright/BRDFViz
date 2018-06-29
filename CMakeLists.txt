@@ -9,6 +9,9 @@ set(EXECUTABLE_NAME ${PROJECT_NAME})
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_INCLUDE_CURRENT_DIR "YES")
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
 
 project(
   ${PROJECT_NAME}
@@ -64,15 +67,4 @@ else()
     message([FATAL_ERROR] "BRDFViz requires VTK 7 and QT 5 or higher. \n Exiting processing and generation") 
 endif()
 
-#include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
-#file(GLOB UI_FILES *.ui)
-#file(GLOB QT_WRAP *.h)
-#if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
-#    qt5_wrap_ui(UISrcs ${UI_FILES})
-#    target_link_libraries(${PROJECT_NAME} Gt5::Core Qt5::Gui) 
-#else()
-#    message([FATAL_ERROR] "BRDFViz requires VTK 7 and QT 5 or higher. \n Exiting processing and generation")
-#endif()
-
 add_subdirectory(src)
-#target_link_libraries(${PROJECT_NAME} ${VTK_LIBRARIES})

@@ -57,9 +57,41 @@ include src/CMakeFiles/BRDFViz.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/BRDFViz.dir/flags.make
 
+src/moc_HoradamGenerator.cpp: ../src/HoradamGenerator.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_HoradamGenerator.cpp"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/lib/qt5/bin/moc @/home/rich/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp_parameters
+
+src/ui_VTKWindow.h: ../src/VTKWindow.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ui_VTKWindow.h"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/lib/qt5/bin/uic -o /home/rich/Documents/Code/BRDFViz/build/src/ui_VTKWindow.h /home/rich/Documents/Code/BRDFViz/src/VTKWindow.ui
+
+src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
+src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o: ../src/VTKWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/VTKWindow.cpp
+
+src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BRDFViz.dir/VTKWindow.cpp.i"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rich/Documents/Code/BRDFViz/src/VTKWindow.cpp > CMakeFiles/BRDFViz.dir/VTKWindow.cpp.i
+
+src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BRDFViz.dir/VTKWindow.cpp.s"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rich/Documents/Code/BRDFViz/src/VTKWindow.cpp -o CMakeFiles/BRDFViz.dir/VTKWindow.cpp.s
+
+src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.requires
+
+src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.provides: src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.provides.build
+.PHONY : src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.provides
+
+src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o
+
+
 src/CMakeFiles/BRDFViz.dir/brdf.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/brdf.cpp.o: ../src/brdf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/BRDFViz.dir/brdf.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/BRDFViz.dir/brdf.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/brdf.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/brdf.cpp
 
 src/CMakeFiles/BRDFViz.dir/brdf.cpp.i: cmake_force
@@ -83,7 +115,7 @@ src/CMakeFiles/BRDFViz.dir/brdf.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir
 
 src/CMakeFiles/BRDFViz.dir/camera.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/camera.cpp.o: ../src/camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/BRDFViz.dir/camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/BRDFViz.dir/camera.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/camera.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/camera.cpp
 
 src/CMakeFiles/BRDFViz.dir/camera.cpp.i: cmake_force
@@ -107,7 +139,7 @@ src/CMakeFiles/BRDFViz.dir/camera.cpp.o.provides.build: src/CMakeFiles/BRDFViz.d
 
 src/CMakeFiles/BRDFViz.dir/config.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/config.cpp.o: ../src/config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/BRDFViz.dir/config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/BRDFViz.dir/config.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/config.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/config.cpp
 
 src/CMakeFiles/BRDFViz.dir/config.cpp.i: cmake_force
@@ -131,7 +163,7 @@ src/CMakeFiles/BRDFViz.dir/config.cpp.o.provides.build: src/CMakeFiles/BRDFViz.d
 
 src/CMakeFiles/BRDFViz.dir/glm.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/glm.cpp.o: ../src/glm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/BRDFViz.dir/glm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/BRDFViz.dir/glm.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/glm.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/glm.cpp
 
 src/CMakeFiles/BRDFViz.dir/glm.cpp.i: cmake_force
@@ -155,7 +187,7 @@ src/CMakeFiles/BRDFViz.dir/glm.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir/
 
 src/CMakeFiles/BRDFViz.dir/global_config.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/global_config.cpp.o: ../src/global_config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/BRDFViz.dir/global_config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/BRDFViz.dir/global_config.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/global_config.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/global_config.cpp
 
 src/CMakeFiles/BRDFViz.dir/global_config.cpp.i: cmake_force
@@ -179,7 +211,7 @@ src/CMakeFiles/BRDFViz.dir/global_config.cpp.o.provides.build: src/CMakeFiles/BR
 
 src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.o: ../src/jsonutils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/jsonutils.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/jsonutils.cpp
 
 src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.i: cmake_force
@@ -203,7 +235,7 @@ src/CMakeFiles/BRDFViz.dir/jsonutils.cpp.o.provides.build: src/CMakeFiles/BRDFVi
 
 src/CMakeFiles/BRDFViz.dir/main.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/BRDFViz.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/BRDFViz.dir/main.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/main.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/main.cpp
 
 src/CMakeFiles/BRDFViz.dir/main.cpp.i: cmake_force
@@ -227,7 +259,7 @@ src/CMakeFiles/BRDFViz.dir/main.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir
 
 src/CMakeFiles/BRDFViz.dir/out.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/out.cpp.o: ../src/out.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/BRDFViz.dir/out.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/BRDFViz.dir/out.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/out.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/out.cpp
 
 src/CMakeFiles/BRDFViz.dir/out.cpp.i: cmake_force
@@ -251,7 +283,7 @@ src/CMakeFiles/BRDFViz.dir/out.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir/
 
 src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.o: ../src/path_tracer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/path_tracer.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/path_tracer.cpp
 
 src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.i: cmake_force
@@ -275,7 +307,7 @@ src/CMakeFiles/BRDFViz.dir/path_tracer.cpp.o.provides.build: src/CMakeFiles/BRDF
 
 src/CMakeFiles/BRDFViz.dir/primitives.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/primitives.cpp.o: ../src/primitives.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/BRDFViz.dir/primitives.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/BRDFViz.dir/primitives.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/primitives.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/primitives.cpp
 
 src/CMakeFiles/BRDFViz.dir/primitives.cpp.i: cmake_force
@@ -299,7 +331,7 @@ src/CMakeFiles/BRDFViz.dir/primitives.cpp.o.provides.build: src/CMakeFiles/BRDFV
 
 src/CMakeFiles/BRDFViz.dir/render_driver.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/render_driver.cpp.o: ../src/render_driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/BRDFViz.dir/render_driver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/BRDFViz.dir/render_driver.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/render_driver.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/render_driver.cpp
 
 src/CMakeFiles/BRDFViz.dir/render_driver.cpp.i: cmake_force
@@ -323,7 +355,7 @@ src/CMakeFiles/BRDFViz.dir/render_driver.cpp.o.provides.build: src/CMakeFiles/BR
 
 src/CMakeFiles/BRDFViz.dir/sampler.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/sampler.cpp.o: ../src/sampler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/BRDFViz.dir/sampler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/BRDFViz.dir/sampler.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/sampler.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/sampler.cpp
 
 src/CMakeFiles/BRDFViz.dir/sampler.cpp.i: cmake_force
@@ -347,7 +379,7 @@ src/CMakeFiles/BRDFViz.dir/sampler.cpp.o.provides.build: src/CMakeFiles/BRDFViz.
 
 src/CMakeFiles/BRDFViz.dir/scene.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/scene.cpp.o: ../src/scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/BRDFViz.dir/scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/BRDFViz.dir/scene.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/scene.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/scene.cpp
 
 src/CMakeFiles/BRDFViz.dir/scene.cpp.i: cmake_force
@@ -371,7 +403,7 @@ src/CMakeFiles/BRDFViz.dir/scene.cpp.o.provides.build: src/CMakeFiles/BRDFViz.di
 
 src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.o: ../src/scene_intersect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/scene_intersect.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/scene_intersect.cpp
 
 src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.i: cmake_force
@@ -395,7 +427,7 @@ src/CMakeFiles/BRDFViz.dir/scene_intersect.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/BRDFViz.dir/stbi.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/stbi.cpp.o: ../src/stbi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/BRDFViz.dir/stbi.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/BRDFViz.dir/stbi.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/stbi.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/stbi.cpp
 
 src/CMakeFiles/BRDFViz.dir/stbi.cpp.i: cmake_force
@@ -419,7 +451,7 @@ src/CMakeFiles/BRDFViz.dir/stbi.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir
 
 src/CMakeFiles/BRDFViz.dir/texture.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/texture.cpp.o: ../src/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/BRDFViz.dir/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/BRDFViz.dir/texture.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/texture.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/texture.cpp
 
 src/CMakeFiles/BRDFViz.dir/texture.cpp.i: cmake_force
@@ -443,7 +475,7 @@ src/CMakeFiles/BRDFViz.dir/texture.cpp.o.provides.build: src/CMakeFiles/BRDFViz.
 
 src/CMakeFiles/BRDFViz.dir/tracer.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/tracer.cpp.o: ../src/tracer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/BRDFViz.dir/tracer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/BRDFViz.dir/tracer.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/tracer.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/tracer.cpp
 
 src/CMakeFiles/BRDFViz.dir/tracer.cpp.i: cmake_force
@@ -467,7 +499,7 @@ src/CMakeFiles/BRDFViz.dir/tracer.cpp.o.provides.build: src/CMakeFiles/BRDFViz.d
 
 src/CMakeFiles/BRDFViz.dir/utils.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/utils.cpp.o: ../src/utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/BRDFViz.dir/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/BRDFViz.dir/utils.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/utils.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/utils.cpp
 
 src/CMakeFiles/BRDFViz.dir/utils.cpp.i: cmake_force
@@ -491,7 +523,7 @@ src/CMakeFiles/BRDFViz.dir/utils.cpp.o.provides.build: src/CMakeFiles/BRDFViz.di
 
 src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o: ../src/LTC/ltc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/LTC/ltc.cpp
 
 src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.i: cmake_force
@@ -515,7 +547,7 @@ src/CMakeFiles/BRDFViz.dir/LTC/ltc.cpp.o.provides.build: src/CMakeFiles/BRDFViz.
 
 src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o: ../src/LTC/ltc_beckmann.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/LTC/ltc_beckmann.cpp
 
 src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.i: cmake_force
@@ -539,7 +571,7 @@ src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o.provides.build: src/CMakeFiles
 
 src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o: ../src/LTC/ltc_ggx.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/LTC/ltc_ggx.cpp
 
 src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.i: cmake_force
@@ -563,7 +595,7 @@ src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o.provides.build: src/CMakeFiles/BRDF
 
 src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o: ../src/bxdf/bxdf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o -c /home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.cpp
 
 src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.i: cmake_force
@@ -587,7 +619,7 @@ src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o.provides.build: src/CMakeFiles/BRDFVi
 
 src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o: ../external/jsoncpp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o -c /home/rich/Documents/Code/BRDFViz/external/jsoncpp.cpp
 
 src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.i: cmake_force
@@ -609,9 +641,33 @@ src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o.provides: src/CMakeFiles/BR
 src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o
 
 
+src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
+src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o: src/moc_HoradamGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o -c /home/rich/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp
+
+src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.i"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rich/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp > CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.i
+
+src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.s"
+	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rich/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp -o CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.s
+
+src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.requires
+
+src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.provides: src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.provides.build
+.PHONY : src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.provides
+
+src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.provides.build: src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o
+
+
 src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o: src/CMakeFiles/BRDFViz.dir/flags.make
 src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o: src/BRDFViz_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o -c /home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/mocs_compilation.cpp
 
 src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.i: cmake_force
@@ -635,6 +691,7 @@ src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.provides.build
 
 # Object files for target BRDFViz
 BRDFViz_OBJECTS = \
+"CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o" \
 "CMakeFiles/BRDFViz.dir/brdf.cpp.o" \
 "CMakeFiles/BRDFViz.dir/camera.cpp.o" \
 "CMakeFiles/BRDFViz.dir/config.cpp.o" \
@@ -658,11 +715,13 @@ BRDFViz_OBJECTS = \
 "CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o" \
 "CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o" \
 "CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o" \
+"CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o" \
 "CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o"
 
 # External object files for target BRDFViz
 BRDFViz_EXTERNAL_OBJECTS =
 
+src/BRDFViz: src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/brdf.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/camera.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/config.cpp.o
@@ -686,6 +745,7 @@ src/BRDFViz: src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o
+src/BRDFViz: src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/build.make
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libassimp.so
@@ -825,7 +885,7 @@ src/BRDFViz: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
 src/BRDFViz: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
 src/BRDFViz: src/CMakeFiles/BRDFViz.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable BRDFViz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX executable BRDFViz"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BRDFViz.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/cmake -E copy /home/rich/Documents/Code/BRDFViz/build/src/./BRDFViz /home/rich/Documents/Code/BRDFViz/build/
 
@@ -834,6 +894,7 @@ src/CMakeFiles/BRDFViz.dir/build: src/BRDFViz
 
 .PHONY : src/CMakeFiles/BRDFViz.dir/build
 
+src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/brdf.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/camera.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/config.cpp.o.requires
@@ -857,6 +918,7 @@ src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/LTC/ltc_beckmann
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/bxdf/bxdf.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/__/external/jsoncpp.cpp.o.requires
+src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o.requires
 src/CMakeFiles/BRDFViz.dir/requires: src/CMakeFiles/BRDFViz.dir/BRDFViz_autogen/mocs_compilation.cpp.o.requires
 
 .PHONY : src/CMakeFiles/BRDFViz.dir/requires
@@ -865,7 +927,8 @@ src/CMakeFiles/BRDFViz.dir/clean:
 	cd /home/rich/Documents/Code/BRDFViz/build/src && $(CMAKE_COMMAND) -P CMakeFiles/BRDFViz.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/BRDFViz.dir/clean
 
-src/CMakeFiles/BRDFViz.dir/depend:
+src/CMakeFiles/BRDFViz.dir/depend: src/moc_HoradamGenerator.cpp
+src/CMakeFiles/BRDFViz.dir/depend: src/ui_VTKWindow.h
 	cd /home/rich/Documents/Code/BRDFViz/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rich/Documents/Code/BRDFViz /home/rich/Documents/Code/BRDFViz/src /home/rich/Documents/Code/BRDFViz/build /home/rich/Documents/Code/BRDFViz/build/src /home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/BRDFViz.dir/depend
 

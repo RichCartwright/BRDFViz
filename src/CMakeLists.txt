@@ -7,6 +7,8 @@ link_directories(
   )
 
 include_directories(
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}
   ${GLM_INCLUDE_DIRS}
   ${png++_INCLUDE_DIRS}
   ${assimp_INCLUDE_DIRS}
@@ -35,12 +37,28 @@ file(GLOB SOURCES
   ../external/*.cpp
   )
 
+file(GLOB UI_FILES
+  *.ui
+  )
+
+file(GLOB QT_WRAP 
+  ./*.h
+  )
+
+if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
+  message(STATUS "Wrapping the UI files")
+  qt5_wrap_cpp(CPPSrcs ${QT_WRAP})
+  qt5_wrap_ui(UISrcs ${UI_FILES})
+else()
+  message(FATAL "VTK 7 (or higher) and QT 5 (or higher) is needed")
+endif()
+
 add_executable(
   ${EXECUTABLE_NAME}
   ${SOURCES}
+  ${CPPSrcs}
+  ${UISrcs}
   )
-
-## SET_TARGET_PROPERTIES(RGK PROPERTIES LINK_FLAGS -pg)
 
 target_link_libraries(
   ${EXECUTABLE_NAME}
@@ -52,10 +70,8 @@ target_link_libraries(
   pthread
   )
 
-file(GLOB UI_FILES *.ui)
-file(GLOB QT_WRAP *.h)
 if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
-  qt5_wrap_ui(UISrcs ${UI_FILES})
+  message(STATUS "Linking QT")
   target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui)
 else()
   message(FATAL_ERROR "BRDFViz requires VTK 7 (or higher) and QT 5 (or higher)")

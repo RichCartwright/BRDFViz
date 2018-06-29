@@ -14,6 +14,7 @@
 #include "render_driver.hpp"
 //    VTK   
 #include "VTKIncludes.hpp"
+#include "VTKWindow.hpp"
 
 void usage(const char* prog) __attribute__((noreturn));
 void usage(const char* prog)

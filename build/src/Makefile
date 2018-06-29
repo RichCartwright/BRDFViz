@@ -248,6 +248,33 @@ LTC/ltc_ggx.cpp.s:
 	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/LTC/ltc_ggx.cpp.s
 .PHONY : LTC/ltc_ggx.cpp.s
 
+VTKWindow.o: VTKWindow.cpp.o
+
+.PHONY : VTKWindow.o
+
+# target to build an object file
+VTKWindow.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o
+.PHONY : VTKWindow.cpp.o
+
+VTKWindow.i: VTKWindow.cpp.i
+
+.PHONY : VTKWindow.i
+
+# target to preprocess a source file
+VTKWindow.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.i
+.PHONY : VTKWindow.cpp.i
+
+VTKWindow.s: VTKWindow.cpp.s
+
+.PHONY : VTKWindow.s
+
+# target to generate assembly for a file
+VTKWindow.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.s
+.PHONY : VTKWindow.cpp.s
+
 __/external/jsoncpp.o: __/external/jsoncpp.cpp.o
 
 .PHONY : __/external/jsoncpp.o
@@ -490,6 +517,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+moc_HoradamGenerator.o: moc_HoradamGenerator.cpp.o
+
+.PHONY : moc_HoradamGenerator.o
+
+# target to build an object file
+moc_HoradamGenerator.cpp.o:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.o
+.PHONY : moc_HoradamGenerator.cpp.o
+
+moc_HoradamGenerator.i: moc_HoradamGenerator.cpp.i
+
+.PHONY : moc_HoradamGenerator.i
+
+# target to preprocess a source file
+moc_HoradamGenerator.cpp.i:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.i
+.PHONY : moc_HoradamGenerator.cpp.i
+
+moc_HoradamGenerator.s: moc_HoradamGenerator.cpp.s
+
+.PHONY : moc_HoradamGenerator.s
+
+# target to generate assembly for a file
+moc_HoradamGenerator.cpp.s:
+	cd /home/rich/Documents/Code/BRDFViz/build && $(MAKE) -f src/CMakeFiles/BRDFViz.dir/build.make src/CMakeFiles/BRDFViz.dir/moc_HoradamGenerator.cpp.s
+.PHONY : moc_HoradamGenerator.cpp.s
 
 out.o: out.cpp.o
 
@@ -810,6 +864,9 @@ help:
 	@echo "... LTC/ltc_ggx.o"
 	@echo "... LTC/ltc_ggx.i"
 	@echo "... LTC/ltc_ggx.s"
+	@echo "... VTKWindow.o"
+	@echo "... VTKWindow.i"
+	@echo "... VTKWindow.s"
 	@echo "... __/external/jsoncpp.o"
 	@echo "... __/external/jsoncpp.i"
 	@echo "... __/external/jsoncpp.s"
@@ -837,6 +894,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... moc_HoradamGenerator.o"
+	@echo "... moc_HoradamGenerator.i"
+	@echo "... moc_HoradamGenerator.s"
 	@echo "... out.o"
 	@echo "... out.i"
 	@echo "... out.s"

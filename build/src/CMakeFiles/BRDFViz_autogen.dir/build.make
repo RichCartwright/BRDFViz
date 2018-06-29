@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/rich/Documents/Code/BRDFViz/build
 include src/CMakeFiles/BRDFViz_autogen.dir/progress.make
 
 src/CMakeFiles/BRDFViz_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target BRDFViz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rich/Documents/Code/BRDFViz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target BRDFViz"
 	cd /home/rich/Documents/Code/BRDFViz/build/src && /usr/bin/cmake -E cmake_autogen /home/rich/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz_autogen.dir ""
 
 BRDFViz_autogen: src/CMakeFiles/BRDFViz_autogen
