@@ -1,0 +1,52 @@
+// All of the needed headers for VTK and QT
+#include <vtkSmartPointer.h>
+#include <vtkDelimitedTextReader.h>
+#include <vtkVersion.h> 
+
+#include <vtkProperty.h>
+#include <vtkPolyDataMapper.h>
+#include <vtkActor.h>
+#include <vtkActor2D.h>
+#include <vtkDoubleArray.h>
+#include <vtkTable.h> 
+#include <vtkPoints.h>
+#include <vtkPolyLine.h>
+#include <vtkPolyData.h>
+#include <vtkPolyDataMapper.h>
+#include <vtkPointData.h> 
+#include <vtkRenderWindow.h>
+#include <vtkRenderWindowInteractor.h>
+#include <vtkRenderer.h>
+#include <vtkVertexGlyphFilter.h>
+#include <vtkGlyph3D.h>
+#include <vtkSphereSource.h>
+#include <vtkTextActor.h>
+#include <vtkTextProperty.h>
+#include <vtkLine.h>
+#include <vtkCamera.h>
+#include <vtkCellArray.h>
+// Coord display
+#include <vtkOrientationMarkerWidget.h> 
+#include <vtkAxesActor.h>
+//For picking
+#include <vtkSelection.h>
+#include <vtkSelectionNode.h>
+#include <vtkCellPicker.h>
+#include <vtkPointPicker.h>
+#include <vtkPropPicker.h>
+#include <vtkExtractSelection.h>
+#include <vtkInteractorStyleTrackballCamera.h>
+#include <vtkCommand.h>
+#include <vtkObjectFactory.h>
+#include <vtkDataSetMapper.h>
+#include <vtkKdTreePointLocator.h>
+#include <vtkIdFilter.h>
+#include <vtkIdTypeArray.h>
+#include <vtkExtractGeometry.h>
+// Labels
+#include <vtkLabelPlacementMapper.h>
+#include <vtkPointSetToLabelHierarchy.h>
+// Data Reduction stuff
+#include <vtkMergePoints.h>
+#include <vtkMath.h>
+#include <vtkCleanPolyData.h>

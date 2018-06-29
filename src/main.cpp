@@ -1,9 +1,9 @@
+//    Standard stuff
 #include <iostream>
 #include <sstream>
-
 #include <getopt.h>
+//    RGK
 #include "global_config.hpp"
-
 #include "scene.hpp"
 #include "texture.hpp"
 #include "config.hpp"
@@ -12,6 +12,8 @@
 #include "out.hpp"
 #include "sampler.hpp"
 #include "render_driver.hpp"
+//    VTK   
+#include "VTKIncludes.hpp"
 
 std::string usage_text = R"--(
 Runs the RGK Ray Tracer using scene configuration from FILE.
