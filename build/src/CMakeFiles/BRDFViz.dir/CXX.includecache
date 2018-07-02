@@ -375,7 +375,29 @@ VTKWindow.hpp
 /home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
 VTKIncludes.hpp
 /home/u1776267/Documents/Code/BRDFViz/src/VTKIncludes.hpp
+scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
+global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
+texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
+camera.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
+out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
+sampler.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/sampler.hpp
+render_driver.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/render_driver.hpp
+utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
+config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 QFileDialog
+-
+QTextStream
+-
+QMessageBox
 -
 
 /home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
@@ -555,30 +577,6 @@ glm.hpp
 /home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 
 /home/u1776267/Documents/Code/BRDFViz/src/main.cpp
-iostream
--
-sstream
--
-getopt.h
--
-global_config.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
-scene.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
-texture.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
-config.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
-utils.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
-camera.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
-out.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
-sampler.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/sampler.hpp
-render_driver.hpp
-/home/u1776267/Documents/Code/BRDFViz/src/render_driver.hpp
 VTKIncludes.hpp
 /home/u1776267/Documents/Code/BRDFViz/src/VTKIncludes.hpp
 VTKWindow.hpp
@@ -1986,6 +1984,10 @@ include/kwiml/int.h
 qobject.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+qtextstream.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
 qvariant.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
@@ -3142,6 +3144,10 @@ qmenu.h
 qmenubar.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
+qmessagebox.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QOpenGLWidget
 qopenglwidget.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qopenglwidget.h
@@ -3318,6 +3324,10 @@ windef.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
 QtWidgets/qmenu.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h
+QtWidgets/qdialog.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qopenglwidget.h
