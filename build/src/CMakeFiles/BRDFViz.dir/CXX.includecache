@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -34,21 +34,21 @@ intrin.h
 arm_neon.h
 -
 
-/home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/EWIEGA46WW/moc_VTKWindow.cpp
-../../../../src/VTKWindow.hpp
-/home/rich/Documents/Code/BRDFViz/src/VTKWindow.hpp
+/home/u1776267/Documents/Code/BRDFViz/build/src/BRDFViz_automoc.cpp
+moc_VTKWindow.cpp
+/home/u1776267/Documents/Code/BRDFViz/build/src/moc_VTKWindow.cpp
+
+/home/u1776267/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp
+
+/home/u1776267/Documents/Code/BRDFViz/build/src/moc_VTKWindow.cpp
+../../src/VTKWindow.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/mocs_compilation.cpp
-EWIEGA46WW/moc_VTKWindow.cpp
-/home/rich/Documents/Code/BRDFViz/build/src/BRDFViz_autogen/EWIEGA46WW/moc_VTKWindow.cpp
-
-/home/rich/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp
-
-/home/rich/Documents/Code/BRDFViz/external/ctpl_stl.h
+/home/u1776267/Documents/Code/BRDFViz/external/ctpl_stl.h
 functional
 -
 thread
@@ -68,7 +68,7 @@ mutex
 queue
 -
 
-/home/rich/Documents/Code/BRDFViz/external/json/json.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/json.h
 stddef.h
 -
 string
@@ -76,15 +76,15 @@ string
 cpptl/config.h
 -
 version.h
-/home/rich/Documents/Code/BRDFViz/external/json/version.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/version.h
 allocator.h
-/home/rich/Documents/Code/BRDFViz/external/json/allocator.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/allocator.h
 config.h
-/home/rich/Documents/Code/BRDFViz/external/json/config.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/config.h
 forwards.h
-/home/rich/Documents/Code/BRDFViz/external/json/forwards.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/forwards.h
 forwards.h
-/home/rich/Documents/Code/BRDFViz/external/json/forwards.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/forwards.h
 string
 -
 vector
@@ -98,9 +98,9 @@ cpptl/smallmap.h
 cpptl/forwards.h
 -
 features.h
-/home/rich/Documents/Code/BRDFViz/external/json/features.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/features.h
 value.h
-/home/rich/Documents/Code/BRDFViz/external/json/value.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/value.h
 deque
 -
 iosfwd
@@ -112,7 +112,7 @@ string
 istream
 -
 value.h
-/home/rich/Documents/Code/BRDFViz/external/json/value.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/value.h
 vector
 -
 string
@@ -124,11 +124,11 @@ stdlib.h
 sstream
 -
 config.h
-/home/rich/Documents/Code/BRDFViz/external/json/config.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/config.h
 
-/home/rich/Documents/Code/BRDFViz/external/jsoncpp.cpp
+/home/u1776267/Documents/Code/BRDFViz/external/jsoncpp.cpp
 json/json.h
-/home/rich/Documents/Code/BRDFViz/external/json/json.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/json.h
 clocale
 -
 json/assertions.h
@@ -138,7 +138,7 @@ json/reader.h
 json/value.h
 -
 json_tool.h
-/home/rich/Documents/Code/BRDFViz/external/json_tool.h
+/home/u1776267/Documents/Code/BRDFViz/external/json_tool.h
 utility
 -
 cstdio
@@ -180,11 +180,11 @@ cstddef
 algorithm
 -
 json_valueiterator.inl
-/home/rich/Documents/Code/BRDFViz/external/json_valueiterator.inl
+/home/u1776267/Documents/Code/BRDFViz/external/json_valueiterator.inl
 json/writer.h
 -
 json_tool.h
-/home/rich/Documents/Code/BRDFViz/external/json_tool.h
+/home/u1776267/Documents/Code/BRDFViz/external/json_tool.h
 iomanip
 -
 memory
@@ -214,9 +214,9 @@ cmath
 float.h
 -
 
-/home/rich/Documents/Code/BRDFViz/external/stb_image.h
+/home/u1776267/Documents/Code/BRDFViz/external/stb_image.h
 stb_image.h
-/home/rich/Documents/Code/BRDFViz/external/stb_image.h
+/home/u1776267/Documents/Code/BRDFViz/external/stb_image.h
 stdio.h
 -
 stdarg.h
@@ -242,15 +242,15 @@ intrin.h
 arm_neon.h
 -
 
-/home/rich/Documents/Code/BRDFViz/src/HoradamGenerator.h
+/home/u1776267/Documents/Code/BRDFViz/src/HoradamGenerator.h
 complex
 -
 
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc.cpp
 ltc.hpp
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc.hpp
 ../utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 algorithm
 -
 glm/gtc/quaternion.hpp
@@ -260,21 +260,21 @@ glm/gtx/string_cast.hpp
 glm/gtx/vector_angle.hpp
 -
 
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc.hpp
 ../global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 ../glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc_beckmann.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc_beckmann.cpp
 ltc.hpp
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc_ggx.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc_ggx.cpp
 ltc.hpp
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/VTKIncludes.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/VTKIncludes.hpp
 vtkSmartPointer.h
 -
 vtkDelimitedTextReader.h
@@ -370,91 +370,97 @@ vtkMath.h
 vtkCleanPolyData.h
 -
 
-/home/rich/Documents/Code/BRDFViz/src/VTKWindow.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.cpp
 VTKWindow.hpp
-/home/rich/Documents/Code/BRDFViz/src/VTKWindow.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
 VTKIncludes.hpp
-/home/rich/Documents/Code/BRDFViz/src/VTKIncludes.hpp
-
-/home/rich/Documents/Code/BRDFViz/src/VTKWindow.hpp
-ui_VTKWindow.h
-/home/rich/Documents/Code/BRDFViz/src/ui_VTKWindow.h
-QMainWindow
+/home/u1776267/Documents/Code/BRDFViz/src/VTKIncludes.hpp
+QFileDialog
 -
 
-/home/rich/Documents/Code/BRDFViz/src/brdf.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
+ui_VTKWindow.h
+/home/u1776267/Documents/Code/BRDFViz/src/ui_VTKWindow.h
+ui_AboutMe.h
+/home/u1776267/Documents/Code/BRDFViz/src/ui_AboutMe.h
+QMainWindow
+-
+QDialog
+-
+
+/home/u1776267/Documents/Code/BRDFViz/src/brdf.cpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 glm/gtx/vector_angle.hpp
 -
 glm/gtx/string_cast.hpp
 -
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 LTC/ltc.hpp
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc.hpp
 random_utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/random_utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/random_utils.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/bxdf/bxdf.cpp
 bxdf.hpp
-/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
 ../scene.hpp
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 ../random_utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/random_utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/random_utils.hpp
 ../jsonutils.hpp
-/home/rich/Documents/Code/BRDFViz/src/jsonutils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/jsonutils.hpp
 ../config.hpp
-/home/rich/Documents/Code/BRDFViz/src/config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 ../out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 ../utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 iostream
 -
 assimp/scene.h
 -
 
-/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
 memory
 -
 iostream
 -
 ../../external/json/json.h
-/home/rich/Documents/Code/BRDFViz/external/json/json.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/json.h
 ../texture.hpp
-/home/rich/Documents/Code/BRDFViz/src/texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
 ../LTC/ltc.hpp
-/home/rich/Documents/Code/BRDFViz/src/LTC/ltc.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/LTC/ltc.hpp
 ../random_utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/random_utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/random_utils.hpp
 ../jsonutils.hpp
-/home/rich/Documents/Code/BRDFViz/src/jsonutils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/jsonutils.hpp
 ../config.hpp
-/home/rich/Documents/Code/BRDFViz/src/config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/camera.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/camera.cpp
 camera.hpp
-/home/rich/Documents/Code/BRDFViz/src/camera.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 random_utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/random_utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/random_utils.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/camera.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 ray.hpp
-/home/rich/Documents/Code/BRDFViz/src/ray.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/ray.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/config.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.cpp
 config.hpp
-/home/rich/Documents/Code/BRDFViz/src/config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 fstream
 -
 cmath
@@ -470,21 +476,21 @@ assimp/postprocess.h
 assimp/cimport.h
 -
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 scene.hpp
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 bxdf/bxdf.hpp
-/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
 jsonutils.hpp
-/home/rich/Documents/Code/BRDFViz/src/jsonutils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/jsonutils.hpp
 glm/gtx/string_cast.hpp
 -
 glm/gtx/vector_angle.hpp
 -
 
-/home/rich/Documents/Code/BRDFViz/src/config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 string
 -
 vector
@@ -494,21 +500,21 @@ exception
 memory
 -
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 primitives.hpp
-/home/rich/Documents/Code/BRDFViz/src/primitives.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/primitives.hpp
 camera.hpp
-/home/rich/Documents/Code/BRDFViz/src/camera.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
 ../external/json/json.h
-/home/rich/Documents/Code/BRDFViz/external/json/json.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/json.h
 
-/home/rich/Documents/Code/BRDFViz/src/glm.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.cpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 glm/glm.hpp
 -
 glm/gtx/transform.hpp
@@ -518,37 +524,37 @@ glm/gtc/matrix_transform.hpp
 glm/gtx/vector_angle.hpp
 -
 
-/home/rich/Documents/Code/BRDFViz/src/global_config.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.cpp
 global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 signal.h
 -
 iostream
 -
 
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 cassert
 -
 string
 -
 
-/home/rich/Documents/Code/BRDFViz/src/jsonutils.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/jsonutils.cpp
 jsonutils.hpp
-/home/rich/Documents/Code/BRDFViz/src/jsonutils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/jsonutils.hpp
 config.hpp
-/home/rich/Documents/Code/BRDFViz/src/config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/jsonutils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/jsonutils.hpp
 string
 -
 ../external/json/json.h
-/home/rich/Documents/Code/BRDFViz/external/json/json.h
+/home/u1776267/Documents/Code/BRDFViz/external/json/json.h
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/main.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/main.cpp
 iostream
 -
 sstream
@@ -556,59 +562,59 @@ sstream
 getopt.h
 -
 global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 scene.hpp
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 texture.hpp
-/home/rich/Documents/Code/BRDFViz/src/texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
 config.hpp
-/home/rich/Documents/Code/BRDFViz/src/config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 camera.hpp
-/home/rich/Documents/Code/BRDFViz/src/camera.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 sampler.hpp
-/home/rich/Documents/Code/BRDFViz/src/sampler.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/sampler.hpp
 render_driver.hpp
-/home/rich/Documents/Code/BRDFViz/src/render_driver.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/render_driver.hpp
 VTKIncludes.hpp
-/home/rich/Documents/Code/BRDFViz/src/VTKIncludes.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/VTKIncludes.hpp
 VTKWindow.hpp
-/home/rich/Documents/Code/BRDFViz/src/VTKWindow.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/out.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.cpp
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 iostream
 -
 
-/home/rich/Documents/Code/BRDFViz/src/path_tracer.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/path_tracer.cpp
 path_tracer.hpp
-/home/rich/Documents/Code/BRDFViz/src/path_tracer.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/path_tracer.hpp
 camera.hpp
-/home/rich/Documents/Code/BRDFViz/src/camera.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
 scene.hpp
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 random_utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/random_utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/random_utils.hpp
 sampler.hpp
-/home/rich/Documents/Code/BRDFViz/src/sampler.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/sampler.hpp
 bxdf/bxdf.hpp
-/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 tuple
 -
 iostream
 -
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 glm/gtx/vector_angle.hpp
 -
 glm/gtx/norm.hpp
@@ -618,7 +624,7 @@ glm/gtx/rotate_vector.hpp
 glm/gtc/constants.hpp
 -
 
-/home/rich/Documents/Code/BRDFViz/src/path_tracer.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/path_tracer.hpp
 cmath
 -
 stddef.h
@@ -628,49 +634,49 @@ stdlib.h
 string.h
 -
 tracer.hpp
-/home/rich/Documents/Code/BRDFViz/src/tracer.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/tracer.hpp
 primitives.hpp
-/home/rich/Documents/Code/BRDFViz/src/primitives.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/primitives.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/primitives.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/primitives.cpp
 primitives.hpp
-/home/rich/Documents/Code/BRDFViz/src/primitives.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/primitives.hpp
 scene.hpp
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 iomanip
 -
 
-/home/rich/Documents/Code/BRDFViz/src/primitives.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/primitives.hpp
 functional
 -
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 radiance.hpp
-/home/rich/Documents/Code/BRDFViz/src/radiance.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/radiance.hpp
 ray.hpp
-/home/rich/Documents/Code/BRDFViz/src/ray.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/ray.hpp
 memory
 -
 vector
 -
 
-/home/rich/Documents/Code/BRDFViz/src/radiance.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/radiance.hpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/random_utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/random_utils.hpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/ray.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/ray.hpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/render_driver.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/render_driver.cpp
 render_driver.hpp
-/home/rich/Documents/Code/BRDFViz/src/render_driver.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/render_driver.hpp
 iomanip
 -
 cmath
@@ -684,19 +690,19 @@ algorithm
 unistd.h
 -
 ../external/ctpl_stl.h
-/home/rich/Documents/Code/BRDFViz/external/ctpl_stl.h
+/home/u1776267/Documents/Code/BRDFViz/external/ctpl_stl.h
 path_tracer.hpp
-/home/rich/Documents/Code/BRDFViz/src/path_tracer.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/path_tracer.hpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 texture.hpp
-/home/rich/Documents/Code/BRDFViz/src/texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/render_driver.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/render_driver.hpp
 config.hpp
-/home/rich/Documents/Code/BRDFViz/src/config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/config.hpp
 atomic
 -
 chrono
@@ -704,31 +710,31 @@ chrono
 set
 -
 tracer.hpp
-/home/rich/Documents/Code/BRDFViz/src/tracer.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/tracer.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/sampler.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/sampler.cpp
 sampler.hpp
-/home/rich/Documents/Code/BRDFViz/src/sampler.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/sampler.hpp
 algorithm
 -
 limits
 -
 
-/home/rich/Documents/Code/BRDFViz/src/sampler.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/sampler.hpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 random
 -
 algorithm
 -
 HoradamGenerator.h
-/home/rich/Documents/Code/BRDFViz/src/HoradamGenerator.h
+/home/u1776267/Documents/Code/BRDFViz/src/HoradamGenerator.h
 
-/home/rich/Documents/Code/BRDFViz/src/scene.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.cpp
 scene.hpp
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 assimp/scene.h
 -
 iostream
@@ -742,15 +748,15 @@ stack
 glm/gtx/wrap.hpp
 -
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 bxdf/bxdf.hpp
-/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 vector
 -
 set
@@ -758,29 +764,29 @@ set
 unordered_map
 -
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 primitives.hpp
-/home/rich/Documents/Code/BRDFViz/src/primitives.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/primitives.hpp
 texture.hpp
-/home/rich/Documents/Code/BRDFViz/src/texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/scene_intersect.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene_intersect.cpp
 scene.hpp
-/home/rich/Documents/Code/BRDFViz/src/scene.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/scene.hpp
 bxdf/bxdf.hpp
-/home/rich/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/bxdf/bxdf.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/stbi.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/stbi.cpp
 stb_image.h
 -
 
-/home/rich/Documents/Code/BRDFViz/src/stbi.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/stbi.hpp
 ../external/stb_image.h
-/home/rich/Documents/Code/BRDFViz/external/stb_image.h
+/home/u1776267/Documents/Code/BRDFViz/external/stb_image.h
 
-/home/rich/Documents/Code/BRDFViz/src/texture.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.cpp
 texture.hpp
-/home/rich/Documents/Code/BRDFViz/src/texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
 png++/png.hpp
 -
 jpeglib.h
@@ -790,19 +796,19 @@ jerror.h
 cmath
 -
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 out.hpp
-/home/rich/Documents/Code/BRDFViz/src/out.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/out.hpp
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 glm/gtx/wrap.hpp
 -
 stbi.hpp
-/home/rich/Documents/Code/BRDFViz/src/stbi.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/stbi.hpp
 OpenEXR/ImfRgbaFile.h
 -
 
-/home/rich/Documents/Code/BRDFViz/src/texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
 string
 -
 vector
@@ -810,19 +816,19 @@ vector
 mutex
 -
 radiance.hpp
-/home/rich/Documents/Code/BRDFViz/src/radiance.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/radiance.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/tracer.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/tracer.cpp
 tracer.hpp
-/home/rich/Documents/Code/BRDFViz/src/tracer.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/tracer.hpp
 texture.hpp
-/home/rich/Documents/Code/BRDFViz/src/texture.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/texture.hpp
 global_config.hpp
-/home/rich/Documents/Code/BRDFViz/src/global_config.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/tracer.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/tracer.hpp
 vector
 -
 atomic
@@ -830,13 +836,13 @@ atomic
 tuple
 -
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 radiance.hpp
-/home/rich/Documents/Code/BRDFViz/src/radiance.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/radiance.hpp
 
-/home/rich/Documents/Code/BRDFViz/src/utils.cpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.cpp
 utils.hpp
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 algorithm
 -
 fstream
@@ -850,7 +856,7 @@ cmath
 iomanip
 -
 
-/home/rich/Documents/Code/BRDFViz/src/utils.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/utils.hpp
 string
 -
 vector
@@ -860,119 +866,141 @@ list
 iostream
 -
 glm.hpp
-/home/rich/Documents/Code/BRDFViz/src/glm.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
 primitives.hpp
-/home/rich/Documents/Code/BRDFViz/src/primitives.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/primitives.hpp
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkABI.h
+/opt/VTK-8.1.1/Common/Core/vtkABI.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
+/opt/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkGenericDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkGenericDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkGenericDataArray.h
 vtkBuffer.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkBuffer.h
+/opt/VTK-8.1.1/Common/Core/vtkBuffer.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAbstractArray.h
+/opt/VTK-8.1.1/Common/Core/vtkAbstractArray.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 vtkVariant.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVariant.h
+/opt/VTK-8.1.1/Common/Core/vtkVariant.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAtomicTypeConcepts.h
+/opt/VTK-8.1.1/Common/Core/vtkAtomic.h
+vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+vtkAtomicTypeConcepts.h
+/opt/VTK-8.1.1/Common/Core/vtkAtomicTypeConcepts.h
+vtkConfigure.h
+/opt/VTK-8.1.1/Common/Core/vtkConfigure.h
+vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+vtkType.h
+/opt/VTK-8.1.1/Common/Core/vtkType.h
+cstddef
+-
+libkern/OSAtomic.h
+-
+
+/opt/VTK-8.1.1/Common/Core/vtkAtomicTypeConcepts.h
 limits
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAtomicTypes.h
+/opt/VTK-8.1.1/Common/Core/vtkAtomicTypes.h
 vtkAtomic.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAtomic.h
+/opt/VTK-8.1.1/Common/Core/vtkAtomic.h
 vtkType.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkType.h
+/opt/VTK-8.1.1/Common/Core/vtkType.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAutoInit.h
+/opt/VTK-8.1.1/Common/Core/vtkAutoInit.h
 vtkDebugLeaksManager.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDebugLeaksManager.h
+/opt/VTK-8.1.1/Common/Core/vtkDebugLeaksManager.h
 vtkTimeStamp.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkTimeStamp.h
+/opt/VTK-8.1.1/Common/Core/vtkTimeStamp.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkBuffer.h
+/opt/VTK-8.1.1/Common/Core/vtkBuffer.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 vtkObjectFactory.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObjectFactory.h
+/opt/VTK-8.1.1/Common/Core/vtkObjectFactory.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCollection.h
+/opt/VTK-8.1.1/Common/Core/vtkCollection.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommand.h
+/opt/VTK-8.1.1/Common/Core/vtkCommand.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObjectBase.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObjectBase.h
+/opt/VTK-8.1.1/Common/Core/vtkObjectBase.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+
+/opt/VTK-8.1.1/Common/Core/vtkConfigure.h
+vtkVersionMacros.h
+/opt/VTK-8.1.1/Common/Core/vtkVersionMacros.h
+
+/opt/VTK-8.1.1/Common/Core/vtkDataArray.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkAbstractArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAbstractArray.h
+/opt/VTK-8.1.1/Common/Core/vtkAbstractArray.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDebugLeaksManager.h
+/opt/VTK-8.1.1/Common/Core/vtkDebugLeaksManager.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDoubleArray.h
+/opt/VTK-8.1.1/Common/Core/vtkDoubleArray.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkDataArray.h
 vtkAOSDataArrayTemplate.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
+/opt/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkGenericDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkGenericDataArray.h
 vtkDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkDataArray.h
 vtkSmartPointer.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSmartPointer.h
+/opt/VTK-8.1.1/Common/Core/vtkSmartPointer.h
 vtkTypeTraits.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkTypeTraits.h
+/opt/VTK-8.1.1/Common/Core/vtkTypeTraits.h
 vtkGenericDataArrayLookupHelper.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkGenericDataArrayLookupHelper.h
+/opt/VTK-8.1.1/Common/Core/vtkGenericDataArrayLookupHelper.h
 cassert
 -
 vtkGenericDataArray.txx
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkGenericDataArray.txx
+/opt/VTK-8.1.1/Common/Core/vtkGenericDataArray.txx
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkGenericDataArray.txx
+/opt/VTK-8.1.1/Common/Core/vtkGenericDataArray.txx
 vtkGenericDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkGenericDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkGenericDataArray.h
 vtkIdList.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIdList.h
+/opt/VTK-8.1.1/Common/Core/vtkIdList.h
 vtkMath.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkMath.h
+/opt/VTK-8.1.1/Common/Core/vtkMath.h
 vtkVariantCast.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVariantCast.h
+/opt/VTK-8.1.1/Common/Core/vtkVariantCast.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkGenericDataArrayLookupHelper.h
+/opt/VTK-8.1.1/Common/Core/vtkGenericDataArrayLookupHelper.h
 algorithm
 -
 cmath
 -
 vtkIdList.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIdList.h
+/opt/VTK-8.1.1/Common/Core/vtkIdList.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIOStream.h
+/opt/VTK-8.1.1/Common/Core/vtkIOStream.h
 vtkConfigure.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkConfigure.h
+/opt/VTK-8.1.1/Common/Core/vtkConfigure.h
 iostream
 -
 fstream
@@ -980,147 +1008,153 @@ fstream
 iomanip
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIOStreamFwd.h
+/opt/VTK-8.1.1/Common/Core/vtkIOStreamFwd.h
 vtkConfigure.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkConfigure.h
+/opt/VTK-8.1.1/Common/Core/vtkConfigure.h
 iosfwd
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIdList.h
+/opt/VTK-8.1.1/Common/Core/vtkIdList.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIdTypeArray.h
+/opt/VTK-8.1.1/Common/Core/vtkIdTypeArray.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkDataArray.h
 vtkAOSDataArrayTemplate.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
+/opt/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIndent.h
+/opt/VTK-8.1.1/Common/Core/vtkIndent.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIntArray.h
+/opt/VTK-8.1.1/Common/Core/vtkIntArray.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkDataArray.h
 vtkAOSDataArrayTemplate.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
+/opt/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkMath.h
+/opt/VTK-8.1.1/Common/Core/vtkMath.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 vtkTypeTraits.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkTypeTraits.h
+/opt/VTK-8.1.1/Common/Core/vtkTypeTraits.h
 vtkSmartPointer.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSmartPointer.h
+/opt/VTK-8.1.1/Common/Core/vtkSmartPointer.h
 vtkMathConfigure.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkMathConfigure.h
+/opt/VTK-8.1.1/Common/Core/vtkMathConfigure.h
 cassert
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkNew.h
+/opt/VTK-8.1.1/Common/Core/vtkMathConfigure.h
+cmath
+-
+float.h
+-
+
+/opt/VTK-8.1.1/Common/Core/vtkNew.h
 vtkIOStream.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIOStream.h
+/opt/VTK-8.1.1/Common/Core/vtkIOStream.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkOStrStreamWrapper.h
+/opt/VTK-8.1.1/Common/Core/vtkOStrStreamWrapper.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkOStreamWrapper.h
+/opt/VTK-8.1.1/Common/Core/vtkOStreamWrapper.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObjectBase.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObjectBase.h
+/opt/VTK-8.1.1/Common/Core/vtkObjectBase.h
 vtkSetGet.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSetGet.h
+/opt/VTK-8.1.1/Common/Core/vtkSetGet.h
 vtkTimeStamp.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkTimeStamp.h
+/opt/VTK-8.1.1/Common/Core/vtkTimeStamp.h
 vtkWeakPointerBase.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkWeakPointerBase.h
+/opt/VTK-8.1.1/Common/Core/vtkWeakPointerBase.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObjectBase.h
+/opt/VTK-8.1.1/Common/Core/vtkObjectBase.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkIndent.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIndent.h
+/opt/VTK-8.1.1/Common/Core/vtkIndent.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 vtkAtomicTypes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAtomicTypes.h
+/opt/VTK-8.1.1/Common/Core/vtkAtomicTypes.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObjectFactory.h
+/opt/VTK-8.1.1/Common/Core/vtkObjectFactory.h
 vtkDebugLeaksManager.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDebugLeaksManager.h
+/opt/VTK-8.1.1/Common/Core/vtkDebugLeaksManager.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkPoints.h
+/opt/VTK-8.1.1/Common/Core/vtkPoints.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 vtkDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkDataArray.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSetGet.h
+/opt/VTK-8.1.1/Common/Core/vtkSetGet.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 math.h
 -
 typeinfo
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSmartPointer.h
+/opt/VTK-8.1.1/Common/Core/vtkSmartPointer.h
 vtkSmartPointerBase.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSmartPointerBase.h
+/opt/VTK-8.1.1/Common/Core/vtkSmartPointerBase.h
 vtkNew.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkNew.h
+/opt/VTK-8.1.1/Common/Core/vtkNew.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSmartPointerBase.h
+/opt/VTK-8.1.1/Common/Core/vtkSmartPointerBase.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObjectBase.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObjectBase.h
+/opt/VTK-8.1.1/Common/Core/vtkObjectBase.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkStdString.h
+/opt/VTK-8.1.1/Common/Core/vtkStdString.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 string
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 vtkWin32Header.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkWin32Header.h
+/opt/VTK-8.1.1/Common/Core/vtkWin32Header.h
 vtkIOStreamFwd.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIOStreamFwd.h
+/opt/VTK-8.1.1/Common/Core/vtkIOStreamFwd.h
 vtkIOStream.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkIOStream.h
+/opt/VTK-8.1.1/Common/Core/vtkIOStream.h
 vtkType.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkType.h
+/opt/VTK-8.1.1/Common/Core/vtkType.h
 vtkWrappingHints.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkWrappingHints.h
+/opt/VTK-8.1.1/Common/Core/vtkWrappingHints.h
 vtkOStreamWrapper.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkOStreamWrapper.h
+/opt/VTK-8.1.1/Common/Core/vtkOStreamWrapper.h
 vtkOStrStreamWrapper.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkOStrStreamWrapper.h
+/opt/VTK-8.1.1/Common/Core/vtkOStrStreamWrapper.h
 stdio.h
 -
 stdlib.h
@@ -1132,329 +1166,335 @@ mem.h
 search.h
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkTimeStamp.h
+/opt/VTK-8.1.1/Common/Core/vtkTimeStamp.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkType.h
+/opt/VTK-8.1.1/Common/Core/vtkType.h
 vtkConfigure.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkConfigure.h
+/opt/VTK-8.1.1/Common/Core/vtkConfigure.h
 vtk_kwiml.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtk_kwiml.h
+/opt/VTK-8.1.1/Common/Core/vtk_kwiml.h
 stdbool.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/stdbool.h
+/opt/VTK-8.1.1/Common/Core/stdbool.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkTypeTraits.h
+/opt/VTK-8.1.1/Common/Core/vtkTypeTraits.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkUnicodeString.h
+/opt/VTK-8.1.1/Common/Core/vtkUnicodeString.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 string
 -
 vector
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkUnsignedCharArray.h
+/opt/VTK-8.1.1/Common/Core/vtkUnsignedCharArray.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkDataArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkDataArray.h
+/opt/VTK-8.1.1/Common/Core/vtkDataArray.h
 vtkAOSDataArrayTemplate.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
+/opt/VTK-8.1.1/Common/Core/vtkAOSDataArrayTemplate.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVariant.h
+/opt/VTK-8.1.1/Common/Core/vtkVariant.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkType.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkType.h
+/opt/VTK-8.1.1/Common/Core/vtkType.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Core/vtkSystemIncludes.h
 vtkSetGet.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkSetGet.h
+/opt/VTK-8.1.1/Common/Core/vtkSetGet.h
 vtkStdString.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkStdString.h
+/opt/VTK-8.1.1/Common/Core/vtkStdString.h
 vtkUnicodeString.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkUnicodeString.h
+/opt/VTK-8.1.1/Common/Core/vtkUnicodeString.h
 vtkVariantInlineOperators.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVariantInlineOperators.h
+/opt/VTK-8.1.1/Common/Core/vtkVariantInlineOperators.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVariantCast.h
+/opt/VTK-8.1.1/Common/Core/vtkVariantCast.h
 vtkUnicodeString.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkUnicodeString.h
+/opt/VTK-8.1.1/Common/Core/vtkUnicodeString.h
 typeinfo
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVariantInlineOperators.h
+/opt/VTK-8.1.1/Common/Core/vtkVariantInlineOperators.h
 climits
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVersion.h
+/opt/VTK-8.1.1/Common/Core/vtkVersion.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 vtkVersionMacros.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkVersionMacros.h
+/opt/VTK-8.1.1/Common/Core/vtkVersionMacros.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkWeakPointerBase.h
+/opt/VTK-8.1.1/Common/Core/vtkVersionMacros.h
+
+/opt/VTK-8.1.1/Common/Core/vtkWeakPointerBase.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObjectBase.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObjectBase.h
+/opt/VTK-8.1.1/Common/Core/vtkObjectBase.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkWin32Header.h
+/opt/VTK-8.1.1/Common/Core/vtkWin32Header.h
 vtkConfigure.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkConfigure.h
+/opt/VTK-8.1.1/Common/Core/vtkConfigure.h
 vtkABI.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkABI.h
+/opt/VTK-8.1.1/Common/Core/vtkABI.h
 windows.h
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkWindow.h
+/opt/VTK-8.1.1/Common/Core/vtkWindow.h
 vtkCommonCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
+/opt/VTK-8.1.1/Common/Core/vtkCommonCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkObject.h
+/opt/VTK-8.1.1/Common/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Core/vtkWrappingHints.h
+/opt/VTK-8.1.1/Common/Core/vtkWrappingHints.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkAbstractCellLinks.h
+/opt/VTK-8.1.1/Common/DataModel/vtkAbstractCellLinks.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkAbstractPointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkAbstractPointLocator.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkLocator.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkLocator.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCell.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCell.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 vtkIdList.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkIdList.h
+/opt/VTK-8.1.1/Common/DataModel/vtkIdList.h
 vtkCellType.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellType.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellType.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellArray.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellArray.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 vtkIdTypeArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkIdTypeArray.h
+/opt/VTK-8.1.1/Common/DataModel/vtkIdTypeArray.h
 vtkCell.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCell.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCell.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellLinks.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellLinks.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkAbstractCellLinks.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkAbstractCellLinks.h
+/opt/VTK-8.1.1/Common/DataModel/vtkAbstractCellLinks.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellType.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellType.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellTypes.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellTypes.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 vtkIntArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkIntArray.h
+/opt/VTK-8.1.1/Common/DataModel/vtkIntArray.h
 vtkIdTypeArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkIdTypeArray.h
+/opt/VTK-8.1.1/Common/DataModel/vtkIdTypeArray.h
 vtkUnsignedCharArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkUnsignedCharArray.h
+/opt/VTK-8.1.1/Common/DataModel/vtkUnsignedCharArray.h
 vtkCellType.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellType.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellType.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+
+/opt/VTK-8.1.1/Common/DataModel/vtkDataObject.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataSet.h
+/opt/VTK-8.1.1/Common/DataModel/vtkDataSet.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkDataObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkDataObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataSetAttributes.h
+/opt/VTK-8.1.1/Common/DataModel/vtkDataSetAttributes.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkFieldData.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkFieldData.h
+/opt/VTK-8.1.1/Common/DataModel/vtkFieldData.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkFieldData.h
+/opt/VTK-8.1.1/Common/DataModel/vtkFieldData.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 vtkAbstractArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkAbstractArray.h
+/opt/VTK-8.1.1/Common/DataModel/vtkAbstractArray.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkIncrementalPointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkIncrementalPointLocator.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkAbstractPointLocator.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkAbstractPointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkAbstractPointLocator.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkKdTreePointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkKdTreePointLocator.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkAbstractPointLocator.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkAbstractPointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkAbstractPointLocator.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkLine.h
+/opt/VTK-8.1.1/Common/DataModel/vtkLine.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkCell.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCell.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCell.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkLocator.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkMergePoints.h
+/opt/VTK-8.1.1/Common/DataModel/vtkMergePoints.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkPointLocator.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPointLocator.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPointData.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPointData.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkDataSetAttributes.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataSetAttributes.h
+/opt/VTK-8.1.1/Common/DataModel/vtkDataSetAttributes.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPointLocator.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkIncrementalPointLocator.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkIncrementalPointLocator.h
+/opt/VTK-8.1.1/Common/DataModel/vtkIncrementalPointLocator.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPointSet.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPointSet.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkDataSet.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataSet.h
+/opt/VTK-8.1.1/Common/DataModel/vtkDataSet.h
 vtkPoints.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPoints.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPoints.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPolyData.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPolyData.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkPointSet.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPointSet.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPointSet.h
 vtkCellTypes.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellTypes.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellTypes.h
 vtkCellLinks.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellLinks.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellLinks.h
 vtkCellArray.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCellArray.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCellArray.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkPolyLine.h
+/opt/VTK-8.1.1/Common/DataModel/vtkPolyLine.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkCell.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCell.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCell.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkRect.h
+/opt/VTK-8.1.1/Common/DataModel/vtkRect.h
 vtkVector.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkVector.h
+/opt/VTK-8.1.1/Common/DataModel/vtkVector.h
 vtkMath.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkMath.h
+/opt/VTK-8.1.1/Common/DataModel/vtkMath.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkSelection.h
+/opt/VTK-8.1.1/Common/DataModel/vtkSelection.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkDataObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkDataObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkSelectionNode.h
+/opt/VTK-8.1.1/Common/DataModel/vtkSelectionNode.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkTable.h
+/opt/VTK-8.1.1/Common/DataModel/vtkTable.h
 vtkCommonDataModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
+/opt/VTK-8.1.1/Common/DataModel/vtkCommonDataModelModule.h
 vtkDataObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkDataObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkDataObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkVector.h
+/opt/VTK-8.1.1/Common/DataModel/vtkVector.h
 vtkTuple.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkTuple.h
+/opt/VTK-8.1.1/Common/DataModel/vtkTuple.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/DataModel/vtkObject.h
+/opt/VTK-8.1.1/Common/DataModel/vtkObject.h
 cmath
 -
 
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
 vtkCommonExecutionModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkObject.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkDataObjectAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkDataObjectAlgorithm.h
 vtkCommonExecutionModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
 vtkDataObject.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkDataObject.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkDataObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkDataSetAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkDataSetAlgorithm.h
 vtkCommonExecutionModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkImageAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkImageAlgorithm.h
 vtkCommonExecutionModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkPolyDataAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkPolyDataAlgorithm.h
 vtkCommonExecutionModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
 vtkPolyData.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkPolyData.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkPolyData.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkTableAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkTableAlgorithm.h
 vtkCommonExecutionModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkUnstructuredGridAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkUnstructuredGridAlgorithm.h
 vtkCommonExecutionModelModule.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
+/opt/VTK-8.1.1/Common/ExecutionModel/vtkAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Common/Math/vtkTuple.h
+/opt/VTK-8.1.1/Common/Math/vtkTuple.h
 vtkIOStream.h
-/home/rich/Downloads/VTK-8.1.1/Common/Math/vtkIOStream.h
+/opt/VTK-8.1.1/Common/Math/vtkIOStream.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Common/Math/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Common/Math/vtkSystemIncludes.h
 cassert
 -
 cstdlib
@@ -1462,59 +1502,73 @@ cstdlib
 cmath
 -
 
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkCleanPolyData.h
+/opt/VTK-8.1.1/Filters/Core/vtkCleanPolyData.h
 vtkFiltersCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkFiltersCoreModule.h
+/opt/VTK-8.1.1/Filters/Core/vtkFiltersCoreModule.h
 vtkPolyDataAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkPolyDataAlgorithm.h
+/opt/VTK-8.1.1/Filters/Core/vtkPolyDataAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkGlyph3D.h
+/opt/VTK-8.1.1/Filters/Core/vtkFiltersCoreModule.h
+vtkAutoInit.h
+/opt/VTK-8.1.1/Filters/Core/vtkAutoInit.h
+
+/opt/VTK-8.1.1/Filters/Core/vtkGlyph3D.h
 vtkFiltersCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkFiltersCoreModule.h
+/opt/VTK-8.1.1/Filters/Core/vtkFiltersCoreModule.h
 vtkPolyDataAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkPolyDataAlgorithm.h
+/opt/VTK-8.1.1/Filters/Core/vtkPolyDataAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkIdFilter.h
+/opt/VTK-8.1.1/Filters/Core/vtkIdFilter.h
 vtkFiltersCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkFiltersCoreModule.h
+/opt/VTK-8.1.1/Filters/Core/vtkFiltersCoreModule.h
 vtkDataSetAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Core/vtkDataSetAlgorithm.h
+/opt/VTK-8.1.1/Filters/Core/vtkDataSetAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Filters/Extraction/vtkExtractGeometry.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkExtractGeometry.h
 vtkFiltersExtractionModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Extraction/vtkFiltersExtractionModule.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkFiltersExtractionModule.h
 vtkUnstructuredGridAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Extraction/vtkUnstructuredGridAlgorithm.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkUnstructuredGridAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Filters/Extraction/vtkExtractSelection.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkExtractSelection.h
 vtkFiltersExtractionModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Extraction/vtkFiltersExtractionModule.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkFiltersExtractionModule.h
 vtkExtractSelectionBase.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Extraction/vtkExtractSelectionBase.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkExtractSelectionBase.h
 
-/home/rich/Downloads/VTK-8.1.1/Filters/General/vtkExtractSelectionBase.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkFiltersExtractionModule.h
 vtkFiltersGeneralModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/General/vtkFiltersGeneralModule.h
+/opt/VTK-8.1.1/Filters/Extraction/vtkFiltersGeneralModule.h
+
+/opt/VTK-8.1.1/Filters/General/vtkExtractSelectionBase.h
+vtkFiltersGeneralModule.h
+/opt/VTK-8.1.1/Filters/General/vtkFiltersGeneralModule.h
 vtkDataObjectAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Filters/General/vtkDataObjectAlgorithm.h
+/opt/VTK-8.1.1/Filters/General/vtkDataObjectAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Filters/General/vtkVertexGlyphFilter.h
+/opt/VTK-8.1.1/Filters/General/vtkFiltersGeneralModule.h
+vtkFiltersCoreModule.h
+/opt/VTK-8.1.1/Filters/General/vtkFiltersCoreModule.h
+
+/opt/VTK-8.1.1/Filters/General/vtkVertexGlyphFilter.h
 vtkFiltersGeneralModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/General/vtkFiltersGeneralModule.h
+/opt/VTK-8.1.1/Filters/General/vtkFiltersGeneralModule.h
 vtkPolyDataAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Filters/General/vtkPolyDataAlgorithm.h
+/opt/VTK-8.1.1/Filters/General/vtkPolyDataAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Filters/Sources/vtkSphereSource.h
+/opt/VTK-8.1.1/Filters/Sources/vtkFiltersSourcesModule.h
+
+/opt/VTK-8.1.1/Filters/Sources/vtkSphereSource.h
 vtkFiltersSourcesModule.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Sources/vtkFiltersSourcesModule.h
+/opt/VTK-8.1.1/Filters/Sources/vtkFiltersSourcesModule.h
 vtkPolyDataAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Filters/Sources/vtkPolyDataAlgorithm.h
+/opt/VTK-8.1.1/Filters/Sources/vtkPolyDataAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/QVTKInteractor.h
+/opt/VTK-8.1.1/GUISupport/Qt/QVTKInteractor.h
 vtkGUISupportQtModule.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/vtkGUISupportQtModule.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkGUISupportQtModule.h
 QVTKWin32Header.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/QVTKWin32Header.h
+/opt/VTK-8.1.1/GUISupport/Qt/QVTKWin32Header.h
 vtkRenderWindowInteractor.h
 -
 vtkCommand.h
@@ -1522,311 +1576,357 @@ vtkCommand.h
 QtCore/QObject
 -
 vtkTDxConfigure.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/vtkTDxConfigure.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkTDxConfigure.h
 
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/QVTKOpenGLWidget.h
+/opt/VTK-8.1.1/GUISupport/Qt/QVTKOpenGLWidget.h
 QOpenGLWidget
 -
 QVTKInteractor.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/QVTKInteractor.h
+/opt/VTK-8.1.1/GUISupport/Qt/QVTKInteractor.h
 vtkGUISupportQtModule.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/vtkGUISupportQtModule.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkGUISupportQtModule.h
 vtkNew.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/vtkNew.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkNew.h
 vtkSmartPointer.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/vtkSmartPointer.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkSmartPointer.h
 
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/QVTKWin32Header.h
+/opt/VTK-8.1.1/GUISupport/Qt/QVTKWin32Header.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/vtkSystemIncludes.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkSystemIncludes.h
 vtkABI.h
-/home/rich/Downloads/VTK-8.1.1/GUISupport/Qt/vtkABI.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkABI.h
 
-/home/rich/Downloads/VTK-8.1.1/IO/Infovis/vtkDelimitedTextReader.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkGUISupportQtModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkRenderingCoreModule.h
+vtkRenderingOpenGL2Module.h
+/opt/VTK-8.1.1/GUISupport/Qt/vtkRenderingOpenGL2Module.h
+
+/opt/VTK-8.1.1/IO/Infovis/vtkDelimitedTextReader.h
 vtkIOInfovisModule.h
-/home/rich/Downloads/VTK-8.1.1/IO/Infovis/vtkIOInfovisModule.h
+/opt/VTK-8.1.1/IO/Infovis/vtkIOInfovisModule.h
 vtkTableAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/IO/Infovis/vtkTableAlgorithm.h
+/opt/VTK-8.1.1/IO/Infovis/vtkTableAlgorithm.h
 vtkUnicodeString.h
-/home/rich/Downloads/VTK-8.1.1/IO/Infovis/vtkUnicodeString.h
+/opt/VTK-8.1.1/IO/Infovis/vtkUnicodeString.h
 vtkStdString.h
-/home/rich/Downloads/VTK-8.1.1/IO/Infovis/vtkStdString.h
+/opt/VTK-8.1.1/IO/Infovis/vtkStdString.h
 
-/home/rich/Downloads/VTK-8.1.1/Interaction/Style/vtkInteractorStyleTrackballCamera.h
+/opt/VTK-8.1.1/IO/Infovis/vtkIOInfovisModule.h
+
+/opt/VTK-8.1.1/Interaction/Style/vtkInteractionStyleModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Interaction/Style/vtkRenderingCoreModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Interaction/Style/vtkRenderingCoreModule.h
+vtkAutoInit.h
+/opt/VTK-8.1.1/Interaction/Style/vtkAutoInit.h
+
+/opt/VTK-8.1.1/Interaction/Style/vtkInteractorStyleTrackballCamera.h
 vtkInteractionStyleModule.h
-/home/rich/Downloads/VTK-8.1.1/Interaction/Style/vtkInteractionStyleModule.h
+/opt/VTK-8.1.1/Interaction/Style/vtkInteractionStyleModule.h
 vtkInteractorStyle.h
-/home/rich/Downloads/VTK-8.1.1/Interaction/Style/vtkInteractorStyle.h
+/opt/VTK-8.1.1/Interaction/Style/vtkInteractorStyle.h
 
-/home/rich/Downloads/VTK-8.1.1/Interaction/Widgets/vtkOrientationMarkerWidget.h
+/opt/VTK-8.1.1/Interaction/Widgets/vtkInteractionWidgetsModule.h
+vtkFiltersGeneralModule.h
+/opt/VTK-8.1.1/Interaction/Widgets/vtkFiltersGeneralModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Interaction/Widgets/vtkRenderingCoreModule.h
+
+/opt/VTK-8.1.1/Interaction/Widgets/vtkOrientationMarkerWidget.h
 vtkInteractionWidgetsModule.h
-/home/rich/Downloads/VTK-8.1.1/Interaction/Widgets/vtkInteractionWidgetsModule.h
+/opt/VTK-8.1.1/Interaction/Widgets/vtkInteractionWidgetsModule.h
 vtkInteractorObserver.h
-/home/rich/Downloads/VTK-8.1.1/Interaction/Widgets/vtkInteractorObserver.h
+/opt/VTK-8.1.1/Interaction/Widgets/vtkInteractorObserver.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Annotation/vtkAxesActor.h
+/opt/VTK-8.1.1/Rendering/Annotation/vtkAxesActor.h
 vtkRenderingAnnotationModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Annotation/vtkRenderingAnnotationModule.h
+/opt/VTK-8.1.1/Rendering/Annotation/vtkRenderingAnnotationModule.h
 vtkProp3D.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Annotation/vtkProp3D.h
+/opt/VTK-8.1.1/Rendering/Annotation/vtkProp3D.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractMapper.h
+/opt/VTK-8.1.1/Rendering/Annotation/vtkRenderingAnnotationModule.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Annotation/vtkRenderingCoreModule.h
+
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractMapper.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAlgorithm.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractMapper3D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractMapper3D.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkAbstractMapper.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractMapper.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractMapper.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractPicker.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractPropPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractPropPicker.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkAbstractPicker.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractPicker.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkActor.h
+/opt/VTK-8.1.1/Rendering/Core/vtkActor.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkProp3D.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProp3D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProp3D.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkActor2D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkActor2D.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkProp.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProp.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProp.h
 vtkCoordinate.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkCoordinate.h
+/opt/VTK-8.1.1/Rendering/Core/vtkCoordinate.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkActorCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkActorCollection.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkPropCollection.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPropCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPropCollection.h
 vtkActor.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkActor.h
+/opt/VTK-8.1.1/Rendering/Core/vtkActor.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkCamera.h
+/opt/VTK-8.1.1/Rendering/Core/vtkCamera.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 vtkRect.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRect.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRect.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkCellPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkCellPicker.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkPicker.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPicker.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkCoordinate.h
+/opt/VTK-8.1.1/Rendering/Core/vtkCoordinate.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkDataSetMapper.h
+/opt/VTK-8.1.1/Rendering/Core/vtkDataSetMapper.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkMapper.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkMapper.h
+/opt/VTK-8.1.1/Rendering/Core/vtkMapper.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkInteractorObserver.h
+/opt/VTK-8.1.1/Rendering/Core/vtkInteractorObserver.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkInteractorStyle.h
+/opt/VTK-8.1.1/Rendering/Core/vtkInteractorStyle.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkInteractorObserver.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkInteractorObserver.h
+/opt/VTK-8.1.1/Rendering/Core/vtkInteractorObserver.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkMapper.h
+/opt/VTK-8.1.1/Rendering/Core/vtkMapper.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkAbstractMapper3D.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractMapper3D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractMapper3D.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Rendering/Core/vtkSystemIncludes.h
 vtkSmartPointer.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkSmartPointer.h
+/opt/VTK-8.1.1/Rendering/Core/vtkSmartPointer.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkMapper2D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkMapper2D.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkAbstractMapper.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractMapper.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractMapper.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPicker.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkAbstractPropPicker.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractPropPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractPropPicker.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPointPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPointPicker.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkPicker.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPicker.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPolyDataMapper.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPolyDataMapper.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkMapper.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkMapper.h
+/opt/VTK-8.1.1/Rendering/Core/vtkMapper.h
 vtkTexture.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkTexture.h
+/opt/VTK-8.1.1/Rendering/Core/vtkTexture.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProp.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProp.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProp3D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProp3D.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkProp.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProp.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProp.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPropCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPropCollection.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkCollection.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkCollection.h
 vtkProp.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProp.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProp.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPropPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPropPicker.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkAbstractPropPicker.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkAbstractPropPicker.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAbstractPropPicker.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProperty.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProperty.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderWindow.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderWindow.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkWindow.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkWindow.h
+/opt/VTK-8.1.1/Rendering/Core/vtkWindow.h
 vtkNew.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkNew.h
+/opt/VTK-8.1.1/Rendering/Core/vtkNew.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderWindowInteractor.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderWindowInteractor.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 vtkCommand.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkCommand.h
+/opt/VTK-8.1.1/Rendering/Core/vtkCommand.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderer.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderer.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkViewport.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkViewport.h
+/opt/VTK-8.1.1/Rendering/Core/vtkViewport.h
 vtkVolumeCollection.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkVolumeCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkVolumeCollection.h
 vtkActorCollection.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkActorCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkActorCollection.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkTextActor.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+vtkFiltersCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkFiltersCoreModule.h
+vtkAutoInit.h
+/opt/VTK-8.1.1/Rendering/Core/vtkAutoInit.h
+
+/opt/VTK-8.1.1/Rendering/Core/vtkTextActor.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkTexturedActor2D.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkTexturedActor2D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkTexturedActor2D.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkTextProperty.h
+/opt/VTK-8.1.1/Rendering/Core/vtkTextProperty.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkTexture.h
+/opt/VTK-8.1.1/Rendering/Core/vtkTexture.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkImageAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkImageAlgorithm.h
+/opt/VTK-8.1.1/Rendering/Core/vtkImageAlgorithm.h
 vtkSystemIncludes.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkSystemIncludes.h
+/opt/VTK-8.1.1/Rendering/Core/vtkSystemIncludes.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkTexturedActor2D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkTexturedActor2D.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkActor2D.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkActor2D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkActor2D.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkViewport.h
+/opt/VTK-8.1.1/Rendering/Core/vtkViewport.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkObject.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkObject.h
+/opt/VTK-8.1.1/Rendering/Core/vtkObject.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkVolume.h
+/opt/VTK-8.1.1/Rendering/Core/vtkVolume.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkProp3D.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkProp3D.h
+/opt/VTK-8.1.1/Rendering/Core/vtkProp3D.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkVolumeCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkVolumeCollection.h
 vtkRenderingCoreModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Core/vtkRenderingCoreModule.h
 vtkPropCollection.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkPropCollection.h
+/opt/VTK-8.1.1/Rendering/Core/vtkPropCollection.h
 vtkVolume.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Core/vtkVolume.h
+/opt/VTK-8.1.1/Rendering/Core/vtkVolume.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkLabelHierarchyAlgorithm.h
+/opt/VTK-8.1.1/Rendering/FreeType/vtkRenderingFreeTypeModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/FreeType/vtkRenderingCoreModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/FreeType/vtkRenderingCoreModule.h
+vtkAutoInit.h
+/opt/VTK-8.1.1/Rendering/FreeType/vtkAutoInit.h
+
+/opt/VTK-8.1.1/Rendering/Label/vtkLabelHierarchyAlgorithm.h
 vtkRenderingLabelModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkRenderingLabelModule.h
+/opt/VTK-8.1.1/Rendering/Label/vtkRenderingLabelModule.h
 vtkAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkAlgorithm.h
+/opt/VTK-8.1.1/Rendering/Label/vtkAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkLabelPlacementMapper.h
+/opt/VTK-8.1.1/Rendering/Label/vtkLabelPlacementMapper.h
 vtkRenderingLabelModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkRenderingLabelModule.h
+/opt/VTK-8.1.1/Rendering/Label/vtkRenderingLabelModule.h
 vtkMapper2D.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkMapper2D.h
+/opt/VTK-8.1.1/Rendering/Label/vtkMapper2D.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkPointSetToLabelHierarchy.h
+/opt/VTK-8.1.1/Rendering/Label/vtkPointSetToLabelHierarchy.h
 vtkRenderingLabelModule.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkRenderingLabelModule.h
+/opt/VTK-8.1.1/Rendering/Label/vtkRenderingLabelModule.h
 vtkLabelHierarchyAlgorithm.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/Label/vtkLabelHierarchyAlgorithm.h
+/opt/VTK-8.1.1/Rendering/Label/vtkLabelHierarchyAlgorithm.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkGenericOpenGLRenderWindow.h
+/opt/VTK-8.1.1/Rendering/Label/vtkRenderingLabelModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/Label/vtkRenderingCoreModule.h
+vtkRenderingFreeTypeModule.h
+/opt/VTK-8.1.1/Rendering/Label/vtkRenderingFreeTypeModule.h
+
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkGenericOpenGLRenderWindow.h
 vtkRenderingOpenGL2Module.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGL2Module.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGL2Module.h
 vtkOpenGLRenderWindow.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkOpenGLRenderWindow.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkOpenGLRenderWindow.h
 
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkOpenGLRenderWindow.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkOpenGLRenderWindow.h
 vtkRect.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkRect.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRect.h
 vtkRenderWindow.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkRenderWindow.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderWindow.h
 vtkRenderingOpenGL2Module.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGL2Module.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGL2Module.h
 vtkType.h
-/home/rich/Downloads/VTK-8.1.1/Rendering/OpenGL2/vtkType.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkType.h
 map
 -
 set
@@ -1834,147 +1934,53 @@ set
 string
 -
 
-/home/rich/Downloads/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/include/vtk_netcdf_mangle.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGL2Module.h
+vtkRenderingOpenGLConfigure.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGLConfigure.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingCoreModule.h
+vtkRenderingCoreModule.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingCoreModule.h
+vtkAutoInit.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkAutoInit.h
 
-/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML/vtkkwiml/abi.h
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGLConfigure.h
+
+/opt/VTK-8.1.1/Rendering/OpenGL2/vtkTDxConfigure.h
+
+/opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/config.h
+vtk_netcdf_config.h
+/opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_config.h
+vtk_netcdf_mangle.h
+/opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_mangle.h
+
+/opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/include/vtk_netcdf_mangle.h
+
+/opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_config.h
+
+/opt/VTK-8.1.1/Utilities/KWIML/vtk_kwiml.h
+vtkkwiml/abi.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/abi.h
+vtkkwiml/int.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/int.h
+
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/abi.h
 include/kwiml/abi.h
-/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
 
-/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
 
-/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/int.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/int.h
 abi.h
-/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
 stdint.h
 -
 inttypes.h
 -
 
-/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML/vtkkwiml/int.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/int.h
 include/kwiml/int.h
-/home/rich/Downloads/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/int.h
-
-/opt/VTK8.1/Common/Core/vtkAtomic.h
-vtkCommonCoreModule.h
-/opt/VTK8.1/Common/Core/vtkCommonCoreModule.h
-vtkAtomicTypeConcepts.h
-/opt/VTK8.1/Common/Core/vtkAtomicTypeConcepts.h
-vtkConfigure.h
-/opt/VTK8.1/Common/Core/vtkConfigure.h
-vtkSystemIncludes.h
-/opt/VTK8.1/Common/Core/vtkSystemIncludes.h
-vtkType.h
-/opt/VTK8.1/Common/Core/vtkType.h
-cstddef
--
-libkern/OSAtomic.h
--
-
-/opt/VTK8.1/Common/Core/vtkCommonCoreModule.h
-
-/opt/VTK8.1/Common/Core/vtkConfigure.h
-vtkVersionMacros.h
-/opt/VTK8.1/Common/Core/vtkVersionMacros.h
-
-/opt/VTK8.1/Common/Core/vtkMathConfigure.h
-cmath
--
-float.h
--
-
-/opt/VTK8.1/Common/Core/vtkVersionMacros.h
-
-/opt/VTK8.1/Common/DataModel/vtkCommonDataModelModule.h
-
-/opt/VTK8.1/Common/ExecutionModel/vtkCommonExecutionModelModule.h
-
-/opt/VTK8.1/Filters/Core/vtkFiltersCoreModule.h
-vtkAutoInit.h
-/opt/VTK8.1/Filters/Core/vtkAutoInit.h
-
-/opt/VTK8.1/Filters/Extraction/vtkFiltersExtractionModule.h
-vtkFiltersGeneralModule.h
-/opt/VTK8.1/Filters/Extraction/vtkFiltersGeneralModule.h
-
-/opt/VTK8.1/Filters/General/vtkFiltersGeneralModule.h
-vtkFiltersCoreModule.h
-/opt/VTK8.1/Filters/General/vtkFiltersCoreModule.h
-
-/opt/VTK8.1/Filters/Sources/vtkFiltersSourcesModule.h
-
-/opt/VTK8.1/GUISupport/Qt/vtkGUISupportQtModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/GUISupport/Qt/vtkRenderingCoreModule.h
-vtkRenderingOpenGL2Module.h
-/opt/VTK8.1/GUISupport/Qt/vtkRenderingOpenGL2Module.h
-
-/opt/VTK8.1/IO/Infovis/vtkIOInfovisModule.h
-
-/opt/VTK8.1/Interaction/Style/vtkInteractionStyleModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Interaction/Style/vtkRenderingCoreModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Interaction/Style/vtkRenderingCoreModule.h
-vtkAutoInit.h
-/opt/VTK8.1/Interaction/Style/vtkAutoInit.h
-
-/opt/VTK8.1/Interaction/Widgets/vtkInteractionWidgetsModule.h
-vtkFiltersGeneralModule.h
-/opt/VTK8.1/Interaction/Widgets/vtkFiltersGeneralModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Interaction/Widgets/vtkRenderingCoreModule.h
-
-/opt/VTK8.1/Rendering/Annotation/vtkRenderingAnnotationModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Rendering/Annotation/vtkRenderingCoreModule.h
-
-/opt/VTK8.1/Rendering/Core/vtkRenderingCoreModule.h
-vtkFiltersCoreModule.h
-/opt/VTK8.1/Rendering/Core/vtkFiltersCoreModule.h
-vtkAutoInit.h
-/opt/VTK8.1/Rendering/Core/vtkAutoInit.h
-
-/opt/VTK8.1/Rendering/FreeType/vtkRenderingFreeTypeModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Rendering/FreeType/vtkRenderingCoreModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Rendering/FreeType/vtkRenderingCoreModule.h
-vtkAutoInit.h
-/opt/VTK8.1/Rendering/FreeType/vtkAutoInit.h
-
-/opt/VTK8.1/Rendering/Label/vtkRenderingLabelModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Rendering/Label/vtkRenderingCoreModule.h
-vtkRenderingFreeTypeModule.h
-/opt/VTK8.1/Rendering/Label/vtkRenderingFreeTypeModule.h
-
-/opt/VTK8.1/Rendering/OpenGL2/vtkRenderingOpenGL2Module.h
-vtkRenderingOpenGLConfigure.h
-/opt/VTK8.1/Rendering/OpenGL2/vtkRenderingOpenGLConfigure.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Rendering/OpenGL2/vtkRenderingCoreModule.h
-vtkRenderingCoreModule.h
-/opt/VTK8.1/Rendering/OpenGL2/vtkRenderingCoreModule.h
-vtkAutoInit.h
-/opt/VTK8.1/Rendering/OpenGL2/vtkAutoInit.h
-
-/opt/VTK8.1/Rendering/OpenGL2/vtkRenderingOpenGLConfigure.h
-
-/opt/VTK8.1/Rendering/OpenGL2/vtkTDxConfigure.h
-
-/opt/VTK8.1/ThirdParty/netcdf/vtknetcdf/config.h
-vtk_netcdf_config.h
-/opt/VTK8.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_config.h
-vtk_netcdf_mangle.h
-/opt/VTK8.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_mangle.h
-
-/opt/VTK8.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_config.h
-
-/opt/VTK8.1/Utilities/KWIML/vtk_kwiml.h
-vtkkwiml/abi.h
-/opt/VTK8.1/Utilities/KWIML/vtkkwiml/abi.h
-vtkkwiml/int.h
-/opt/VTK8.1/Utilities/KWIML/vtkkwiml/int.h
+/opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/int.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 qobject.h
@@ -1997,8 +2003,6 @@ QtCore/qvector.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h
 -
-intrin.h
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
 QtCore/qrefcount.h
@@ -2012,6 +2016,18 @@ QtCore/qglobal.h
 QtCore/qbasicatomic.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+QtCore/qgenericatomic.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+QtCore/qgenericatomic.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+QtCore/qatomic_armv6.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore/qatomic_armv6.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
 QtCore/qgenericatomic.h
 -
@@ -2022,7 +2038,29 @@ QtCore/qgenericatomic.h
 atomic
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+QtCore/qgenericatomic.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+QtCore/qgenericatomic.h
+-
+ia64intrin.h
+-
+ia64/sys/inline.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+QtCore/qgenericatomic.h
+-
+winbase.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+QtCore/qgenericatomic.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
 QtCore/qgenericatomic.h
 -
 
@@ -2033,7 +2071,25 @@ QtCore/qatomic_bootstrap.h
 -
 QtCore/qatomic_cxx11.h
 -
+QtCore/qatomic_gcc.h
+-
 QtCore/qatomic_msvc.h
+-
+QtCore/qatomic_armv7.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore/qatomic_armv7.h
+QtCore/qatomic_armv6.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore/qatomic_armv6.h
+QtCore/qatomic_armv5.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore/qatomic_armv5.h
+QtCore/qatomic_ia64.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore/qatomic_ia64.h
+QtCore/qatomic_x86.h
+-
+QtCore/qatomic_cxx11.h
+-
+QtCore/qatomic_gcc.h
+-
+QtCore/qatomic_unix.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
@@ -2050,8 +2106,6 @@ string.h
 stdarg.h
 -
 string
--
-iterator
 -
 QtCore/qstring.h
 -
@@ -2071,8 +2125,6 @@ QtCore/qglobal.h
 -
 utility
 -
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig-bootstrapped.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
 
@@ -2139,20 +2191,22 @@ QtCore/qset.h
 -
 QtCore/qcontiguouscache.h
 -
-QtCore/qsharedpointer.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h
+QtCore/qstring.h
 -
-vector
+QtCore/qfileinfo.h
 -
-list
+QtCore/qstringlist.h
 -
-map
--
-utility
+QtCore/qshareddata.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
 QtCore/qobject.h
 -
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
 QtCore/qfiledevice.h
@@ -2168,8 +2222,22 @@ QtCore/qiodevice.h
 QtCore/qstring.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h
+QtCore/qfile.h
+-
+QtCore/qlist.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qmetatype.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
 QtCore/qglobal.h
+-
+QtCore/qtypeinfo.h
+-
+QtCore/qtypetraits.h
 -
 initializer_list
 -
@@ -2181,19 +2249,13 @@ QtCore/qtypeinfo.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
-type_traits
--
 cstddef
--
-utility
 -
 stddef.h
 -
-QtCore/qconfig-bootstrapped.h
--
 QtCore/qconfig.h
 -
-QtCore/qtcore-config.h
+QtCore/qfeatures.h
 -
 QtCore/qsystemdetection.h
 -
@@ -2217,8 +2279,6 @@ QtCore/qglobalstatic.h
 -
 QtCore/qnumeric.h
 -
-QtCore/qversiontagging.h
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
 QtCore/qglobal.h
@@ -2235,21 +2295,13 @@ QtCore/qiterator.h
 -
 QtCore/qlist.h
 -
-QtCore/qrefcount.h
--
-QtCore/qhashfunctions.h
--
-initializer_list
--
-algorithm
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
-QtCore/qchar.h
--
 QtCore/qpair.h
 -
+QtCore/qrefcount.h
+-
 numeric
+-
+initializer_list
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
@@ -2264,9 +2316,13 @@ QtCore/qscopedpointer.h
 QtCore/qstring.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
 QtCore/qglobal.h
 -
+QtCore/qtypetraits.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
 QtCore/qset.h
 -
 QtCore/qvector.h
@@ -2292,8 +2348,6 @@ QtCore/qiterator.h
 QtCore/qrefcount.h
 -
 QtCore/qarraydata.h
--
-QtCore/qhashfunctions.h
 -
 iterator
 -
@@ -2345,8 +2399,6 @@ map
 -
 new
 -
-functional
--
 initializer_list
 -
 
@@ -2362,6 +2414,10 @@ QtCore/qatomic.h
 QtCore/qbytearray.h
 -
 QtCore/qvarlengtharray.h
+-
+QtCore/qisenum.h
+-
+QtCore/qtypetraits.h
 -
 QtCore/qobjectdefs.h
 -
@@ -2380,10 +2436,6 @@ QtCore/qglobal.h
 QtCore/qatomic.h
 -
 new
--
-chrono
--
-limits
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -2410,8 +2462,6 @@ QtCore/qscopedpointer.h
 QtCore/qmetatype.h
 -
 QtCore/qobject_impl.h
--
-chrono
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
@@ -2479,8 +2529,6 @@ QtCore/qhash.h
 -
 initializer_list
 -
-iterator
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
 QtCore/qglobal.h
@@ -2488,8 +2536,6 @@ QtCore/qglobal.h
 QtCore/qatomic.h
 -
 QtCore/qhash.h
--
-QtCore/qhashfunctions.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
@@ -2511,7 +2557,7 @@ QtCore/qobject.h
 -
 QtCore/qhash.h
 -
-QtCore/qhashfunctions.h
+utility
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
@@ -2528,8 +2574,6 @@ QtCore/qrefcount.h
 QtCore/qnamespace.h
 -
 string
--
-iterator
 -
 stdarg.h
 -
@@ -2577,8 +2621,8 @@ AvailabilityMacros.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qt_windows.h
 windows.h
 -
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
+ceconfig.h
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
 QtCore/qiodevice.h
@@ -2595,7 +2639,13 @@ stdio.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+QtCore/qtypetraits.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
 QtCore/qglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore/qglobal.h
+utility
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
@@ -2663,8 +2713,6 @@ algorithm
 -
 initializer_list
 -
-iterator
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
 QtCore/qalgorithms.h
@@ -2676,8 +2724,6 @@ QtCore/qlist.h
 QtCore/qrefcount.h
 -
 QtCore/qarraydata.h
--
-QtCore/qhashfunctions.h
 -
 iterator
 -
@@ -2694,17 +2740,11 @@ algorithm
 QtCore/qpoint.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
-QtCore/qglobal.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtGui/QSurfaceFormat
 qsurfaceformat.h
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurfaceformat.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
-QtGui/qtguiglobal.h
--
 QtCore/qpair.h
 -
 QtCore/qpoint.h
@@ -2725,29 +2765,23 @@ QtGui/qpixmap.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
-QtGui/qtguiglobal.h
--
 QtGui/qrgb.h
 -
 QtCore/qnamespace.h
 -
 QtCore/qstringlist.h
 -
-QtGui/qrgba64.h
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
-QtGui/qtguiglobal.h
--
 QtCore/qpoint.h
 -
 QtGui/qwindowdefs.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
-QtGui/qtguiglobal.h
--
 QtGui/qwindowdefs.h
+-
+QtCore/qobject.h
 -
 QtGui/qregion.h
 -
@@ -2777,8 +2811,6 @@ QtGui/qtouchdevice.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
-QtGui/qtguiglobal.h
--
 QtGui/qwindowdefs.h
 -
 QtCore/qstring.h
@@ -2787,16 +2819,12 @@ QtCore/qsharedpointer.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
-QtGui/qtguiglobal.h
--
 QtGui/qfont.h
 -
 QtCore/qsharedpointer.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
-QtGui/qtguiglobal.h
--
 QtGui/qfont.h
 -
 QtCore/qsharedpointer.h
@@ -2805,8 +2833,6 @@ QtCore/qrect.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h
-QtGui/qtguiglobal.h
--
 QtCore/qcoreapplication.h
 -
 QtGui/qwindowdefs.h
@@ -2821,7 +2847,7 @@ QtCore/qsize.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
-QtGui/qtguiglobal.h
+QtCore/qglobal.h
 -
 QtCore/qsize.h
 -
@@ -2831,17 +2857,13 @@ QtGui/qpixmap.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
-QtGui/qtguiglobal.h
--
-QtGui/qcolor.h
--
-QtGui/qrgb.h
+QtGui/qtransform.h
 -
 QtGui/qpaintdevice.h
 -
-QtGui/qpixelformat.h
+QtGui/qrgb.h
 -
-QtGui/qtransform.h
+QtGui/qpixelformat.h
 -
 QtCore/qbytearray.h
 -
@@ -2853,13 +2875,11 @@ QtCore/qstringlist.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
-QtGui/qtguiglobal.h
--
 QtCore/qobject.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
-QtGui/qtguiglobal.h
+QtCore/qnamespace.h
 -
 QtCore/qstring.h
 -
@@ -2867,8 +2887,6 @@ QtCore/qobjectdefs.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
-QtGui/qtguiglobal.h
--
 QtGui/qpolygon.h
 -
 QtGui/qregion.h
@@ -2883,7 +2901,7 @@ QtCore/qrect.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qopengl.h
-QtGui/qtguiglobal.h
+QtCore/qglobal.h
 -
 QtCore/qt_windows.h
 -
@@ -2908,8 +2926,6 @@ OpenGL/gl.h
 OpenGL/gl3.h
 -
 OpenGL/glext.h
--
-GL/gl.h
 -
 GL/gl.h
 -
@@ -2951,16 +2967,12 @@ inttypes.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
-QtGui/qtguiglobal.h
--
 QtGui/qwindowdefs.h
 -
 QtCore/qrect.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
-QtGui/qtguiglobal.h
--
 QtGui/qmatrix.h
 -
 QtCore/qglobal.h
@@ -2975,8 +2987,6 @@ QtCore/qscopedpointer.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
-QtGui/qtguiglobal.h
--
 QtGui/qwindowdefs.h
 -
 QtGui/qcolor.h
@@ -2985,12 +2995,10 @@ QtGui/qbrush.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
-QtGui/qtguiglobal.h
+QtCore/qglobal.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
-QtGui/qtguiglobal.h
--
 QtGui/qpaintdevice.h
 -
 QtGui/qcolor.h
@@ -3007,8 +3015,6 @@ QtGui/qtransform.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
-QtGui/qtguiglobal.h
--
 QtCore/qvector.h
 -
 QtCore/qpoint.h
@@ -3017,8 +3023,6 @@ QtCore/qrect.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
-QtGui/qtguiglobal.h
--
 QtCore/qatomic.h
 -
 QtCore/qrect.h
@@ -3029,42 +3033,22 @@ QtCore/qdatastream.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
-QtGui/qtguiglobal.h
--
-QtCore/qprocessordetection.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
-QtGui/qtguiglobal.h
+QtCore/qglobal.h
 -
 QtCore/qprocessordetection.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurfaceformat.h
-QtGui/qtguiglobal.h
+QtCore/qglobal.h
 -
 QtCore/qpair.h
 -
-QtCore/qobjectdefs.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
-QtCore/qglobal.h
--
-QtGui/qtgui-config.h
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
-QtGui/qtguiglobal.h
--
 QtCore/qobject.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
-QtGui/qtguiglobal.h
--
 QtGui/qmatrix.h
 -
 QtGui/qpainterpath.h
@@ -3083,8 +3067,6 @@ QtCore/qrect.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
-QtGui/qtguiglobal.h
--
 QtCore/qobject.h
 -
 QtCore/qstring.h
@@ -3097,15 +3079,13 @@ QtCore/qlocale.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
-QtGui/qtguiglobal.h
--
 QtCore/qpoint.h
 -
 QtCore/qmetatype.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
-QtGui/qtguiglobal.h
+QtCore/qglobal.h
 -
 QtCore/qobjectdefs.h
 -
@@ -3115,7 +3095,7 @@ QtGui/qwindowdefs_win.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
-QtGui/qtguiglobal.h
+QtCore/qglobal.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction
@@ -3130,6 +3110,22 @@ qapplication.h
 qbuttongroup.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+qdialog.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
+qdialogbuttonbox.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog
+qfiledialog.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout
+qgridlayout.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
 qheaderview.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
@@ -3138,25 +3134,37 @@ qheaderview.h
 qmainwindow.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenu
+qmenu.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
+qmenubar.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QOpenGLWidget
 qopenglwidget.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qopenglwidget.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
+qstatusbar.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget
+qtabwidget.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 qwidget.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
-QtWidgets/qtwidgetsglobal.h
--
 QtCore/qobject.h
 -
 QtWidgets/qstyleoption.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qabstractscrollarea.h
 -
 QtCore/qabstractitemmodel.h
@@ -3167,28 +3175,20 @@ QtWidgets/qabstractitemdelegate.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qframe.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qwidget.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qwidget.h
 -
 QtGui/qvalidator.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
-QtWidgets/qtwidgetsglobal.h
--
 QtGui/qkeysequence.h
 -
 QtCore/qstring.h
@@ -3203,14 +3203,10 @@ QtWidgets/qactiongroup.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qaction.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
-QtWidgets/qtwidgetsglobal.h
--
 QtCore/qcoreapplication.h
 -
 QtGui/qwindowdefs.h
@@ -3226,40 +3222,106 @@ QtWidgets/qdesktopwidget.h
 QtGui/qguiapplication.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
-QtWidgets/qtwidgetsglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h
+QtWidgets/qlayout.h
 -
+QtWidgets/qwidget.h
+-
+limits.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
 QtCore/qobject.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qwidget.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+QtWidgets/qwidget.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
+QtWidgets/qwidget.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h
+QtCore/qdir.h
+-
+QtCore/qstring.h
+-
+QtCore/qurl.h
+-
+QtWidgets/qdialog.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qwidget.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
-QtWidgets/qtwidgetsglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h
+QtWidgets/qlayout.h
 -
+QtWidgets/qwidget.h
+-
+limits.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
 QtWidgets/qabstractitemview.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
-QtWidgets/qtwidgetsglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
+QtCore/qobject.h
 -
+QtWidgets/qlayoutitem.h
+-
+QtWidgets/qsizepolicy.h
+-
+QtCore/qrect.h
+-
+QtCore/qmargins.h
+-
+limits.h
+-
+QtWidgets/qboxlayout.h
+-
+QtWidgets/qgridlayout.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
+QtWidgets/qsizepolicy.h
+-
+QtCore/qrect.h
+-
+limits.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
 QtWidgets/qwidget.h
 -
 QtWidgets/qtabwidget.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h
+QtWidgets/qwidget.h
+-
+QtCore/qstring.h
+-
+QtGui/qicon.h
+-
+QtWidgets/qaction.h
+-
+windef.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
+QtWidgets/qmenu.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qopenglwidget.h
-QtWidgets/qtwidgetsglobal.h
+QtCore/qglobal.h
 -
 QtWidgets/QWidget
 -
@@ -3269,28 +3331,22 @@ QtGui/qopengl.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qwidget.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
-QtWidgets/qtwidgetsglobal.h
--
 QtCore/qobject.h
--
-QtCore/qalgorithms.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qabstractslider.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
-QtWidgets/qtwidgetsglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
+QtWidgets/qwidget.h
 -
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 QtCore/qobject.h
 -
 QtCore/qrect.h
@@ -3307,10 +3363,6 @@ QtWidgets/qsizepolicy.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qlocale.h
--
 QtCore/qvariant.h
 -
 QtWidgets/qabstractspinbox.h
@@ -3335,30 +3387,16 @@ QtCore/qabstractitemmodel.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qwidget.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
-QtWidgets/qtwidgetsglobal.h
--
 QtWidgets/qwidget.h
 -
 QtGui/qicon.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
-QtGui/qtguiglobal.h
--
-QtWidgets/qtwidgets-config.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
-QtWidgets/qtwidgetsglobal.h
--
 QtGui/qwindowdefs.h
 -
 QtCore/qobject.h
@@ -3388,6 +3426,22 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
+src/ui_AboutMe.h
+QtCore/QVariant
+-
+QtWidgets/QAction
+-
+QtWidgets/QApplication
+-
+QtWidgets/QButtonGroup
+-
+QtWidgets/QDialog
+-
+QtWidgets/QDialogButtonBox
+-
+QtWidgets/QHeaderView
+-
+
 src/ui_VTKWindow.h
 QtCore/QVariant
 -
@@ -3397,9 +3451,19 @@ QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
 -
+QtWidgets/QGridLayout
+-
 QtWidgets/QHeaderView
 -
 QtWidgets/QMainWindow
+-
+QtWidgets/QMenu
+-
+QtWidgets/QMenuBar
+-
+QtWidgets/QStatusBar
+-
+QtWidgets/QTabWidget
 -
 QtWidgets/QWidget
 -

@@ -72,7 +72,7 @@ target_link_libraries(
 
 if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
   message(STATUS "Linking QT")
-  target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui)
+  target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui Qt5::Widgets)
 else()
   message(FATAL_ERROR "BRDFViz requires VTK 7 (or higher) and QT 5 (or higher)")
 endif()
