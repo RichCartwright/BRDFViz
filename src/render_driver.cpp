@@ -149,15 +149,17 @@ void RenderDriver::RenderRound(const Scene& scene,
                                const int seedstart,
                                unsigned int concurrency,
                                EXRTexture& total_ob
-                               ){
+                               )
+{
 
-    // We need this single threaded when collected data. 
-    if(cfg->collect_data) concurrency = 1; 
-    
-    ctpl::thread_pool tpool(concurrency);
+    // Since RGK isn't the only thing running, 
+    //  we only really want to give this 1 thread, 
+    //  this can be tweaked later maybe half threads would be better?
+    ctpl::thread_pool tpool(1);
     std::mutex total_ob_mx;
     // Push all render tasks to thread pool
-    for(unsigned int i = 0; i < tasks.size(); i++){
+    for(unsigned int i = 0; i < tasks.size(); i++)
+    {
         const RenderTask& task = tasks[i];
         unsigned int c = seedcount++;
         tpool.push( [seedstart, camera, &scene, &cfg, task, c, &total_ob_mx, &total_ob](int){
@@ -206,7 +208,8 @@ void RenderDriver::RenderFrame(const Scene& scene,
     // Determine thread pool size.
     unsigned int concurrency = std::thread::hardware_concurrency();
     concurrency = std::max((unsigned int)1, concurrency); // If available, leave one core free. 
-    if(cfg->collect_data) concurrency = 1; // if collecting data, single only
+    
+    concurrency = 1; // Leave some threads for VTK
 
     out::cout(2) << "Using thread pool of size " << concurrency << std::endl;
 

@@ -106,6 +106,15 @@ int main(int argc, char** argv)
         std::cout << "Failed to load data from config file: " << ex.what() << std::endl;
         return 1;
     }
+
+    QSurfaceFormat::setDefaultFormat(QVTKOpenGLWidget::defaultFormat());
+
+    QScopedPointer<QApplication> app(new QApplication(argc, argv));
+
+    VTKWindow qvtkWindow;
+
+    qvtkWindow.show();
+
     scene.Commit();
 
     // Prepare camera.
@@ -127,5 +136,5 @@ int main(int argc, char** argv)
         fclose(cfg->dataFile);
     }
 
-    return 0;
+    return app->exec();
 }
