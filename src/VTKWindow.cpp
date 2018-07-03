@@ -15,6 +15,7 @@
 #include <QTextStream>
 #include <QMessageBox>
 #include <QFuture>
+#include <QThread>
 #include <QtConcurrent/QtConcurrent>
 VTKWindow::VTKWindow()
 {
@@ -113,10 +114,21 @@ void VTKWindow::slotOpen()
 	    output_file = base_output_file; 
 	    Camera c = camera;
 
-	    //QFuture<void> renderDriver = QtConcurrent::run(RenderDriver::RenderFrame, scene, cfg, c, output_file);
-	    //renderDriver.waitForFinished();
+	    QThread* pathThread = new QThread();
 
-	    RenderDriver::RenderFrame(scene, cfg, c, output_file);
+	    RenderDriver renderDriver;
+	    renderDriver.moveToThread(pathThread);
+	    connect(pathThread, SIGNAL (started()), &renderDriver, SLOT(renderDriver::RenderFrame(const Scene&, std::shared_ptr<Config>, const Camera&, std::string))); 
+	    pathThread->start();
+	    //QMetaObject::invokeMethod(	pathThread, 
+	//		    		"RenderFrame", 
+	//				Qt::DirectConnection,
+	//				Q_ARG(const Scene&, scene), 
+	//				Q_ARG(std::shared_ptr<Config>, cfg),
+	//				Q_ARG(const Camera&, c), 
+	//				Q_ARG(std::string, output_file)  );
+
+	    //RenderDriver::RenderFrame(scene, cfg, c, output_file);
     }
 }
 

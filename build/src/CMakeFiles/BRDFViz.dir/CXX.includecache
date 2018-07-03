@@ -37,12 +37,22 @@ arm_neon.h
 /home/u1776267/Documents/Code/BRDFViz/build/src/BRDFViz_automoc.cpp
 moc_VTKWindow.cpp
 /home/u1776267/Documents/Code/BRDFViz/build/src/moc_VTKWindow.cpp
+moc_render_driver.cpp
+/home/u1776267/Documents/Code/BRDFViz/build/src/moc_render_driver.cpp
 
 /home/u1776267/Documents/Code/BRDFViz/build/src/moc_HoradamGenerator.cpp
 
 /home/u1776267/Documents/Code/BRDFViz/build/src/moc_VTKWindow.cpp
 ../../src/VTKWindow.hpp
 /home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/u1776267/Documents/Code/BRDFViz/build/src/moc_render_driver.cpp
+../../src/render_driver.hpp
+/home/u1776267/Documents/Code/BRDFViz/src/render_driver.hpp
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
@@ -401,6 +411,8 @@ QMessageBox
 -
 QFuture
 -
+QThread
+-
 QtConcurrent/QtConcurrent
 -
 
@@ -713,6 +725,8 @@ set
 -
 tracer.hpp
 /home/u1776267/Documents/Code/BRDFViz/src/tracer.hpp
+QObject
+-
 
 /home/u1776267/Documents/Code/BRDFViz/src/sampler.cpp
 sampler.hpp
@@ -2181,6 +2195,10 @@ qstringlist.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
 qtextstream.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
+qthread.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
 qvariant.h

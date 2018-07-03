@@ -4,7 +4,18 @@
 src/CMakeFiles/BRDFViz.dir/BRDFViz_automoc.cpp.o
  /home/u1776267/Documents/Code/BRDFViz/build/src/BRDFViz_automoc.cpp
  /home/u1776267/Documents/Code/BRDFViz/build/src/moc_VTKWindow.cpp
+ /home/u1776267/Documents/Code/BRDFViz/build/src/moc_render_driver.cpp
+ /home/u1776267/Documents/Code/BRDFViz/external/json/json.h
  /home/u1776267/Documents/Code/BRDFViz/src/VTKWindow.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/camera.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/config.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/glm.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/global_config.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/primitives.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/radiance.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/ray.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/render_driver.hpp
+ /home/u1776267/Documents/Code/BRDFViz/src/tracer.hpp
  /opt/VTK-8.1.1/Common/Core/vtkABI.h
  /opt/VTK-8.1.1/Common/Core/vtkAtomic.h
  /opt/VTK-8.1.1/Common/Core/vtkAtomicTypeConcepts.h
@@ -42,6 +53,9 @@ src/CMakeFiles/BRDFViz.dir/BRDFViz_automoc.cpp.o
  /opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGL2Module.h
  /opt/VTK-8.1.1/Rendering/OpenGL2/vtkRenderingOpenGLConfigure.h
  /opt/VTK-8.1.1/Rendering/OpenGL2/vtkTDxConfigure.h
+ /opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/config.h
+ /opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/include/vtk_netcdf_mangle.h
+ /opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_config.h
  /opt/VTK-8.1.1/Utilities/KWIML/vtk_kwiml.h
  /opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/abi.h
  /opt/VTK-8.1.1/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
@@ -435,6 +449,7 @@ src/CMakeFiles/BRDFViz.dir/VTKWindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCoreDepends
@@ -1178,6 +1193,58 @@ src/CMakeFiles/BRDFViz.dir/render_driver.cpp.o
  /opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/config.h
  /opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/include/vtk_netcdf_mangle.h
  /opt/VTK-8.1.1/ThirdParty/netcdf/vtknetcdf/vtk_netcdf_config.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
 src/CMakeFiles/BRDFViz.dir/sampler.cpp.o
  /home/u1776267/Documents/Code/BRDFViz/src/HoradamGenerator.h
  /home/u1776267/Documents/Code/BRDFViz/src/glm.hpp

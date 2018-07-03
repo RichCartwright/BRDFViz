@@ -5,9 +5,11 @@
 #include <set>
 
 #include "tracer.hpp"
-
-class RenderDriver{
-public:
+#include <QObject>
+class RenderDriver : public QObject
+{
+    Q_OBJECT
+public slots:
     static void RenderFrame(const Scene& scene,
                             std::shared_ptr<Config> cfg,
                             const Camera& camera,

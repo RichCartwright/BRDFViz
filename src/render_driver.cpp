@@ -22,6 +22,7 @@ std::atomic<bool> RenderDriver::stop_monitor(false);
 std::atomic<int> RenderDriver::rounds_done(0);
 std::atomic<int> RenderDriver::pixels_done(0);
 std::atomic<unsigned int> RenderDriver::rays_done(0);
+
 void RenderDriver::ResetCounters(){
     rounds_done = 0;
     pixels_done = 0;
