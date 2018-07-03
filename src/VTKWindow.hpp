@@ -3,6 +3,7 @@
 
 #include "ui_VTKWindow.h"
 #include "ui_AboutMe.h"
+
 #include <QMainWindow>
 #include <QDialog>
 
@@ -12,6 +13,9 @@ class VTKWindow : public QMainWindow, private Ui::VTKWindow
 
 public:
     VTKWindow();
+
+protected:
+    QString previousPath = NULL;
 
 protected slots:
     virtual void slotExit();

@@ -14,7 +14,6 @@ public:
                             std::string output_file
                             );
 private:
-    FILE* DataFile;
     static void FrameMonitorThread(RenderLimitMode render_limit_mode,
                                    unsigned int limit_rounds,
                                    unsigned int limit_minutes,
@@ -36,4 +35,6 @@ private:
     static std::atomic<int> rounds_done;
     static std::atomic<int> pixels_done;
     static std::atomic<unsigned int> rays_done;
-    static void ResetCounters();};
+    static void ResetCounters();
+
+};

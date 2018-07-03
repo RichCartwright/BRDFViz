@@ -23,8 +23,8 @@ public:
     ~Scene();
 
     // Copying is forbidden
-    Scene(const Scene&) = delete;
-    Scene& operator=(const Scene&) = delete;
+    //Scene(const Scene&) = delete;
+    //Scene& operator=(const Scene&) = delete;
 
     void LoadAiNode(const aiScene* scene, const aiNode* ainode, glm::mat4 transform, std::string force_mat = "");
     void LoadAiMesh(const aiScene* scene, const aiMesh* mesh, glm::mat4 transform, std::string force_mat = "");

@@ -26,9 +26,7 @@ public:
                float bumpmap_scale,
                bool  force_fresnell,
                unsigned int reverse,
-               unsigned int samplerSeed,
-	       bool log_data,
-	       FILE* dataFile);
+               unsigned int samplerSeed);
 protected:
     PixelRenderResult RenderPixel(int x, int y, unsigned int & raycount, bool debug = false) override;
 
@@ -77,8 +75,6 @@ private:
     bool force_fresnell;
     unsigned int reverse;
     mutable unsigned int samplerSeed;
-    bool log_data;
-    FILE* dataFile;
 
 };
 

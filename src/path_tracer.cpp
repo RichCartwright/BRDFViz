@@ -60,18 +60,14 @@ PathTracer::PathTracer(const Scene& scene,
                        float bumpmap_scale,
                        bool force_fresnell,
                        unsigned int reverse,
-                       unsigned int samplerSeed,
-		       bool log_data,
-		       FILE* dataFile)
+                       unsigned int samplerSeed)
 : Tracer(scene, camera, xres, yres, multisample, bumpmap_scale),
   clamp(clamp),
   russian(russian),
   depth(depth),
   force_fresnell(force_fresnell),
   reverse(reverse),
-  samplerSeed(samplerSeed),
-  log_data(log_data),
-  dataFile(dataFile)
+  samplerSeed(samplerSeed)
 {
 }
 
@@ -98,11 +94,7 @@ PixelRenderResult PathTracer::RenderPixel(int x, int y, unsigned int & raycount,
             camera.GetPixelRay(x, y, xres, yres, coords, &outpos) :
             camera.GetPixelRayLens(x, y, xres, yres, coords, sampler.Get2D());
 	//std::cout << outpos->x << " " << outpos->y << " " << outpos->z << std::endl;
-	if(log_data) { fprintf(dataFile, "%f,%f,%f,", 	outpos.x, 
-							outpos.y, 
-							outpos.z); } //The cameras origin of the path 
 	// For the camera position, just print green.
-	if(log_data) { fprintf(dataFile, "0.0, 1.0, 0.0,"); }
 
 	// Before looking at the view path, we need to initialise the neural net
 	//SibnekLev_initialize();
@@ -191,13 +183,7 @@ std::vector<PathTracer::PathPoint> PathTracer::GeneratePath(Ray r, unsigned int&
 
         //std::cout << "Point " << n << ":" << current_ray[i.t] << std::endl;
 	
-	//if(dataFile) fprintf(dataFile, "%f,%f,%f,", current_ray[i.t].x, current_ray[i.t].y, current_ray[i.t].z); 
-
         if(!i.triangle){
- 	    /*for(unsigned int i = 0; i < (5 - n) + 1; ++i)
-	    {
-		fprintf(dataFile, "%f,%f,%f,", p.pos.x, p.pos.y, p.pos.z);
-	    } */
            // A sky ray!
             IFDEBUG std::cout << "Sky ray!" << std::endl;
             p.infinity = true;
@@ -475,19 +461,6 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
 	//dv4[bufferCounter++] = p.pos.z;
 
 	// For enclosed scenes, the loop should run for 5 times. Just for a sanity check, we pad if it doesnt
-	if(dataFile)
-	{
-		fprintf(dataFile, "%6f,%6f,%6f,", p.pos.x, p.pos.y, p.pos.z);
-
-		if(n == path.size() - 1)
-		{
-		    for(unsigned int i = 0; i < (5 - n) - 1; i++)
-		    {
-			    // Lets just pad with the last known point, which should in turn be 0,0,0
-			    fprintf(dataFile, "%6f,%6f,%6f,", p.pos.x, p.pos.y, p.pos.z);
-		    }
-		}
-	} 
 
 	if(p.infinity){
             qassert_false(std::isnan(p.Vr.x));
@@ -571,7 +544,6 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
         }
 
 
-        if (dataFile) fprintf(dataFile, "%f,%f,%f,", total_here.r, total_here.g, total_here.b);
         IFDEBUG std::cout << "total here: " << total_here << std::endl;
         IFDEBUG std::cout << "contribution: " << p.contribution << std::endl;
 
@@ -595,8 +567,6 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
     if(glm::isnan(path_total.r) || path_total.r < 0.0f) path_total.r = 0.0f;
     if(glm::isnan(path_total.g) || path_total.g < 0.0f) path_total.g = 0.0f;
     if(glm::isnan(path_total.b) || path_total.b < 0.0f) path_total.b = 0.0f;
-
-    if (dataFile) fprintf(dataFile, "%f,%f,%f\n", path_total.r*255, path_total.g*255, path_total.b*255);
 
     //SibnekLev_terminate(); //Clean up the NN 
    
