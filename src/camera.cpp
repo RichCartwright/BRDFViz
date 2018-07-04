@@ -4,6 +4,7 @@
 #include "glm.hpp"
 #include "random_utils.hpp"
 
+Camera::Camera() {}
 Camera::Camera(glm::vec3 pos, glm::vec3 la, glm::vec3 up, float yview, float xview, int xres, int yres, float focus_plane, float ls){
     origin = pos;
     lookat = la;

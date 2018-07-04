@@ -6,6 +6,7 @@
 
 class Camera{
 public:
+    Camera(); 
     Camera(glm::vec3 pos, glm::vec3 la, glm::vec3 up, float yview, float xview, int xsize, int ysize, float focus_plane = 1.0f, float lens_size = 0.0f);
 
     /* xres, yres - targetted output image resolution

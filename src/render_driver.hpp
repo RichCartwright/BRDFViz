@@ -6,6 +6,7 @@
 
 #include "tracer.hpp"
 #include <QObject>
+
 class RenderDriver : public QObject
 {
     Q_OBJECT
@@ -13,6 +14,12 @@ class RenderDriver : public QObject
 
 public slots:
     void RenderFrame();
+
+signals:
+    void finished();
+    void error(QString err);
+    void started();
+
 public:
     RenderDriver(  const Scene& _scene, 
 		        std::shared_ptr<Config> _cfg, 
@@ -21,10 +28,9 @@ public:
 		     ) : scene(_scene), cfg(_cfg), camera(_camera), output_file(_output_file) {};
 
     const Scene& scene;
-    std::shared_ptr<Config> cfg = nullptr;
+    std::shared_ptr<Config> cfg;
     const Camera& camera;
-    std::string output_file = NULL;
-    int i = 0;
+    std::string output_file;
 
 private:
     void FrameMonitorThread(RenderLimitMode render_limit_mode,

@@ -1,15 +1,14 @@
 #include "VTKWindow.hpp"
 #include "VTKIncludes.hpp"
 
-#include "scene.hpp"
+//#include "scene.hpp"
 #include "global_config.hpp"
 #include "texture.hpp"
-#include "camera.hpp"
+//#include "camera.hpp"
 #include "out.hpp"
 #include "sampler.hpp"
 #include "render_driver.hpp"
 #include "utils.hpp"
-#include "config.hpp"
 
 #include <QFileDialog>
 #include <QTextStream>
@@ -17,6 +16,7 @@
 #include <QFuture>
 #include <QThread>
 #include <QtConcurrent/QtConcurrent>
+
 VTKWindow::VTKWindow()
 {
     this->setupUi(this);
@@ -40,7 +40,7 @@ void VTKWindow::slotOpen()
     QString sceneDir = QFileDialog::getOpenFileName(	this, 
 		    					tr("Open Scene..."), previousPath, 
 							tr("Scene JSON (*.json);;All Files (*)")); 
-
+    pathThread = new QThread;
     if(!sceneDir.isNull())
     {
 	//We want to remember this path for next time
@@ -48,9 +48,7 @@ void VTKWindow::slotOpen()
     }
 
     std::string directory = "";
-    std::shared_ptr<Config> cfg; 
     std::string cfg_ext;
-    std::string output_file;
     if(!sceneDir.isEmpty())
     {
 	    std::tie(std::ignore, cfg_ext) = Utils::GetFileExtension(sceneDir.toStdString());
@@ -82,7 +80,7 @@ void VTKWindow::slotOpen()
 	    if(directory != "") directory += "/";
 	    output_file = directory + cfg->output_file;
     
-	    Scene scene;
+	   // Scene scene;
 	    try
 	    {
 		cfg->InstallMaterials(scene);
@@ -105,34 +103,42 @@ void VTKWindow::slotOpen()
 
 	    scene.Commit();
 
-	    Camera camera = cfg->GetCamera(0.0f);
+	    camera = cfg->GetCamera(0.0f);
 
 	    cfg->PerformPostCheck();
 
 	    std::string base_output_file = output_file;
 
 	    output_file = base_output_file; 
-	    Camera c = camera;
-
-	    //QThread* pathThread = new QThread();
+	    //Camera c = camera;
 
 	    // Loads the scene data through the constructor - 
 	    // Just to keep QT threads happy
-	    RenderDriver *renderDriver = new RenderDriver(scene, cfg, c, output_file);
+	    RenderDriver *renderDriver = new RenderDriver(scene, cfg, camera, output_file);
 
-	    //renderDriver.moveToThread(pathThread);
-	    //connect(pathThread, SIGNAL (started()), &renderDriver, SLOT(renderDriver::RenderFrame(const Scene&, std::shared_ptr<Config>, const Camera&, std::string))); 
-	    //pathThread->start();
-	    //QMetaObject::invokeMethod(	pathThread, 
+	    renderDriver->moveToThread(pathThread);
+	    connect(renderDriver, SIGNAL(error(QString)), this, SLOT(HandleThreadError(QString)));
+	    connect(pathThread, SIGNAL(started()), renderDriver, SLOT(RenderFrame())); 
+	    connect(renderDriver, SIGNAL(finished()), pathThread, SLOT(quit()));
+	    connect(renderDriver, SIGNAL(finished()), renderDriver, SLOT(deleteLater()));
+	    connect(pathThread, SIGNAL(finished()), pathThread, SLOT(deleteLater()));
+	    pathThread->start();
+	   // QMetaObject::invokeMethod(	pathThread, 
 	//		    		"RenderFrame", 
 	//				Qt::DirectConnection,
 	//				Q_ARG(const Scene&, scene), 
 	//				Q_ARG(std::shared_ptr<Config>, cfg),
 	//				Q_ARG(const Camera&, c), 
-	//				Q_ARG(std::string, output_file)  );
-
-	    renderDriver->RenderFrame();
+        //				Q_ARG(std::string, output_file)  );
+	    //renderDriver->RenderFrame();
     }
+}
+
+void VTKWindow::HandleThreadError(QString err)
+{
+	QMessageBox sceneErrorMessage;
+	sceneErrorMessage.critical(0, "Error", err);
+	sceneErrorMessage.setFixedSize(500, 200);
 }
 
 void VTKWindow::slotExit()

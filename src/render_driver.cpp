@@ -79,6 +79,9 @@ void RenderDriver::RenderFrame()
     std::cout << "Rendering in " << tasks.size() << " tiles." << std::endl;
 
     unsigned int seedcount = 0, seedstart = 42;
+    
     RenderRound(scene, cfg, camera, tasks, seedcount, seedstart, 1, total_ob);
     total_ob.Normalize(cfg->output_scale).Write(output_file);
+    emit error("Finished");
+    emit finished();
 }

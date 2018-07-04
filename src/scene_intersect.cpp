@@ -214,7 +214,6 @@ Intersection Scene::FindIntersectKdOtherThan(const Ray& __restrict__ r, const Tr
     res.triangle = nullptr;
     res.t = std::numeric_limits<float>::infinity();
 
-
     // First, check whether the ray intersects with our BB at all.
 
     const  std::pair<float,float>* __restrict  bb[3] = {&xBB,&yBB,&zBB};
@@ -238,12 +237,14 @@ Intersection Scene::FindIntersectKdOtherThan(const Ray& __restrict__ r, const Tr
 
 
     glm::vec3 invDir(1.f/r.direction.x, 1.f/r.direction.y, 1.f/r.direction.z);
-
+    
     NodeToDo todo[200];
     int todo_size = 1;
     todo[0] = NodeToDo{compressed_array, t0, t1};
+    
+    while(todo_size > 0)
+    {
 
-    while(todo_size > 0){
         todo_size--;
         const CompressedKdNode* node = todo[todo_size].node;
         float tmin = todo[todo_size].tmin;
@@ -252,8 +253,9 @@ Intersection Scene::FindIntersectKdOtherThan(const Ray& __restrict__ r, const Tr
         // Abort if we got too far.
         if(r.far < tmin) break;
 
-        if(node->IsLeaf()){ // leaf node
-
+        if(node->IsLeaf())
+	{ // leaf node
+	
             bool hit = false;
             // Search for intersections with triangles inside this node
             unsigned int n = node->GetTrianglesN();
@@ -291,8 +293,10 @@ Intersection Scene::FindIntersectKdOtherThan(const Ray& __restrict__ r, const Tr
                 return res;
             }
 
-        }else{ // internal node
-
+        }
+	else
+	{ // internal node
+	    
             // Compute parametric distance along ray to split plane
             int axis = node->GetSplitAxis();
             float tplane = (node->GetSplitPlane() - r.origin[axis]) * invDir[axis];
@@ -323,6 +327,7 @@ Intersection Scene::FindIntersectKdOtherThan(const Ray& __restrict__ r, const Tr
     }
 
     // No hit found at all.
+    //
     return res;
 }
 
