@@ -24,6 +24,7 @@ public:
     std::shared_ptr<Config> cfg = nullptr;
     const Camera& camera;
     std::string output_file = NULL;
+    int i = 0;
 
 private:
     void FrameMonitorThread(RenderLimitMode render_limit_mode,
