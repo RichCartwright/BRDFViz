@@ -114,12 +114,15 @@ void VTKWindow::slotOpen()
 	    output_file = base_output_file; 
 	    Camera c = camera;
 
-	    QThread* pathThread = new QThread();
+	    //QThread* pathThread = new QThread();
 
-	    RenderDriver renderDriver;
-	    renderDriver.moveToThread(pathThread);
-	    connect(pathThread, SIGNAL (started()), &renderDriver, SLOT(renderDriver::RenderFrame(const Scene&, std::shared_ptr<Config>, const Camera&, std::string))); 
-	    pathThread->start();
+	    // Loads the scene data through the constructor - 
+	    // Just to keep QT threads happy
+	    RenderDriver *renderDriver = new RenderDriver(scene, cfg, c, output_file);
+
+	    //renderDriver.moveToThread(pathThread);
+	    //connect(pathThread, SIGNAL (started()), &renderDriver, SLOT(renderDriver::RenderFrame(const Scene&, std::shared_ptr<Config>, const Camera&, std::string))); 
+	    //pathThread->start();
 	    //QMetaObject::invokeMethod(	pathThread, 
 	//		    		"RenderFrame", 
 	//				Qt::DirectConnection,
@@ -128,7 +131,7 @@ void VTKWindow::slotOpen()
 	//				Q_ARG(const Camera&, c), 
 	//				Q_ARG(std::string, output_file)  );
 
-	    //RenderDriver::RenderFrame(scene, cfg, c, output_file);
+	    renderDriver->RenderFrame();
     }
 }
 

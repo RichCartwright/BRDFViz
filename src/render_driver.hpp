@@ -9,18 +9,28 @@
 class RenderDriver : public QObject
 {
     Q_OBJECT
+	    
+
 public slots:
-    static void RenderFrame(const Scene& scene,
-                            std::shared_ptr<Config> cfg,
-                            const Camera& camera,
-                            std::string output_file
-                            );
+    void RenderFrame();
+public:
+    RenderDriver(  const Scene& _scene, 
+		        std::shared_ptr<Config> _cfg, 
+			const Camera& _camera, 
+			std::string _output_file
+		     ) : scene(_scene), cfg(_cfg), camera(_camera), output_file(_output_file) {};
+
+    const Scene& scene;
+    std::shared_ptr<Config> cfg = nullptr;
+    const Camera& camera;
+    std::string output_file = NULL;
+
 private:
-    static void FrameMonitorThread(RenderLimitMode render_limit_mode,
+    void FrameMonitorThread(RenderLimitMode render_limit_mode,
                                    unsigned int limit_rounds,
                                    unsigned int limit_minutes,
                                    unsigned int pixels_per_round);
-    static void RenderRound(const Scene& scene,
+    void RenderRound(const Scene& scene,
                             std::shared_ptr<Config> cfg,
                             const Camera& camera,
                             const std::vector<RenderTask>& tasks,
@@ -30,13 +40,13 @@ private:
                             EXRTexture& total_ob
                             );
 
-    static std::chrono::high_resolution_clock::time_point frame_render_start;
-    static std::atomic<bool> stop_monitor;
+    std::chrono::high_resolution_clock::time_point frame_render_start;
+    std::atomic<bool> stop_monitor;
 
     // Performance counters
-    static std::atomic<int> rounds_done;
-    static std::atomic<int> pixels_done;
-    static std::atomic<unsigned int> rays_done;
-    static void ResetCounters();
+    std::atomic<int> rounds_done;
+    std::atomic<int> pixels_done;
+    std::atomic<unsigned int> rays_done;
+    void ResetCounters();
 
 };

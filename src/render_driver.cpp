@@ -14,20 +14,8 @@
 #include "utils.hpp"
 #include "out.hpp"
 #include "texture.hpp"
+#include "scene.hpp"
 
-std::chrono::high_resolution_clock::time_point RenderDriver::frame_render_start;
-std::atomic<bool> RenderDriver::stop_monitor(false);
-
-// Performance counters
-std::atomic<int> RenderDriver::rounds_done(0);
-std::atomic<int> RenderDriver::pixels_done(0);
-std::atomic<unsigned int> RenderDriver::rays_done(0);
-
-void RenderDriver::ResetCounters(){
-    rounds_done = 0;
-    pixels_done = 0;
-    rays_done = 0;
-}
 
 std::vector<RenderTask> GenerateTaskList(unsigned int tile_size,
                                          unsigned int xres,
@@ -78,12 +66,8 @@ void RenderDriver::RenderRound(const Scene& scene,
 	}
 }
 
-void RenderDriver::RenderFrame(const Scene& scene,
-                               std::shared_ptr<Config> cfg,
-                               const Camera& camera,
-                               std::string output_file
-                               ){
-    ResetCounters();
+void RenderDriver::RenderFrame()
+{
     // Preapare output buffer
     EXRTexture total_ob(cfg->xres, cfg->yres);
     total_ob.Write(output_file);

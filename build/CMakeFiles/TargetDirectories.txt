@@ -1,6 +1,0 @@
-/home/u1776267/Documents/Code/BRDFViz/build/CMakeFiles/edit_cache.dir
-/home/u1776267/Documents/Code/BRDFViz/build/CMakeFiles/rebuild_cache.dir
-/home/u1776267/Documents/Code/BRDFViz/build/src/CMakeFiles/rebuild_cache.dir
-/home/u1776267/Documents/Code/BRDFViz/build/src/CMakeFiles/edit_cache.dir
-/home/u1776267/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz.dir
-/home/u1776267/Documents/Code/BRDFViz/build/src/CMakeFiles/BRDFViz_automoc.dir
