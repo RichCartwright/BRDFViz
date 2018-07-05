@@ -7,6 +7,7 @@
 #include "camera.hpp"
 #include "scene.hpp"
 #include "config.hpp"
+#include "VTKIncludes.hpp"
 
 #include <QMainWindow>
 #include <QDialog>
@@ -21,8 +22,9 @@ public:
     Scene scene;
     Camera camera;
     std::shared_ptr<Config> cfg;
-    std::string output_file; 
-
+    std::string output_file;
+    vtkSmartPointer<vtkOrientationMarkerWidget> widget;
+    
 protected:
     QString previousPath = NULL;
 
@@ -31,6 +33,10 @@ protected slots:
     virtual void slotAbout();
     virtual void slotOpen();
     void HandleThreadError(QString err);
+    void UpdateStatusBar(QString status);
+
+private:
+    void SetupXYZCompass();
 };
 
 

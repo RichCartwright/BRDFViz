@@ -19,6 +19,7 @@ signals:
     void finished();
     void error(QString err);
     void started();
+    void statusBarUpdate(QString status);
 
 public:
     RenderDriver(  const Scene& _scene, 

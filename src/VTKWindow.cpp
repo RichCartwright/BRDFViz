@@ -1,5 +1,5 @@
 #include "VTKWindow.hpp"
-#include "VTKIncludes.hpp"
+//#include "VTKIncludes.hpp"
 
 //#include "scene.hpp"
 #include "global_config.hpp"
@@ -24,10 +24,38 @@ VTKWindow::VTKWindow()
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
     qvtkWidget->SetRenderWindow(renderWindow);
 
-    vtkSmartPointer<vtkRenderer> renderer =
+
+    vtkSmartPointer<vtkRenderer> renderer = 
         vtkSmartPointer<vtkRenderer>::New();
-    
     this->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
+   
+    ////////// TEMP //////
+    vtkSmartPointer<vtkSphereSource> sphereSource =
+    	vtkSmartPointer<vtkSphereSource>::New();
+    sphereSource->Update();
+    vtkSmartPointer<vtkPolyDataMapper> sphereMapper =
+    	vtkSmartPointer<vtkPolyDataMapper>::New();
+    sphereMapper->SetInputConnection(sphereSource->GetOutputPort());
+    vtkSmartPointer<vtkActor> sphereActor =
+    	vtkSmartPointer<vtkActor>::New();
+    sphereActor->SetMapper(sphereMapper);
+    ////////// TEMP //////
+
+
+    vtkSmartPointer<vtkAxesActor> axes = 
+	    vtkSmartPointer<vtkAxesActor>::New();
+    //This need to be a class member, else it will go out of scope!
+    widget = vtkSmartPointer<vtkOrientationMarkerWidget>::New();
+    widget->SetOutlineColor(0.9, 0.5, 0.1);
+    widget->SetOrientationMarker(axes);
+    // QVTK handles its own interaction - It can still be overriden with a style though
+    widget->SetInteractor(this->qvtkWidget->GetRenderWindow()->GetInteractor());
+    // Top right-ish
+    widget->SetViewport(0.75, 0.75, 1, 1);
+    widget->SetEnabled(1); 
+    widget->InteractiveOff();
+
+    renderer->AddActor(sphereActor);
 
     connect(this->actionExit, SIGNAL(triggered()), this, SLOT(slotExit()));
     connect(this->actionAbout, SIGNAL(triggered()), this, SLOT(slotAbout()));
@@ -63,6 +91,7 @@ void VTKWindow::slotOpen()
 		    QMessageBox sceneErrorMessage;
 		    sceneErrorMessage.critical(0, "Error", "Only JSON scenes are supported!");
 		    sceneErrorMessage.setFixedSize(500, 200);
+		    UpdateStatusBar("Only JSON scenes are supported");
 		}
 	    }
 	    catch(ConfigFileException& ex)
@@ -106,6 +135,7 @@ void VTKWindow::slotOpen()
 	    camera = cfg->GetCamera(0.0f);
 
 	    cfg->PerformPostCheck();
+	    UpdateStatusBar("Config successfully loaded");
 
 	    std::string base_output_file = output_file;
 
@@ -122,16 +152,15 @@ void VTKWindow::slotOpen()
 	    connect(renderDriver, SIGNAL(finished()), pathThread, SLOT(quit()));
 	    connect(renderDriver, SIGNAL(finished()), renderDriver, SLOT(deleteLater()));
 	    connect(pathThread, SIGNAL(finished()), pathThread, SLOT(deleteLater()));
+	    connect(renderDriver, SIGNAL(statusBarUpdate(QString)), pathThread, SLOT(UpdateStatusBar(QString)));
+	    UpdateStatusBar("Starting render thread");
 	    pathThread->start();
-	   // QMetaObject::invokeMethod(	pathThread, 
-	//		    		"RenderFrame", 
-	//				Qt::DirectConnection,
-	//				Q_ARG(const Scene&, scene), 
-	//				Q_ARG(std::shared_ptr<Config>, cfg),
-	//				Q_ARG(const Camera&, c), 
-        //				Q_ARG(std::string, output_file)  );
-	    //renderDriver->RenderFrame();
     }
+}
+
+void VTKWindow::SetupXYZCompass()
+{
+
 }
 
 void VTKWindow::HandleThreadError(QString err)
@@ -139,6 +168,11 @@ void VTKWindow::HandleThreadError(QString err)
 	QMessageBox sceneErrorMessage;
 	sceneErrorMessage.critical(0, "Error", err);
 	sceneErrorMessage.setFixedSize(500, 200);
+}
+
+void VTKWindow::UpdateStatusBar(QString status)
+{
+	Ui_VTKWindow::statusBar->showMessage(status);
 }
 
 void VTKWindow::slotExit()
