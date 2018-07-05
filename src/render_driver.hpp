@@ -20,7 +20,7 @@ signals:
     void error(QString err);
     void started();
     void statusBarUpdate(QString status);
-
+    void ReturnPathData(std::vector<double> PathData);
 public:
     RenderDriver(  const Scene& _scene, 
 		        std::shared_ptr<Config> _cfg, 

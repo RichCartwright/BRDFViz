@@ -16,7 +16,6 @@
 #include "texture.hpp"
 #include "scene.hpp"
 
-
 std::vector<RenderTask> GenerateTaskList(unsigned int tile_size,
                                          unsigned int xres,
                                          unsigned int yres,
@@ -74,7 +73,14 @@ void RenderDriver::RenderFrame()
     out::cout(2) << "Writing to file " << output_file << std::endl;
     // Split rendering into smaller (tile_size x tile_size) tasks.
     glm::vec2 midpoint(cfg->xres/2.0f, cfg->yres/2.0f);
-    
+   
+    qRegisterMetaType<std::vector<double>>("std::vector<double>");
+    std::vector<double> testPath;
+    for(double i = 0; i < 21; ++i)
+    {
+	testPath.push_back(i);
+    }
+    emit ReturnPathData(testPath); 
     std::vector<RenderTask> tasks = GenerateTaskList(512, cfg->xres, cfg->yres, midpoint);
     std::cout << "Rendering in " << tasks.size() << " tiles." << std::endl;
 

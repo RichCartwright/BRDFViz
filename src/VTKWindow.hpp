@@ -9,6 +9,7 @@
 #include "config.hpp"
 #include "VTKIncludes.hpp"
 
+#include <vector>
 #include <QMainWindow>
 #include <QDialog>
 
@@ -17,6 +18,7 @@ class VTKWindow : public QMainWindow, private Ui::VTKWindow
     Q_OBJECT
 
     QThread *pathThread;
+    
 public:
     VTKWindow();
     Scene scene;
@@ -34,6 +36,7 @@ protected slots:
     virtual void slotOpen();
     void HandleThreadError(QString err);
     void UpdateStatusBar(QString status);
+    void RecievePathData(std::vector<double> pathData);
 
 private:
     void SetupXYZCompass();

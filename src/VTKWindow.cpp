@@ -16,9 +16,13 @@
 #include <QFuture>
 #include <QThread>
 #include <QtConcurrent/QtConcurrent>
+#include <QMetaType>
 
 VTKWindow::VTKWindow()
 {
+
+    qRegisterMetaType<std::vector<double>>("std::vector<double>");
+
     this->setupUi(this);
 
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
@@ -41,7 +45,6 @@ VTKWindow::VTKWindow()
     sphereActor->SetMapper(sphereMapper);
     ////////// TEMP //////
 
-
     vtkSmartPointer<vtkAxesActor> axes = 
 	    vtkSmartPointer<vtkAxesActor>::New();
     //This need to be a class member, else it will go out of scope!
@@ -53,7 +56,7 @@ VTKWindow::VTKWindow()
     // Top right-ish
     widget->SetViewport(0.75, 0.75, 1, 1);
     widget->SetEnabled(1); 
-    widget->InteractiveOff();
+    widget->InteractiveOn();
 
     renderer->AddActor(sphereActor);
 
@@ -153,6 +156,10 @@ void VTKWindow::slotOpen()
 	    connect(renderDriver, SIGNAL(finished()), renderDriver, SLOT(deleteLater()));
 	    connect(pathThread, SIGNAL(finished()), pathThread, SLOT(deleteLater()));
 	    connect(renderDriver, SIGNAL(statusBarUpdate(QString)), pathThread, SLOT(UpdateStatusBar(QString)));
+	    // connect the path data recieve to the render driver - Its gonna have to come
+	    //  from much further away though! 
+	    connect(renderDriver, SIGNAL(ReturnPathData(std::vector<double>)),
+		    this, SLOT(RecievePathData(std::vector<double>)));
 	    UpdateStatusBar("Starting render thread");
 	    pathThread->start();
     }
@@ -161,6 +168,14 @@ void VTKWindow::slotOpen()
 void VTKWindow::SetupXYZCompass()
 {
 
+}
+
+void VTKWindow::RecievePathData(std::vector<double> pathData)
+{
+	for(unsigned i = 0; i < pathData.size(); ++i)
+	{
+		std::cout << pathData[i] << std::endl;
+	}
 }
 
 void VTKWindow::HandleThreadError(QString err)
