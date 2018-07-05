@@ -47,6 +47,7 @@ void RenderDriver::RenderRound(const Scene& scene,
 	const RenderTask& task = tasks[0];
 	unsigned int c = seedcount++;
 
+	//Constructor for the path tracer
 	PathTracer rt(scene, camera,
 		      task.xres, task.yres,
 		      cfg->multisample,
@@ -57,6 +58,7 @@ void RenderDriver::RenderRound(const Scene& scene,
 		      cfg->force_fresnell,
 		      cfg->reverse,
 		      seedstart + c);
+	
 	
 	EXRTexture output_buffer(cfg->xres, cfg->yres);
 	rt.Render(task, &output_buffer, pixels_done, rays_done);

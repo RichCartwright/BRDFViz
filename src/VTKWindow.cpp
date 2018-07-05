@@ -20,7 +20,6 @@
 
 VTKWindow::VTKWindow()
 {
-
     qRegisterMetaType<std::vector<double>>("std::vector<double>");
 
     this->setupUi(this);
