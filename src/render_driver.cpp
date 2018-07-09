@@ -92,3 +92,15 @@ void RenderDriver::RenderFrame()
     total_ob.Normalize(cfg->output_scale).Write(output_file);
     emit finished();
 }
+
+void RenderDriver::RecievePathData(std::vector<double> PathData)
+{
+    // This method recieves a FULL path. At the moment this
+    //  is restricted to just 5 path segments, each with their own
+    //  colour. There are no protections for this so VTK will
+    //  likely go tits-up. It might be worth checking the size of 
+    //  the container and gathering the path length from here.
+    //  However, this wont work with monte carlo when its variable...
+    //  Or will it? TODO 
+    emit ReturnPathData(PathData);
+}

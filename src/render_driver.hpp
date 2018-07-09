@@ -33,7 +33,7 @@ public:
     const Camera& camera;
     std::string output_file;
 
-protect slots:
+protected slots:
     void RecievePathData(std::vector<double> PathData);
 private:
     void FrameMonitorThread(RenderLimitMode render_limit_mode,
