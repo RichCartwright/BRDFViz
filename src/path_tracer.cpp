@@ -83,38 +83,30 @@ PixelRenderResult PathTracer::RenderPixel(int x, int y, unsigned int & raycount,
     //HaltonSampler sampler(samplerSeed, 64, multisample);
     IndependentSampler sampler(samplerSeed);
     //HoradamSampler sampler(samplerSeed);
-    for(unsigned int i = 0; i < multisample; i++){
-
+    for(unsigned int i = 0; i < multisample; i++)
+    {
         sampler.Advance();
         IFDEBUG std::cout << "[SAMPLER] Advaincing sampler" << std::endl;
 	
-	glm::vec3 outpos;
+	    glm::vec3 outpos;
         glm::vec2 coords = sampler.Get2D();
         Ray r = camera.IsSimple() ?
             camera.GetPixelRay(x, y, xres, yres, coords, &outpos) :
             camera.GetPixelRayLens(x, y, xres, yres, coords, sampler.Get2D());
-	//std::cout << outpos->x << " " << outpos->y << " " << outpos->z << std::endl;
-	// For the camera position, just print green.
 
-	// Before looking at the view path, we need to initialise the neural net
-	//SibnekLev_initialize();
-	// We should also zero fill the input buffer
-	//argInt_1x15_real_T(dv4);
-
-	//We need to add this to our buffer first!
-	//dv4[bufferCounter++] = outpos.x; 
-	//dv4[bufferCounter++] = outpos.y;
-	//dv4[bufferCounter++] = outpos.z;
-
+        // for the sake of ease, just load the cam positions and colours into an array
+        double p[6] = {outpos.x, outpos.y, outpos.z, 0.0, 1.0, 0.0}; 
+	    pathData.insert(pathData.end(), std::begin(p), std::end(p));
+        
         PixelRenderResult q = TracePath(r, raycount, sampler, debug);
         total.main_pixel += q.main_pixel;
 
-        for(const auto& p : q.side_effects){
+        for(const auto& p : q.side_effects)
+        {
             total.side_effects.push_back(p);
         }
 
         IFDEBUG std::cout << "Side effects: " << q.side_effects.size() << std::endl;
-
         IFDEBUG std::cout << "[SAMPLER] Samples used for this ray: " << sampler.GetUsage().first + sampler.GetUsage().second << std::endl;
     }
 
@@ -451,27 +443,22 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
 
     Radiance path_total = Radiance(0.0f, 0.0f, 0.0f);
 
-    for(unsigned int n = 0; n < path.size(); n++){
+    for(unsigned int n = 0; n < path.size(); n++)
+    {
         IFDEBUG std::cout << "--- Processing PP " << n << std::endl;
 
         const PathPoint& p = path[n];
-	// Fill in the path values for the NN input
-        //dv4[bufferCounter++] = p.pos.x;
-	//dv4[bufferCounter++] = p.pos.y;
-	//dv4[bufferCounter++] = p.pos.z;
 
-	// For enclosed scenes, the loop should run for 5 times. Just for a sanity check, we pad if it doesnt
-
-	if(p.infinity){
+        pathData.insert(pathData.end(), {p.pos.x, p.pos.y, p.pos.z});
+	    if(p.infinity)
+        {
             qassert_false(std::isnan(p.Vr.x));
             Radiance sky_radiance = scene.GetSkyboxRay(p.Vr, debug);
             IFDEBUG std::cout << "This a sky ray, total: " << sky_radiance << std::endl;
             IFDEBUG std::cout << "contribution: " << p.contribution << std::endl;
             path_total += p.contribution * ApplyThinglass(sky_radiance, p.thinglass_isect, -p.Vr);
-	    continue;
+	        continue;
         }
-
-
         const Material& mat = *p.mat;
 
         IFDEBUG std::cout << "Hit material: " << mat.name << std::endl;
@@ -547,6 +534,7 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
         IFDEBUG std::cout << "total here: " << total_here << std::endl;
         IFDEBUG std::cout << "contribution: " << p.contribution << std::endl;
 
+        pathData.insert(pathData.end(), {total_here.r, total_here.g, total_here.b});
         total_here.clamp(clamp);
         IFDEBUG std::cout << "total here clamped: " << total_here << std::endl;
 
@@ -568,6 +556,9 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
     if(glm::isnan(path_total.g) || path_total.g < 0.0f) path_total.g = 0.0f;
     if(glm::isnan(path_total.b) || path_total.b < 0.0f) path_total.b = 0.0f;
 
+    pathData.insert(pathData.end(), {path_total.r*255, path_total.g*255, path_total.b*255}); 
+    emit ReturnPathData(pathData);
+    pathData.clear(); 
     //SibnekLev_terminate(); //Clean up the NN 
    
     IFDEBUG std::cout << "PATH TOTAL" << path_total << std::endl << std::endl;

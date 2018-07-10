@@ -27,22 +27,32 @@ VTKWindow::VTKWindow()
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
     qvtkWidget->SetRenderWindow(renderWindow);
 
-
-    vtkSmartPointer<vtkRenderer> renderer = 
-        vtkSmartPointer<vtkRenderer>::New();
+    renderer = vtkSmartPointer<vtkRenderer>::New();
+    renderer->SetBackground(0.0, 0.0, 0.2);
     this->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
-   
-    ////////// TEMP //////
-    vtkSmartPointer<vtkSphereSource> sphereSource =
-    	vtkSmartPointer<vtkSphereSource>::New();
-    sphereSource->Update();
-    vtkSmartPointer<vtkPolyDataMapper> sphereMapper =
-    	vtkSmartPointer<vtkPolyDataMapper>::New();
-    sphereMapper->SetInputConnection(sphereSource->GetOutputPort());
-    vtkSmartPointer<vtkActor> sphereActor =
-    	vtkSmartPointer<vtkActor>::New();
-    sphereActor->SetMapper(sphereMapper);
-    ////////// TEMP //////
+
+    polyData = vtkSmartPointer<vtkPolyData>::New();
+    points = vtkSmartPointer<vtkPoints>::New();
+    colours = vtkSmartPointer<vtkUnsignedCharArray>::New();
+    colours->SetNumberOfComponents(3);
+    colours->SetName("Colours");
+
+    vtkSmartPointer<vtkVertexGlyphFilter> glyphFilter =
+        vtkSmartPointer<vtkVertexGlyphFilter>::New();
+    glyphFilter->AddInputData(polyData);
+    glyphFilter->Update();
+
+    vtkSmartPointer<vtkPolyDataMapper> mapper =
+        vtkSmartPointer<vtkPolyDataMapper>::New();
+    mapper->SetInputConnection(glyphFilter->GetOutputPort());
+    mapper->Update();
+
+    vtkSmartPointer<vtkActor> actor =
+        vtkSmartPointer<vtkActor>::New();
+    actor->SetMapper(mapper);
+    actor->GetProperty()->SetPointSize(3);
+
+    renderer->AddActor(actor);
 
     vtkSmartPointer<vtkAxesActor> axes = 
 	    vtkSmartPointer<vtkAxesActor>::New();
@@ -57,7 +67,6 @@ VTKWindow::VTKWindow()
     widget->SetEnabled(1); 
     widget->InteractiveOn();
 
-    renderer->AddActor(sphereActor);
 
     connect(this->actionExit, SIGNAL(triggered()), this, SLOT(slotExit()));
     connect(this->actionAbout, SIGNAL(triggered()), this, SLOT(slotAbout()));
@@ -114,22 +123,20 @@ void VTKWindow::slotOpen()
 	   // Scene scene;
 	    try
 	    {
-		cfg->InstallMaterials(scene);
-		cfg->InstallScene(scene);
-		cfg->InstallLights(scene);
-		cfg->InstallSky(scene);
-		scene.MakeThinglassSet(cfg->thinglass);
+            cfg->InstallMaterials(scene);
+            cfg->InstallScene(scene);
+            cfg->InstallLights(scene);
+            cfg->InstallSky(scene);
+            scene.MakeThinglassSet(cfg->thinglass);
 	    }
 	    catch(ConfigFileException& ex)
 	    {
-		std::stringstream ss;
-		ss << "Failed to load config: " << ex.what();
-
-		QString ExString = QString::fromStdString(ss.str());
-
-		QMessageBox ConfigFileExceptionMessage;
-		ConfigFileExceptionMessage.critical(0, "Error", ExString); 
-		ConfigFileExceptionMessage.setFixedSize(500, 200);
+            std::stringstream ss;
+            ss << "Failed to load config: " << ex.what();
+            QString ExString = QString::fromStdString(ss.str());
+            QMessageBox ConfigFileExceptionMessage;
+            ConfigFileExceptionMessage.critical(0, "Error", ExString); 
+            ConfigFileExceptionMessage.setFixedSize(500, 200);
 	    }
 
 	    scene.Commit();
@@ -164,6 +171,33 @@ void VTKWindow::slotOpen()
     }
 }
 
+void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
+{
+
+    static constexpr auto step = 6;
+    for(std::vector<double>::iterator i = std::begin(pathData);; 
+            std::advance(i, step))
+    {
+        if(std::distance(i, pathData.end()) < step)
+            break;
+
+        // Current position of the iterator
+        size_t position = i - pathData.begin();
+        points->InsertNextPoint(pathData.at(position), 
+                                pathData.at(position+1),
+                                pathData.at(position+2));
+
+        double col[3] = {   pathData.at(position+3)*255,
+                            pathData.at(position+4)*255,
+                            pathData.at(position+5)*255 };
+        colours->InsertNextTuple(col); 
+     }
+
+    polyData->SetPoints(points);
+    polyData->GetPointData()->SetScalars(colours);
+    polyData->Modified();
+}
+
 void VTKWindow::SetupXYZCompass()
 {
 
@@ -171,10 +205,8 @@ void VTKWindow::SetupXYZCompass()
 
 void VTKWindow::RecievePathData(std::vector<double> pathData)
 {
-	for(unsigned i = 0; i < pathData.size(); ++i)
-	{
-		std::cout << pathData[i] << std::endl;
-	}
+    // Finally pass this on to qVTK
+    UpdatePointCloud(pathData);
 }
 
 void VTKWindow::HandleThreadError(QString err)

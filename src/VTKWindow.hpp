@@ -40,6 +40,12 @@ protected slots:
 
 private:
     void SetupXYZCompass();
+    void UpdatePointCloud(std::vector<double> pathData);
+
+    vtkSmartPointer<vtkRenderer> renderer;
+    vtkSmartPointer<vtkPolyData> polyData;
+    vtkSmartPointer<vtkPoints> points;
+    vtkSmartPointer<vtkUnsignedCharArray> colours;
 };
 
 

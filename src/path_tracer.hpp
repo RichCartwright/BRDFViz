@@ -10,10 +10,17 @@
 //#include "NeuralNet/SibnekLev_types.h"
 #include "tracer.hpp"
 #include "primitives.hpp"
+#include <QObject> 
 
 class Sampler;
 
-class PathTracer : public Tracer{
+class PathTracer : public QObject, public Tracer
+{
+    Q_OBJECT; 
+
+signals:
+    void ReturnPathData(std::vector<double>);
+
 public:
     PathTracer(const Scene& scene,
                const Camera& camera,
@@ -75,7 +82,7 @@ private:
     bool force_fresnell;
     unsigned int reverse;
     mutable unsigned int samplerSeed;
-
+    std::vector<double> pathData; 
 };
 
 #endif // __PATH_TRACER_HPP__

@@ -46,7 +46,7 @@ void RenderDriver::RenderRound(const Scene& scene,
 {
 	const RenderTask& task = tasks[0];
 	unsigned int c = seedcount++;
-
+    std::cout << "Hit" << std::endl;
 	//Constructor for the path tracer
 	PathTracer rt(scene, camera,
 		      task.xres, task.yres,
@@ -58,7 +58,9 @@ void RenderDriver::RenderRound(const Scene& scene,
 		      cfg->force_fresnell,
 		      cfg->reverse,
 		      seedstart + c);
-	
+
+    connect(&rt, SIGNAL(ReturnPathData(std::vector<double>)), 
+                this, SLOT(RecievePathData(std::vector<double>)));  
 	
 	EXRTexture output_buffer(cfg->xres, cfg->yres);
 	rt.Render(task, &output_buffer, pixels_done, rays_done);
@@ -77,12 +79,7 @@ void RenderDriver::RenderFrame()
     glm::vec2 midpoint(cfg->xres/2.0f, cfg->yres/2.0f);
    
     qRegisterMetaType<std::vector<double>>("std::vector<double>");
-    std::vector<double> testPath;
-    for(double i = 0; i < 21; ++i)
-    {
-	testPath.push_back(i);
-    }
-    emit ReturnPathData(testPath); 
+    
     std::vector<RenderTask> tasks = GenerateTaskList(512, cfg->xres, cfg->yres, midpoint);
     std::cout << "Rendering in " << tasks.size() << " tiles." << std::endl;
 
