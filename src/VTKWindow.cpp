@@ -18,6 +18,45 @@
 #include <QtConcurrent/QtConcurrent>
 #include <QMetaType>
 
+class MouseInteractorStyle : public vtkInteractorStyleTrackballCamera
+{
+public:
+    static MouseInteractorStyle* New();
+
+    MouseInteractorStyle()
+    {
+    }
+
+    virtual void OnMouseMove()
+    {
+        vtkInteractorStyleTrackballCamera::OnMouseMove();
+
+        //vtkCamera* cam = this->GetDefaultRenderer()->GetActiveCamera();
+        //cam->SetViewUp(0.0, 1.0, 0.0);
+    }
+
+    virtual void OnRightButtonDown()
+    {
+        int* pos = this->GetInteractor()->GetEventPosition();
+
+        vtkSmartPointer<vtkCellPicker> picker =
+            vtkSmartPointer<vtkCellPicker>::New();
+        picker->SetTolerance(0.008);
+        picker->Pick(pos[0], pos[1], 0, this->GetDefaultRenderer());
+
+        if(picker->GetPointId() != -1)
+        {
+            // TODO
+            std::cout << "picked" << std::endl;
+        }
+        
+        //Dont forget to call the forward function
+        vtkInteractorStyleTrackballCamera::OnRightButtonDown();
+    }
+};
+
+vtkStandardNewMacro(MouseInteractorStyle);
+
 VTKWindow::VTKWindow()
 {
     qRegisterMetaType<std::vector<double>>("std::vector<double>");
@@ -38,8 +77,8 @@ VTKWindow::VTKWindow()
     colours->SetName("Colours");
 
     // Now we have made the pointers to the polydata and points
-    //  we can bind them. So they can be updated by the render loop
-    //  No orginal points need to be added. An empty pointer is fine.
+    // we can plug them into the pipeline. So they can be updated by the render loop
+    // No orginal points need to be added. An empty pointer is fine.
     polyData->SetPoints(points);
     polyData->GetPointData()->SetScalars(colours);
 
@@ -58,21 +97,17 @@ VTKWindow::VTKWindow()
     actor->SetMapper(mapper);
     actor->GetProperty()->SetPointSize(3);
 
+    vtkSmartPointer<MouseInteractorStyle> interactorOverride = 
+        vtkSmartPointer<MouseInteractorStyle>::New();
+    interactorOverride->SetDefaultRenderer(renderer);
+
+    QVTKInteractor* interactor = this->qvtkWidget->GetInteractor();
+    interactor->SetInteractorStyle(interactorOverride);
     renderer->AddActor(actor);
 
-    vtkSmartPointer<vtkAxesActor> axes = 
-	    vtkSmartPointer<vtkAxesActor>::New();
-    //This need to be a class member, else it will go out of scope!
-    widget = vtkSmartPointer<vtkOrientationMarkerWidget>::New();
-    widget->SetOutlineColor(0.9, 0.5, 0.1);
-    widget->SetOrientationMarker(axes);
-    // QVTK handles its own interaction - It can still be overriden with a style though
-    widget->SetInteractor(this->qvtkWidget->GetRenderWindow()->GetInteractor());
-    // Top right-ish
-    widget->SetViewport(0.75, 0.75, 1, 1);
-    widget->SetEnabled(1); 
-    widget->InteractiveOn();
+    SetupXYZCompass();
 
+    // Handle the UI connections
     connect(this->actionExit, SIGNAL(triggered()), this, SLOT(slotExit()));
     connect(this->actionAbout, SIGNAL(triggered()), this, SLOT(slotAbout()));
     connect(this->actionOpenFile, SIGNAL(triggered()), this, SLOT(slotOpen())); 
@@ -84,11 +119,13 @@ void VTKWindow::slotOpen()
     QString sceneDir = QFileDialog::getOpenFileName(	this, 
 		    					tr("Open Scene..."), previousPath, 
 							tr("Scene JSON (*.json);;All Files (*)")); 
+    
     pathThread = new QThread;
+    
     if(!sceneDir.isNull())
     {
-	//We want to remember this path for next time
-	previousPath = sceneDir;	
+	    //We want to remember this path for next time
+	    previousPath = sceneDir;	
     }
 
     std::string directory = "";
@@ -128,11 +165,11 @@ void VTKWindow::slotOpen()
 	   // Scene scene;
 	    try
 	    {
-            cfg->InstallMaterials(scene);
-            cfg->InstallScene(scene);
-            cfg->InstallLights(scene);
-            cfg->InstallSky(scene);
-            scene.MakeThinglassSet(cfg->thinglass);
+	    	cfg->InstallMaterials(scene);
+	    	cfg->InstallScene(scene);
+	    	cfg->InstallLights(scene);
+	    	cfg->InstallSky(scene);
+	    	scene.MakeThinglassSet(cfg->thinglass);
 	    }
 	    catch(ConfigFileException& ex)
 	    {
@@ -155,7 +192,6 @@ void VTKWindow::slotOpen()
 	    std::string base_output_file = output_file;
 
 	    output_file = base_output_file; 
-	    //Camera c = camera;
 
 	    // Loads the scene data through the constructor - 
 	    // Just to keep QT threads happy
@@ -168,8 +204,6 @@ void VTKWindow::slotOpen()
 	    connect(renderDriver, SIGNAL(finished()), renderDriver, SLOT(deleteLater()));
 	    connect(pathThread, SIGNAL(finished()), pathThread, SLOT(deleteLater()));
 	    connect(renderDriver, SIGNAL(statusBarUpdate(QString)), this, SLOT(UpdateStatusBar(QString)));
-	    // connect the path data recieve to the render driver - Its gonna have to come
-	    //  from much further away though! 
 	    connect(renderDriver, SIGNAL(ReturnPathData(std::vector<double>)),
 		    this, SLOT(RecievePathData(std::vector<double>)));
 	    UpdateStatusBar("Starting render thread");
@@ -181,7 +215,6 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
 {
 
     static constexpr auto step = 6;
-
     for(std::vector<double>::iterator i = std::begin(pathData);
             /*Empty*/ ; 
             std::advance(i, step))
@@ -201,7 +234,9 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
         colours->InsertNextTuple(col); 
         points->Modified();
      }
-
+    //   Ive left this in just incase I need to revisit this
+    //   for whatever reason. I shouldn't have to since rebuilding
+    //   the polydata seems super slow and needless
     //polyData->SetPoints(points);
     //polyData->GetPointData()->SetScalars(colours);
     //polyData->Modified();
@@ -209,7 +244,18 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
 
 void VTKWindow::SetupXYZCompass()
 {
-
+    vtkSmartPointer<vtkAxesActor> axes = 
+	    vtkSmartPointer<vtkAxesActor>::New();
+    //This need to be a class member, else it will go out of scope!
+    widget = vtkSmartPointer<vtkOrientationMarkerWidget>::New();
+    widget->SetOutlineColor(0.9, 0.5, 0.1);
+    widget->SetOrientationMarker(axes);
+    // QVTK handles its own interaction - It can still be overriden with a style though
+    widget->SetInteractor(this->qvtkWidget->GetRenderWindow()->GetInteractor());
+    // Top right
+    widget->SetViewport(0.75, 0.75, 1, 1);
+    widget->SetEnabled(1); 
+    widget->InteractiveOn();
 }
 
 void VTKWindow::RecievePathData(std::vector<double> pathData)
