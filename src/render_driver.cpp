@@ -87,6 +87,7 @@ void RenderDriver::RenderFrame()
     
     RenderRound(scene, cfg, camera, tasks, seedcount, seedstart, 1, total_ob);
     total_ob.Normalize(cfg->output_scale).Write(output_file);
+    emit statusBarUpdate("Render finished");
     emit finished();
 }
 

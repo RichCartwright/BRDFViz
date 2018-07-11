@@ -39,7 +39,7 @@ VTKWindow::VTKWindow()
 
     // Now we have made the pointers to the polydata and points
     //  we can bind them. So they can be updated by the render loop
-    
+    //  No orginal points need to be added. An empty pointer is fine.
     polyData->SetPoints(points);
     polyData->GetPointData()->SetScalars(colours);
 
@@ -72,7 +72,6 @@ VTKWindow::VTKWindow()
     widget->SetViewport(0.75, 0.75, 1, 1);
     widget->SetEnabled(1); 
     widget->InteractiveOn();
-
 
     connect(this->actionExit, SIGNAL(triggered()), this, SLOT(slotExit()));
     connect(this->actionAbout, SIGNAL(triggered()), this, SLOT(slotAbout()));
@@ -143,6 +142,7 @@ void VTKWindow::slotOpen()
             QMessageBox ConfigFileExceptionMessage;
             ConfigFileExceptionMessage.critical(0, "Error", ExString); 
             ConfigFileExceptionMessage.setFixedSize(500, 200);
+            return;
 	    }
 
 	    scene.Commit();
@@ -167,7 +167,7 @@ void VTKWindow::slotOpen()
 	    connect(renderDriver, SIGNAL(finished()), pathThread, SLOT(quit()));
 	    connect(renderDriver, SIGNAL(finished()), renderDriver, SLOT(deleteLater()));
 	    connect(pathThread, SIGNAL(finished()), pathThread, SLOT(deleteLater()));
-	    connect(renderDriver, SIGNAL(statusBarUpdate(QString)), pathThread, SLOT(UpdateStatusBar(QString)));
+	    connect(renderDriver, SIGNAL(statusBarUpdate(QString)), this, SLOT(UpdateStatusBar(QString)));
 	    // connect the path data recieve to the render driver - Its gonna have to come
 	    //  from much further away though! 
 	    connect(renderDriver, SIGNAL(ReturnPathData(std::vector<double>)),
