@@ -37,6 +37,12 @@ VTKWindow::VTKWindow()
     colours->SetNumberOfComponents(3);
     colours->SetName("Colours");
 
+    // Now we have made the pointers to the polydata and points
+    //  we can bind them. So they can be updated by the render loop
+    
+    polyData->SetPoints(points);
+    polyData->GetPointData()->SetScalars(colours);
+
     vtkSmartPointer<vtkVertexGlyphFilter> glyphFilter =
         vtkSmartPointer<vtkVertexGlyphFilter>::New();
     glyphFilter->AddInputData(polyData);
@@ -175,7 +181,9 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
 {
 
     static constexpr auto step = 6;
-    for(std::vector<double>::iterator i = std::begin(pathData);; 
+
+    for(std::vector<double>::iterator i = std::begin(pathData);
+            /*Empty*/ ; 
             std::advance(i, step))
     {
         if(std::distance(i, pathData.end()) < step)
@@ -191,11 +199,12 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
                             pathData.at(position+4)*255,
                             pathData.at(position+5)*255 };
         colours->InsertNextTuple(col); 
+        points->Modified();
      }
 
-    polyData->SetPoints(points);
-    polyData->GetPointData()->SetScalars(colours);
-    polyData->Modified();
+    //polyData->SetPoints(points);
+    //polyData->GetPointData()->SetScalars(colours);
+    //polyData->Modified();
 }
 
 void VTKWindow::SetupXYZCompass()
