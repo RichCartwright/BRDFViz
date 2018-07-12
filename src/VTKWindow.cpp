@@ -48,7 +48,7 @@ public:
         if(picker->GetPointId() != -1)
         {
             // TODO
-            std::cout << "picked" << std::endl;
+            std::cout << "picked - ID: " << picker->GetPointId() << std::endl;
         }
         
         //Dont forget to call the forward function
