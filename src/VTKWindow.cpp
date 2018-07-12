@@ -20,6 +20,7 @@
 
 class MouseInteractorStyle : public vtkInteractorStyleTrackballCamera
 {
+
 public:
     static MouseInteractorStyle* New();
 
