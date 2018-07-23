@@ -26,7 +26,10 @@ public:
     std::shared_ptr<Config> cfg;
     std::string output_file;
     vtkSmartPointer<vtkOrientationMarkerWidget> widget;
-    
+
+public slots:
+    void UpdateStatusBar(QString status);
+
 protected:
     QString previousPath = NULL;
 
@@ -35,7 +38,6 @@ protected slots:
     virtual void slotAbout();
     virtual void slotOpen();
     void HandleThreadError(QString err);
-    void UpdateStatusBar(QString status);
     void RecievePathData(std::vector<double> pathData);
 
 private:

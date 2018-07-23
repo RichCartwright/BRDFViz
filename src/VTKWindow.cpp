@@ -53,6 +53,10 @@ public:
             vtkIdType id = picker->GetPointId();
             double pointPos[3] = {0.0, 0.0, 0.0};
 
+            std::stringstream ss;
+            ss << "Point " << picker->GetPointId() << " selected."; 
+	        WindowReference->UpdateStatusBar(QString::fromStdString(ss.str()));
+
             if(!PolyData)
             {
 		        QMessageBox sceneErrorMessage;
@@ -129,7 +133,6 @@ public:
 };
 
 vtkStandardNewMacro(MouseInteractorStyle);
-
 
 VTKWindow::VTKWindow()
 {
