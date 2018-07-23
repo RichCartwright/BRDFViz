@@ -26,6 +26,8 @@ public:
 
     MouseInteractorStyle()
     {
+        selectedMapper = vtkSmartPointer<vtkDataSetMapper>::New();
+        selectedActor = vtkSmartPointer<vtkActor>::New();
     }
 
     virtual void OnMouseMove()
@@ -47,13 +49,69 @@ public:
 
         if(picker->GetPointId() != -1)
         {
-            // TODO
-            std::cout << "picked - ID: " << picker->GetPointId() << std::endl;
+            vtkIdType id = picker->GetPointId();
+            double pointPos[3] = {0.0, 0.0, 0.0};
+
+            if(!PolyData)
+            {
+		        QMessageBox sceneErrorMessage;
+		        sceneErrorMessage.critical(0, "Error", "Window Interactor contains a nullptr to the polydata!\n Has it been attatched on creation?");
+		        sceneErrorMessage.setFixedSize(500, 200);
+                return;
+            }
+            else
+            {
+                vtkSmartPointer<vtkPolyData> linePolyData =
+                    vtkSmartPointer<vtkPolyData>::New();
+                vtkSmartPointer<vtkPoints> linePoints = 
+                    vtkSmartPointer<vtkPoints>::New();
+                vtkSmartPointer<vtkCellArray> lines =
+                    vtkSmartPointer<vtkCellArray>::New();
+
+                for(vtkIdType i = id - (id % 6), j = 0; i < id - (id % 6) + 6; i++, j++)
+                {
+                    if(linesActor)
+                    {
+                        this->GetDefaultRenderer()->RemoveActor(linesActor); 
+                    }
+                    
+                    PolyData->GetPoint(i, pointPos);
+                    linePoints->InsertNextPoint(pointPos); 
+                }
+
+                for(vtkIdType i = 0; i < linePoints->GetNumberOfPoints() - 1; i++)
+                {
+                    vtkSmartPointer<vtkLine> line = 
+                        vtkSmartPointer<vtkLine>::New();
+                    line->GetPointIds()->SetId(0, i);
+                    line->GetPointIds()->SetId(1, i+1);
+                    lines->InsertNextCell(line);
+                }
+
+                linePolyData->SetPoints(linePoints);
+                linePolyData->SetLines(lines);
+                vtkSmartPointer<vtkPolyDataMapper> mapper =
+                    vtkSmartPointer<vtkPolyDataMapper>::New();
+
+                mapper->SetInputData(linePolyData);
+
+                linesActor->SetMapper(mapper);
+                linesActor->GetProperty()->SetLineWidth(2);
+                this->GetDefaultRenderer()->AddActor(linesActor);
+                this->GetDefaultRenderer()->Render();
+            }
+
         }
         
         //Dont forget to call the forward function
         vtkInteractorStyleTrackballCamera::OnRightButtonDown();
     }
+
+    vtkSmartPointer<vtkDataSetMapper> selectedMapper;
+    vtkSmartPointer<vtkActor> selectedActor;
+    vtkSmartPointer<vtkPolyData> PolyData;
+    vtkSmartPointer<vtkActor> linesActor = 
+        vtkSmartPointer<vtkActor>::New();
 };
 
 vtkStandardNewMacro(MouseInteractorStyle);
@@ -103,6 +161,7 @@ VTKWindow::VTKWindow()
     interactorOverride->SetDefaultRenderer(renderer);
 
     QVTKInteractor* interactor = this->qvtkWidget->GetInteractor();
+    interactorOverride->PolyData = polyData;
     interactor->SetInteractorStyle(interactorOverride);
     renderer->AddActor(actor);
 
@@ -136,34 +195,39 @@ void VTKWindow::slotOpen()
 	    std::tie(std::ignore, cfg_ext) = Utils::GetFileExtension(sceneDir.toStdString());
 	    try
 	    {
-		if(cfg_ext == "json")
-		{
-		    cfg = ConfigJSON::CreateFromFile(sceneDir.toStdString());
-		}
-		else
-		{
-		    QMessageBox sceneErrorMessage;
-		    sceneErrorMessage.critical(0, "Error", "Only JSON scenes are supported!");
-		    sceneErrorMessage.setFixedSize(500, 200);
-		    UpdateStatusBar("Only JSON scenes are supported");
-		}
+		    if(cfg_ext == "json")
+		    {
+		        cfg = ConfigJSON::CreateFromFile(sceneDir.toStdString());
+		    }
+		    else
+		    {
+		        QMessageBox sceneErrorMessage;
+		        sceneErrorMessage.critical(0, "Error", "Only JSON scenes are supported!");
+		        sceneErrorMessage.setFixedSize(500, 200);
+		        UpdateStatusBar("Only JSON scenes are supported");
+		    }
 	    }
 	    catch(ConfigFileException& ex)
 	    {
-		std::stringstream ss;
-		ss << "Failed to load config: " << ex.what();
+		    std::stringstream ss;
+		    ss << "Failed to load config: " << ex.what();
 
-		QString ExString = QString::fromStdString(ss.str());
+		    QString ExString = QString::fromStdString(ss.str());
 
-		QMessageBox ConfigFileExceptionMessage;
-		ConfigFileExceptionMessage.critical(0, "Error", ExString); 
-		ConfigFileExceptionMessage.setFixedSize(500, 200);
+		    QMessageBox ConfigFileExceptionMessage;
+		    ConfigFileExceptionMessage.critical(0, "Error", ExString); 
+		    ConfigFileExceptionMessage.setFixedSize(500, 200);
+            return;
 	    }
 
-	    if(directory != "") directory += "/";
+	    if(directory != "") 
+        {
+            directory += "/";
+        }
+
 	    output_file = directory + cfg->output_file;
     
-	   // Scene scene;
+	    // Scene scene;
 	    try
 	    {
 	    	cfg->InstallMaterials(scene);
@@ -221,36 +285,35 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
             std::advance(i, step))
     {
         if(std::distance(i, pathData.end()) < step)
+        {
             break;
+        }
 
         // Current position of the iterator
         size_t position = i - pathData.begin();
+        // Data input goes point then colour
         points->InsertNextPoint(pathData.at(position), 
                                 pathData.at(position+1),
                                 pathData.at(position+2));
-
         double col[3] = {   pathData.at(position+3)*255,
                             pathData.at(position+4)*255,
                             pathData.at(position+5)*255 };
         colours->InsertNextTuple(col); 
+        // Call the update for the points
         points->Modified();
      }
-    //   Ive left this in just incase I need to revisit this
-    //   for whatever reason. I shouldn't have to since rebuilding
-    //   the polydata seems super slow and needless
-    //polyData->SetPoints(points);
-    //polyData->GetPointData()->SetScalars(colours);
-    //polyData->Modified();
 }
 
 void VTKWindow::SetupXYZCompass()
 {
     vtkSmartPointer<vtkAxesActor> axes = 
 	    vtkSmartPointer<vtkAxesActor>::New();
+
     //This need to be a class member, else it will go out of scope!
     widget = vtkSmartPointer<vtkOrientationMarkerWidget>::New();
     widget->SetOutlineColor(0.9, 0.5, 0.1);
     widget->SetOrientationMarker(axes);
+    
     // QVTK handles its own interaction - It can still be overriden with a style though
     widget->SetInteractor(this->qvtkWidget->GetRenderWindow()->GetInteractor());
     // Top right
