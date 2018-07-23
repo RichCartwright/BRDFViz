@@ -17,6 +17,7 @@
 #include <QThread>
 #include <QtConcurrent/QtConcurrent>
 #include <QMetaType>
+#include <QString>
 
 class MouseInteractorStyle : public vtkInteractorStyleTrackballCamera
 {
@@ -68,6 +69,8 @@ public:
                 vtkSmartPointer<vtkCellArray> lines =
                     vtkSmartPointer<vtkCellArray>::New();
 
+                WindowReference->TextInformation->clear();
+
                 for(vtkIdType i = id - (id % 6), j = 0; i < id - (id % 6) + 6; i++, j++)
                 {
                     if(linesActor)
@@ -76,7 +79,15 @@ public:
                     }
                     
                     PolyData->GetPoint(i, pointPos);
+
+                    std::stringstream ss;
+                    ss << "Point " << i << 
+                        "\n   x:" << pointPos[0] <<
+                        "   y:" << pointPos[1] << 
+                        "   z:" << pointPos[2] << std::endl; 
                     linePoints->InsertNextPoint(pointPos); 
+
+                    WindowReference->TextInformation->append(QString::fromStdString(ss.str()));
                 }
 
                 for(vtkIdType i = 0; i < linePoints->GetNumberOfPoints() - 1; i++)
@@ -97,24 +108,28 @@ public:
 
                 linesActor->SetMapper(mapper);
                 linesActor->GetProperty()->SetLineWidth(2);
+
                 this->GetDefaultRenderer()->AddActor(linesActor);
                 this->GetDefaultRenderer()->Render();
             }
 
         }
         
-        //Dont forget to call the forward function
+        // Call the forward function
         vtkInteractorStyleTrackballCamera::OnRightButtonDown();
     }
 
     vtkSmartPointer<vtkDataSetMapper> selectedMapper;
     vtkSmartPointer<vtkActor> selectedActor;
     vtkSmartPointer<vtkPolyData> PolyData;
+    VTKWindow* WindowReference;
+
     vtkSmartPointer<vtkActor> linesActor = 
         vtkSmartPointer<vtkActor>::New();
 };
 
 vtkStandardNewMacro(MouseInteractorStyle);
+
 
 VTKWindow::VTKWindow()
 {
@@ -129,6 +144,9 @@ VTKWindow::VTKWindow()
     renderer->SetBackground(0.0, 0.0, 0.2);
     this->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
 
+    this->TextInformation->setReadOnly(true);
+    this->TextInformation->setFontPointSize(8);
+
     polyData = vtkSmartPointer<vtkPolyData>::New();
     points = vtkSmartPointer<vtkPoints>::New();
     colours = vtkSmartPointer<vtkUnsignedCharArray>::New();
@@ -141,11 +159,13 @@ VTKWindow::VTKWindow()
     polyData->SetPoints(points);
     polyData->GetPointData()->SetScalars(colours);
 
+    // Glyph filter
     vtkSmartPointer<vtkVertexGlyphFilter> glyphFilter =
         vtkSmartPointer<vtkVertexGlyphFilter>::New();
     glyphFilter->AddInputData(polyData);
     glyphFilter->Update();
 
+    // Mapper creation
     vtkSmartPointer<vtkPolyDataMapper> mapper =
         vtkSmartPointer<vtkPolyDataMapper>::New();
     mapper->SetInputConnection(glyphFilter->GetOutputPort());
@@ -154,14 +174,17 @@ VTKWindow::VTKWindow()
     vtkSmartPointer<vtkActor> actor =
         vtkSmartPointer<vtkActor>::New();
     actor->SetMapper(mapper);
-    actor->GetProperty()->SetPointSize(3);
+    actor->GetProperty()->SetPointSize(4);
 
     vtkSmartPointer<MouseInteractorStyle> interactorOverride = 
         vtkSmartPointer<MouseInteractorStyle>::New();
     interactorOverride->SetDefaultRenderer(renderer);
 
+    // Sort the interactor, we have to refernece it then replace it
     QVTKInteractor* interactor = this->qvtkWidget->GetInteractor();
     interactorOverride->PolyData = polyData;
+    interactorOverride->WindowReference = this;
+
     interactor->SetInteractorStyle(interactorOverride);
     renderer->AddActor(actor);
 

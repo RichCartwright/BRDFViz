@@ -27,7 +27,7 @@
        <enum>Qt::Vertical</enum>
       </property>
       <widget class="QGraphicsView" name="ImageViewer"/>
-      <widget class="QTextBrowser" name="TextInformation"/>
+      <widget class="QTextEdit" name="TextInformation"/>
      </widget>
     </item>
     <item row="0" column="0">

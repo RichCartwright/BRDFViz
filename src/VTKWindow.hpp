@@ -13,7 +13,7 @@
 #include <QMainWindow>
 #include <QDialog>
 
-class VTKWindow : public QMainWindow, private Ui::VTKWindow 
+class VTKWindow : public QMainWindow, public Ui::VTKWindow 
 {
     Q_OBJECT
 
