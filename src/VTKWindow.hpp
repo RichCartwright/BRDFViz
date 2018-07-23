@@ -43,11 +43,15 @@ protected slots:
 private:
     void SetupXYZCompass();
     void UpdatePointCloud(std::vector<double> pathData);
+    void UpdateFinalImage(int *PixelPosition, double *PixelColour);
 
     vtkSmartPointer<vtkRenderer> renderer;
     vtkSmartPointer<vtkPolyData> polyData;
     vtkSmartPointer<vtkPoints> points;
     vtkSmartPointer<vtkUnsignedCharArray> colours;
+
+    QGraphicsScene* imgScene;
+    QImage* img; 
 };
 
 

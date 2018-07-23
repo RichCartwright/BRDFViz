@@ -94,6 +94,10 @@ PixelRenderResult PathTracer::RenderPixel(int x, int y, unsigned int & raycount,
             camera.GetPixelRay(x, y, xres, yres, coords, &outpos) :
             camera.GetPixelRayLens(x, y, xres, yres, coords, sampler.Get2D());
 
+        // First, lets enter the current pixel number
+        double pixel[2] = { (double)x, (double)y };
+        pathData.insert(pathData.end(), std::begin(pixel), std::end(pixel));
+
         // for the sake of ease, just load the cam positions and colours into an array
         double p[6] = {outpos.x, outpos.y, outpos.z, 0.0, 1.0, 0.0}; 
 	    pathData.insert(pathData.end(), std::begin(p), std::end(p));
