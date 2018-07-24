@@ -49,9 +49,6 @@ private:
     vtkSmartPointer<vtkPolyData> polyData;
     vtkSmartPointer<vtkPoints> points;
     vtkSmartPointer<vtkUnsignedCharArray> colours;
-
-    QGraphicsScene* imgScene;
-    QImage* img; 
 };
 
 

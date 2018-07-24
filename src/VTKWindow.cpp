@@ -284,22 +284,6 @@ void VTKWindow::slotOpen()
 
 	    output_file = base_output_file; 
 
-        //img.setSceneRect(0, 0, xres, yres);
-        img = new QImage((int)cfg->xres, (int)cfg->yres, QImage::Format_RGB32);
-
-        for(unsigned int i = 0; i < cfg->yres; i++)
-        {
-            for(unsigned int j = 0; j < cfg->xres; j++)
-            {
-                img->setPixel((int)i, (int)j, qRgb(0.0, 0.0, 0.0)); 
-            }
-        }
-
-        imgScene = new QGraphicsScene(this);
-        QPixmap pixelMap = QPixmap::fromImage(*img);
-        imgScene->addPixmap(pixelMap);
-        this->ImageViewer->setScene(imgScene);
-
 	    // Loads the scene data through the constructor - 
 	    // Just to keep QT threads happy
 	    RenderDriver *renderDriver = new RenderDriver(scene, cfg, camera, output_file);
@@ -320,9 +304,12 @@ void VTKWindow::slotOpen()
 
 void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
 {
-
+    // I might update the path data to contain a vector of double vectors (or arrays) 
+    //  later
+    
     // Get the pixel position of the sent path
-    int XY[2] = { (int)pathData.at(0), (int)pathData.at(1) };
+    // STILL NEEDED - TODO 
+    //int XY[2] = { (int)pathData.at(0), (int)pathData.at(1) };
 
     static constexpr auto step = 6;
     for(std::vector<double>::iterator i = std::begin(pathData) + 2;
@@ -336,7 +323,6 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
 
         // Current position of the iterator
         size_t position = i - pathData.begin();
-
 
         // Data input goes point then colour
         points->InsertNextPoint(pathData.at(position), 
@@ -352,14 +338,14 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
         points->Modified();
 
     }
-
-    double finalPixel[2] = {0.0, 0.0};
-    UpdateFinalImage(XY, finalPixel);
 }
 
 void VTKWindow::UpdateFinalImage(int *PixelPosition, double *PixelColour)
 {
-
+    //img->setPixelColor(PixelPosition[0], PixelPosition[1], qRgb(PixelColour[0], PixelColour[1], PixelColour[2]));
+    //imgScene->update(PixelPosition[0], PixelPosition[1], 2, 2); 
+    //this->ImageViewer->update();
+    //this->ImageViewer->setScene(imgScene);
 }
 
 void VTKWindow::SetupXYZCompass()
