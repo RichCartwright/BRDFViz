@@ -143,6 +143,8 @@ VTKWindow::VTKWindow()
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
     qvtkWidget->SetRenderWindow(renderWindow);
 
+    this->OGLImageView = new OGLImageViewer();
+    
     renderer = vtkSmartPointer<vtkRenderer>::New();
     renderer->SetBackground(0.0, 0.0, 0.2);
     this->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
@@ -336,7 +338,6 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
         colours->InsertNextTuple(col); 
         // Call the update for the points
         points->Modified();
-
     }
 }
 
