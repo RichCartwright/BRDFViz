@@ -19,7 +19,10 @@ public:
 protected:
 
 private:
+        GLuint vertexShader;
+        GLuint fragShader;
         void printContextInformation();
+        void ShaderCompileStatus();
 }; 
 
 #endif // OGLImageViewer_H
