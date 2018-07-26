@@ -1,11 +1,11 @@
 #ifndef OGLImageViewer_H
 #define OGLImageViewer_H
 
-#include <QOpenGLFunctions>
+#include <QOpenGLFunctions_3_1>
 #include <QOpenGLWidget>
 
 class OGLImageViewer :  public QOpenGLWidget, 
-                        public QOpenGLFunctions
+                        public QOpenGLFunctions_3_1
 {   
     Q_OBJECT
 
@@ -23,6 +23,10 @@ private:
         GLuint fragShader;
         void printContextInformation();
         void ShaderCompileStatus();
+        GLuint VertexArrayID;
+        GLuint vertexBuffer;
+        GLuint programID;
+        GLuint LoadShaders(const char * vertex_file_path, const char * fragment_file_path);
 }; 
 
 #endif // OGLImageViewer_H

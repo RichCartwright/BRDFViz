@@ -144,7 +144,8 @@ VTKWindow::VTKWindow()
     qvtkWidget->SetRenderWindow(renderWindow);
 
     imageViewer = this->OGLImageView; 
-   
+    imageViewer->update();
+
     renderer = vtkSmartPointer<vtkRenderer>::New();
     renderer->SetBackground(0.0, 0.0, 0.2);
     this->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
