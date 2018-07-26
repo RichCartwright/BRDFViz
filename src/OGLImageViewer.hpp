@@ -12,9 +12,9 @@ class OGLImageViewer :  public QOpenGLWidget,
 public: 
         OGLImageViewer(QWidget *parent = 0);
 
-        void initializeGL() Q_DECL_OVERRIDE;
-        void paintGL() Q_DECL_OVERRIDE;
-        void resizeGL(int w, int h) Q_DECL_OVERRIDE;
+        void initializeGL();
+        void paintGL();
+        void resizeGL(int w, int h);
 
 protected:
 

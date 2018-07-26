@@ -3,14 +3,11 @@
 #include <QtGui>
 OGLImageViewer::OGLImageViewer(QWidget *parent) : QOpenGLWidget (parent)
 {
-	QSurfaceFormat format;
-	format.setDepthBufferSize(24);
-	setFormat(format);
 }
 
 void OGLImageViewer::initializeGL()
 {
-    //initializeOpenGLFunctions();
+    initializeOpenGLFunctions();
     printContextInformation(); 
     glClearColor(1.0, 0.0, 0.0, 1.0);
     

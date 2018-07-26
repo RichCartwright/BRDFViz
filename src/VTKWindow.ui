@@ -108,7 +108,7 @@
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="QOpenGLWidget" name="OGLImageView">
+          <widget class="OGLImageViewer" name="OGLImageView">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -209,7 +209,12 @@
   <customwidget>
    <class>QVTKOpenGLWidget</class>
    <extends>QWidget</extends>
-   <header location="global">QVTKOpenGLWidget.h</header>
+   <header>QVTKOpenGLWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>OGLImageViewer</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">OGLImageViewer.hpp</header>
   </customwidget>
  </customwidgets>
  <resources/>
