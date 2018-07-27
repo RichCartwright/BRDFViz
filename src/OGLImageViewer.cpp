@@ -17,10 +17,12 @@ static const GLfloat imageVert[] = {
 };
 */
 
-static const GLfloat imageVert[] = { 
-		-1.0f, -1.0f, 0.0f,
-		 1.0f, -1.0f, 0.0f,
-		 -1.0f,  1.0f, 0.0f,
+static const GLfloat imageVert[] = 
+{ 
+        -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Top-left
+         0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Top-right
+         0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right
+        -0.5f, -0.5f, 1.0f, 1.0f, 1.0f  // Bottom-left
 };
 
 OGLImageViewer::OGLImageViewer(QWidget *parent) : QOpenGLWidget (parent)
@@ -44,7 +46,20 @@ void OGLImageViewer::initializeGL()
     glBufferData(   GL_ARRAY_BUFFER, 
                     sizeof(imageVert), 
                     imageVert, 
-                    GL_STATIC_DRAW);    
+                    GL_STATIC_DRAW);
+
+    GLuint elementArray;
+    glGenBuffers(1, &elementArray);
+
+    GLuint elements[] = 
+    {
+        0, 1, 2, 
+        2, 3, 0
+    };
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementArray);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
+
 }
 
 void OGLImageViewer::paintGL()
@@ -55,7 +70,7 @@ void OGLImageViewer::paintGL()
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
     glVertexAttribPointer(
-       0,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
+       0,                  
        3,                  // size
        GL_FLOAT,           // type
        GL_FALSE,           // normalized?
@@ -63,7 +78,7 @@ void OGLImageViewer::paintGL()
        (void*)0            // array buffer offset
     );
     
-    glDrawArrays(GL_TRIANGLES, 0, 3); 
+    glDrawElements(GL_TRIANGLES, 6, GL_FLOAT, (void*)0); 
     glDisableVertexAttribArray(0);
 
 }
