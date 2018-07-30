@@ -1,10 +1,7 @@
 #include "VTKWindow.hpp"
-//#include "VTKIncludes.hpp"
 
-//#include "scene.hpp"
 #include "global_config.hpp"
 #include "texture.hpp"
-//#include "camera.hpp"
 #include "out.hpp"
 #include "sampler.hpp"
 #include "render_driver.hpp"
@@ -145,9 +142,10 @@ VTKWindow::VTKWindow()
     qvtkWidget->SetRenderWindow(renderWindow);
 
     // We need to initialise the graphics pixmap item first
-    graphicPixmap = new QGraphicsPixmapItem();
     graphicsScene = new QGraphicsScene(this);
-    graphicsScene->addItem(graphicPixmap);
+    imagetest = new ImageDisplay(512, 512);
+
+    graphicsScene->addItem(imagetest);
 
     renderer = vtkSmartPointer<vtkRenderer>::New();
     renderer->SetBackground(0.0, 0.0, 0.2);
@@ -292,17 +290,13 @@ void VTKWindow::slotOpen()
             this->ImageViewer->setScene(graphicsScene);
         }
         this->ImageViewer->show();
-        this->ImageViewer->setSceneRect(0, 0, cfg->xres, cfg->yres);
-        image = new QImage(cfg->xres, cfg->yres, QImage::Format_RGB32);
-        for(unsigned int x = 0; x < cfg->xres; x++)
-        {
-            for(unsigned int y = 0; y < cfg->yres; y++)
-            {
-                image->setPixel(x, y, qRgba(0, 0, 0, 255));
-            }
-        }
-        QPixmap imgPixmap = QPixmap::fromImage(*image);
-        graphicPixmap->setPixmap(imgPixmap);
+        //this->ImageViewer->setSceneRect(0, 0, cfg->xres, cfg->yres);
+        //image = new QImage(cfg->xres, cfg->yres, QImage::Format_RGB32);
+                
+        //image->fill(QColor(0, 0, 0));
+
+        //QPixmap imgPixmap = QPixmap::fromImage(*image);
+        //graphicPixmap->setPixmap(imgPixmap);
 	    
         std::string base_output_file = output_file;
 
@@ -333,7 +327,7 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
     
     // Get the pixel position of the sent path
     // STILL NEEDED - TODO 
-    int XY[2] = { (int)pathData.at(0), (int)pathData.at(1) };
+    //int XY[2] = { (int)pathData.at(0), (int)pathData.at(1) };
 
     static constexpr auto step = 6;
     for(std::vector<double>::iterator i = std::begin(pathData) + 2;
@@ -363,13 +357,14 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
         // Call the update for the points
         points->Modified();
     }
-   
+  
+    /*
     int vectorSize = pathData.size();
     double testCol[] = {    pathData.at(vectorSize - 3), 
                             pathData.at(vectorSize - 2), 
                             pathData.at(vectorSize - 1)    };
     UpdateFinalImage(XY, testCol);
-
+    */
 }
 
 void VTKWindow::UpdateFinalImage(int *PixelPosition, double *PixelColour)

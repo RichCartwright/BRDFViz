@@ -8,6 +8,7 @@
 #include "scene.hpp"
 #include "config.hpp"
 #include "VTKIncludes.hpp"
+#include "ImageDisplay.hpp" 
 
 #include <vector>
 #include <QMainWindow>
@@ -50,6 +51,7 @@ private:
     vtkSmartPointer<vtkPoints> points;
     vtkSmartPointer<vtkUnsignedCharArray> colours;
 
+    ImageDisplay *imagetest = 0;
     QImage *image;
     QGraphicsScene *graphicsScene;
     QGraphicsPixmapItem *graphicPixmap; 
