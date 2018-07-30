@@ -327,7 +327,7 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
     
     // Get the pixel position of the sent path
     // STILL NEEDED - TODO 
-    //int XY[2] = { (int)pathData.at(0), (int)pathData.at(1) };
+    int XY[2] = { (int)pathData.at(0), (int)pathData.at(1) };
 
     static constexpr auto step = 6;
     for(std::vector<double>::iterator i = std::begin(pathData) + 2;
@@ -358,20 +358,17 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
         points->Modified();
     }
   
-    /*
     int vectorSize = pathData.size();
     double testCol[] = {    pathData.at(vectorSize - 3), 
                             pathData.at(vectorSize - 2), 
                             pathData.at(vectorSize - 1)    };
     UpdateFinalImage(XY, testCol);
-    */
+    
 }
 
 void VTKWindow::UpdateFinalImage(int *PixelPosition, double *PixelColour)
 {
-    image->setPixel(PixelPosition[0], PixelPosition[1], qRgba(PixelColour[0], PixelColour[1], PixelColour[2], 255));
-    QPixmap pixmap = QPixmap::fromImage(*image);
-    graphicPixmap->setPixmap(pixmap); 
+   imagetest->UpdateImage(PixelPosition[0], PixelPosition[1], PixelColour); 
 }
 
 void VTKWindow::SetupXYZCompass()

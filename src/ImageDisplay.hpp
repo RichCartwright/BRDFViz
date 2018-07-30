@@ -9,6 +9,9 @@ public:
         xres = x, yres = y;
 
         image = QImage(xres, yres, QImage::Format_ARGB32);
+
+        image.fill(QColor(0.0, 0.0, 0.0)); 
+        /*
         static int red = 0;
         static int green = 0;
         static int blue = 0;
@@ -23,12 +26,16 @@ public:
         }); 
 
         pTimer->start(1000 / 30);
+        */
     } 
-    
-    //Allow public access to this image, so we can draw to it
-    QImage image;
-
+   
+    void UpdateImage(int x, int y, double *colour)
+    {
+        image.setPixel(x, y, qRgba(colour[0], colour[1], colour[2], 255)); 
+        update(); 
+    }
 private:
+    QImage image;
     int xres = 0;
     int yres = 0;
     virtual QRectF boundingRect() const
