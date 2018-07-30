@@ -18,6 +18,7 @@
 #include <QtConcurrent/QtConcurrent>
 #include <QMetaType>
 #include <QString>
+#include <QGraphicsPixmapItem>
 
 class MouseInteractorStyle : public vtkInteractorStyleTrackballCamera
 {
@@ -143,8 +144,10 @@ VTKWindow::VTKWindow()
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
     qvtkWidget->SetRenderWindow(renderWindow);
 
-    imageViewer = this->OGLImageView; 
-    imageViewer->update();
+    // We need to initialise the graphics pixmap item first
+    graphicPixmap = new QGraphicsPixmapItem();
+    graphicsScene = new QGraphicsScene(this);
+    graphicsScene->addItem(graphicPixmap);
 
     renderer = vtkSmartPointer<vtkRenderer>::New();
     renderer->SetBackground(0.0, 0.0, 0.2);
@@ -283,7 +286,25 @@ void VTKWindow::slotOpen()
 	    cfg->PerformPostCheck();
 	    UpdateStatusBar("Config successfully loaded");
 
-	    std::string base_output_file = output_file;
+        // Now the config is sorted, lets make the QImage
+        if(graphicsScene)
+        {
+            this->ImageViewer->setScene(graphicsScene);
+        }
+        this->ImageViewer->show();
+        this->ImageViewer->setSceneRect(0, 0, cfg->xres, cfg->yres);
+        image = new QImage(cfg->xres, cfg->yres, QImage::Format_RGB32);
+        for(unsigned int x = 0; x < cfg->xres; x++)
+        {
+            for(unsigned int y = 0; y < cfg->yres; y++)
+            {
+                image->setPixel(x, y, qRgba(0, 0, 0, 255));
+            }
+        }
+        QPixmap imgPixmap = QPixmap::fromImage(*image);
+        graphicPixmap->setPixmap(imgPixmap);
+	    
+        std::string base_output_file = output_file;
 
 	    output_file = base_output_file; 
 
@@ -344,10 +365,7 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
 
 void VTKWindow::UpdateFinalImage(int *PixelPosition, double *PixelColour)
 {
-    //img->setPixelColor(PixelPosition[0], PixelPosition[1], qRgb(PixelColour[0], PixelColour[1], PixelColour[2]));
-    //imgScene->update(PixelPosition[0], PixelPosition[1], 2, 2); 
-    //this->ImageViewer->update();
-    //this->ImageViewer->setScene(imgScene);
+
 }
 
 void VTKWindow::SetupXYZCompass()

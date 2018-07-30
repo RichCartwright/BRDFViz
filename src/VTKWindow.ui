@@ -108,14 +108,6 @@
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="OGLImageViewer" name="OGLImageView">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>1</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
           <widget class="QTextEdit" name="TextInformation">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -124,6 +116,7 @@
             </sizepolicy>
            </property>
           </widget>
+          <widget class="QGraphicsView" name="ImageViewer"/>
          </widget>
         </item>
        </layout>
@@ -210,11 +203,6 @@
    <class>QVTKOpenGLWidget</class>
    <extends>QWidget</extends>
    <header>QVTKOpenGLWidget.h</header>
-  </customwidget>
-  <customwidget>
-   <class>OGLImageViewer</class>
-   <extends>QOpenGLWidget</extends>
-   <header location="global">OGLImageViewer.hpp</header>
   </customwidget>
  </customwidgets>
  <resources/>

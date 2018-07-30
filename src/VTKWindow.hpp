@@ -8,7 +8,6 @@
 #include "scene.hpp"
 #include "config.hpp"
 #include "VTKIncludes.hpp"
-#include "OGLImageViewer.hpp"
 
 #include <vector>
 #include <QMainWindow>
@@ -51,7 +50,9 @@ private:
     vtkSmartPointer<vtkPoints> points;
     vtkSmartPointer<vtkUnsignedCharArray> colours;
 
-    OGLImageViewer* imageViewer;
+    QImage *image;
+    QGraphicsScene *graphicsScene;
+    QGraphicsPixmapItem *graphicPixmap; 
 };
 
 
