@@ -11,22 +11,6 @@ public:
         image = QImage(xres, yres, QImage::Format_ARGB32);
 
         image.fill(QColor(0.0, 0.0, 0.0)); 
-        /*
-        static int red = 0;
-        static int green = 0;
-        static int blue = 0;
-
-        image.fill(QColor(red++%255, green++%255, blue++%255));
-
-        QTimer* pTimer = new QTimer;
-        QObject::connect(pTimer, &QTimer::timeout, [=]()
-        {
-            image.fill(QColor(red++%255, green++%255, blue++%255));
-            update();
-        }); 
-
-        pTimer->start(1000 / 30);
-        */
     } 
    
     void UpdateImage(int x, int y, double *colour)
@@ -34,6 +18,7 @@ public:
         image.setPixel(x, y, qRgba(colour[0], colour[1], colour[2], 255)); 
         update(); 
     }
+
 private:
     QImage image;
     int xres = 0;
