@@ -141,7 +141,6 @@ VTKWindow::VTKWindow()
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
     qvtkWidget->SetRenderWindow(renderWindow);
 
-    // We need to initialise the graphics pixmap item first
     graphicsScene = new QGraphicsScene(this);
     outputImage = new ImageDisplay(   512, 512,
                                     this->ImageViewer->width(), 

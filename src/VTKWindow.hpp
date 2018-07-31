@@ -52,7 +52,8 @@ private:
     ImageDisplay *outputImage = 0;
     QImage *image;
     QGraphicsScene *graphicsScene;
-    QGraphicsPixmapItem *graphicPixmap; 
+    QGraphicsPixmapItem *graphicPixmap;
+    int multiSample;
 };
 
 class AboutMeDialog : public QDialog, private Ui::AboutMe

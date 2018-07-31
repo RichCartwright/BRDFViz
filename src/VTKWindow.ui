@@ -138,7 +138,7 @@
             <enum>QGraphicsView::ScrollHandDrag</enum>
            </property>
            <property name="transformationAnchor">
-            <enum>QGraphicsView::AnchorViewCenter</enum>
+            <enum>QGraphicsView::AnchorUnderMouse</enum>
            </property>
           </widget>
          </widget>
