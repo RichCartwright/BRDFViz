@@ -116,7 +116,28 @@
             </sizepolicy>
            </property>
           </widget>
-          <widget class="QGraphicsView" name="ImageViewer"/>
+          <widget class="QGraphicsView" name="ImageViewer">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferDefault</stylestrategy>
+            </font>
+           </property>
+           <property name="cursor" stdset="0">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustIgnored</enum>
+           </property>
+           <property name="dragMode">
+            <enum>QGraphicsView::ScrollHandDrag</enum>
+           </property>
+          </widget>
          </widget>
         </item>
        </layout>
