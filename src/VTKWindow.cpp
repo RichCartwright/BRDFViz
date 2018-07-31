@@ -143,11 +143,11 @@ VTKWindow::VTKWindow()
 
     // We need to initialise the graphics pixmap item first
     graphicsScene = new QGraphicsScene(this);
-    imagetest = new ImageDisplay(   512, 512,
+    outputImage = new ImageDisplay(   512, 512,
                                     this->ImageViewer->width(), 
                                     this->ImageViewer->height() );
 
-    graphicsScene->addItem(imagetest);
+    graphicsScene->addItem(outputImage);
 
     renderer = vtkSmartPointer<vtkRenderer>::New();
     renderer->SetBackground(0.0, 0.0, 0.2);
@@ -294,7 +294,6 @@ void VTKWindow::slotOpen()
         this->ImageViewer->show();
 	    
         std::string base_output_file = output_file;
-
 	    output_file = base_output_file; 
 
 	    // Loads the scene data through the constructor - 
@@ -363,7 +362,7 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
 
 void VTKWindow::UpdateFinalImage(int *PixelPosition, double *PixelColour)
 {
-   imagetest->UpdateImage(  PixelPosition[0], PixelPosition[1], PixelColour,
+   outputImage->UpdateImage(  PixelPosition[0], PixelPosition[1], PixelColour,
                             this->ImageViewer->width(), this->ImageViewer->height()); 
 }
 

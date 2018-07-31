@@ -17,22 +17,19 @@
 class VTKWindow : public QMainWindow, public Ui::VTKWindow 
 {
     Q_OBJECT
-
     QThread *pathThread;
-    
 public:
     VTKWindow();
     Scene scene;
     Camera camera;
     std::shared_ptr<Config> cfg;
     std::string output_file;
-    vtkSmartPointer<vtkOrientationMarkerWidget> widget;
 
 public slots:
     void UpdateStatusBar(QString status);
 
 protected:
-    QString previousPath = NULL;
+    QString previousPath = "../scenes/";
 
 protected slots:
     virtual void slotExit();
@@ -50,16 +47,14 @@ private:
     vtkSmartPointer<vtkPolyData> polyData;
     vtkSmartPointer<vtkPoints> points;
     vtkSmartPointer<vtkUnsignedCharArray> colours;
+    vtkSmartPointer<vtkOrientationMarkerWidget> widget;
 
-    ImageDisplay *imagetest = 0;
+    ImageDisplay *outputImage = 0;
     QImage *image;
     QGraphicsScene *graphicsScene;
     QGraphicsPixmapItem *graphicPixmap; 
 };
 
-
-
-// About me class
 class AboutMeDialog : public QDialog, private Ui::AboutMe
 {
     Q_OBJECT

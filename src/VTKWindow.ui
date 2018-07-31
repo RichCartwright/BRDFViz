@@ -116,7 +116,7 @@
             </sizepolicy>
            </property>
           </widget>
-          <widget class="QGraphicsView" name="ImageViewer">
+          <widget class="ImageGraphicsView" name="ImageViewer">
            <property name="font">
             <font>
              <stylestrategy>PreferDefault</stylestrategy>
@@ -136,6 +136,9 @@
            </property>
            <property name="dragMode">
             <enum>QGraphicsView::ScrollHandDrag</enum>
+           </property>
+           <property name="transformationAnchor">
+            <enum>QGraphicsView::AnchorViewCenter</enum>
            </property>
           </widget>
          </widget>
@@ -224,6 +227,11 @@
    <class>QVTKOpenGLWidget</class>
    <extends>QWidget</extends>
    <header>QVTKOpenGLWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ImageGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">ImageGraphicsView.hpp</header>
   </customwidget>
  </customwidgets>
  <resources/>
