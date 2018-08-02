@@ -48,6 +48,7 @@ private:
     vtkSmartPointer<vtkPoints> points;
     vtkSmartPointer<vtkUnsignedCharArray> colours;
     vtkSmartPointer<vtkOrientationMarkerWidget> widget;
+    std::vector<unsigned int> polyPathSize;
 
     ImageDisplay *outputImage = 0;
     QImage *image;

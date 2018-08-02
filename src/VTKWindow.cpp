@@ -50,11 +50,11 @@ public:
         {
             vtkIdType id = picker->GetPointId();
             double pointPos[3] = {0.0, 0.0, 0.0};
-
-            std::stringstream ss;
+            
+            std::stringstream ss; 
             ss << "Point " << picker->GetPointId() << " selected."; 
 	        WindowReference->UpdateStatusBar(QString::fromStdString(ss.str()));
-
+            
             if(!PolyData)
             {
 		        QMessageBox sceneErrorMessage;
@@ -72,8 +72,8 @@ public:
                     vtkSmartPointer<vtkCellArray>::New();
 
                 WindowReference->TextInformation->clear();
-
-                for(vtkIdType i = id - (id % 6), j = 0; i < id - (id % 6) + 6; i++, j++)
+                unsigned int pathMod = pathSize->at(id); 
+                for(vtkIdType i = id - (id % pathMod ), j = 0; i < id - (id % pathMod) + pathMod; i++, j++)
                 {
                     if(linesActor)
                     {
@@ -124,6 +124,7 @@ public:
     vtkSmartPointer<vtkDataSetMapper> selectedMapper;
     vtkSmartPointer<vtkActor> selectedActor;
     vtkSmartPointer<vtkPolyData> PolyData;
+    std::vector<unsigned int> * pathSize;
     VTKWindow* WindowReference;
 
     vtkSmartPointer<vtkActor> linesActor = 
@@ -192,8 +193,9 @@ VTKWindow::VTKWindow()
     QVTKInteractor* interactor = this->qvtkWidget->GetInteractor();
     interactorOverride->PolyData = polyData;
     interactorOverride->WindowReference = this;
-
+    interactorOverride->pathSize = &polyPathSize; 
     interactor->SetInteractorStyle(interactorOverride);
+
     renderer->AddActor(actor);
 
     SetupXYZCompass();
@@ -318,21 +320,32 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
     // I might update the path data to contain a vector of double vectors (or arrays) 
     //  later
     
-    // Get the pixel position of the sent path
-    // STILL NEEDED - TODO 
-    int XY[2] = { (int)pathData.at(0), (int)pathData.at(1) };
+    // Size of the incoming path. We could just count the elements in the vector, 
+    //  but this should be faster
+    int pathSize = (int)pathData.at(0);
 
-    static constexpr auto step = 6;
-    for(std::vector<double>::iterator i = std::begin(pathData) + 2;
+    // The pixel that spawned the path
+    int XY[2] = { (int)pathData.at(1), (int)pathData.at(2) };
+    
+    static constexpr auto step = 6;  // two vector3's (position/colour)
+    for(std::vector<double>::iterator i = std::begin(pathData) + 3;
             /*Empty*/ ; 
             std::advance(i, step))
     {
-        // end() - 3 is used because of the RGB at the end
+        //  "end() - 3" because of the RGB at the end
         //  we dont want to use that in here.
         if(std::distance(i, pathData.end() - 3) < step)
         {
             break;
         }
+
+        // Add the size of the path. This needs to be 
+        //  inline with the point set. If any points/paths
+        //  are removed, this will need to be revised. 
+        // This seems like a stupid way to do this, 
+        //  but VTK is pretty unflexible when it comes to custom
+        //  data structures. vtkPoints doesnt have any flexibility.
+        polyPathSize.push_back((uint8_t)pathSize);
 
         // Current position of the iterator
         size_t position = i - pathData.begin();
@@ -349,6 +362,7 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
         colours->InsertNextTuple(col); 
         // Call the update for the points
         points->Modified();
+
     }
   
     int vectorSize = pathData.size();

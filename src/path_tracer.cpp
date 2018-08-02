@@ -318,20 +318,19 @@ std::vector<PathTracer::PathPoint> PathTracer::GeneratePath(Ray r, unsigned int&
             // Commit the path point to the path
             path.push_back(p);
 
-	    /*
             if(cumulative_transfer_coefficients.max() < 0.001f){
                 // Terminate when cumulative_coeff gets too low
                 IFDEBUG std::cout << "Terminating, cumulative transfer too small." << std::endl;
                 break;
             }
-*/
-	    /*
+
+	    
             // Russian roulette path termination
             if(!mat.no_russian && russian__ >= 0.0f && sampler.Get1D() > russian__){
                 IFDEBUG std::cout << "Russian terminating." << std::endl;
                 break;
             }
-*/
+
             // Fixed depth path termination
             if(n > depth__) break;
 
@@ -447,6 +446,10 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
 
     Radiance path_total = Radiance(0.0f, 0.0f, 0.0f);
 
+    // By now, we know the size of the path. We should push it at the begining of the vector. 
+    // This is fairly costly, but should be okay with the size of the vector
+    pathData.insert(pathData.begin(), path.size());
+
     for(unsigned int n = 0; n < path.size(); n++)
     {
         IFDEBUG std::cout << "--- Processing PP " << n << std::endl;
@@ -477,7 +480,8 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
         ThinglassIsections thinglass_isect;
         // Visibility factor
         if((scene.thinglass.size() == 0 && scene.Visibility(light.pos, p.pos)) ||
-           (scene.thinglass.size() != 0 && scene.VisibilityWithThinglass(light.pos, p.pos, thinglass_isect))){
+           (scene.thinglass.size() != 0 && scene.VisibilityWithThinglass(light.pos, p.pos, thinglass_isect)))
+        {
 
             IFDEBUG std::cout << "====> Light is visible" << std::endl;
 
@@ -503,15 +507,19 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
             Radiance out = inc_l * ( f * G );
             IFDEBUG std::cout << "total direct lighting: " << out << std::endl;
             total_here += out;
-        }else{
+        }
+        else
+        {
             IFDEBUG std::cout << "Light not visible" << std::endl;
         }
 
         // Reverse light
-        for(unsigned int q = 0; q < light_path.size(); q++){
+        for(unsigned int q = 0; q < light_path.size(); q++)
+        {
             const PathPoint& l = light_path[q];
             // TODO: Thinglass?
-            if(!l.infinity && scene.Visibility(l.pos, p.pos)){
+            if(!l.infinity && scene.Visibility(l.pos, p.pos))
+            {
                 glm::vec3 light_to_p = glm::normalize(p.pos - l.pos);
                 glm::vec3 p_to_light = -light_to_p;
                 Spectrum f_light = l.mat->bxdf->value(l.transform.toLocal(light_to_p),
@@ -522,6 +530,7 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
                                                           p.transform.toLocal(p_to_light),
                                                       p.texUV,
                                                       debug);
+                
                 float G = glm::abs(glm::dot(p.lightN, p_to_light)) / glm::distance2(l.pos, p.pos);
                 total_here += l.light_from_source * ( f_light * f_point * G );
             }// not visible from each other.
@@ -530,7 +539,8 @@ PixelRenderResult PathTracer::TracePath(const Ray& r, unsigned int& raycount, Sa
         IFDEBUG std::cout << "total with light path: " << total_here << std::endl;
 
 
-        if(glm::dot(p.faceN, p.Vr) > 0){
+        if(glm::dot(p.faceN, p.Vr) > 0)
+        {
             total_here += p.emission; /* * glm::dot(p.lightN, p.Vr); */
         }
 
