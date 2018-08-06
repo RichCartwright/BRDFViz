@@ -1,8 +1,8 @@
 {
     "output-file": "cornell-box.exr",
-    "output-width": 1024,
-    "output-height": 1024,
-    "multisample": 400,
+    "output-width": 1028,
+    "output-height": 1028,
+    "multisample": 2,
     "rounds": 1,
     "russian": 0.74,
     "recursion-max": 10,

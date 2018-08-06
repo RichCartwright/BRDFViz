@@ -142,12 +142,6 @@ VTKWindow::VTKWindow()
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
     qvtkWidget->SetRenderWindow(renderWindow);
 
-    graphicsScene = new QGraphicsScene(this);
-    outputImage = new ImageDisplay(   512, 512,
-                                    this->ImageViewer->width(), 
-                                    this->ImageViewer->height() );
-
-    graphicsScene->addItem(outputImage);
 
     renderer = vtkSmartPointer<vtkRenderer>::New();
     renderer->SetBackground(0.0, 0.0, 0.2);
@@ -287,6 +281,13 @@ void VTKWindow::slotOpen()
 	    cfg->PerformPostCheck();
 	    UpdateStatusBar("Config successfully loaded");
 
+        graphicsScene = new QGraphicsScene(this);
+        outputImage = new ImageDisplay(     cfg->xres, cfg->yres,
+                                            this->ImageViewer->width(), 
+                                            this->ImageViewer->height() );
+
+        graphicsScene->addItem(outputImage);
+
         // Now the config is sorted, lets make the QImage
         if(graphicsScene)
         {
@@ -354,10 +355,18 @@ void VTKWindow::UpdatePointCloud(std::vector<double> pathData)
         points->InsertNextPoint(pathData.at(position), 
                                 pathData.at(position+1),
                                 pathData.at(position+2));
-
+         
         double col[3] = {   pathData.at(position+3)*255,
                             pathData.at(position+4)*255,
                             pathData.at(position+5)*255 };
+
+        // Basically, this is the camera point
+        if(i == std::begin(pathData) + 3)
+        {
+           col[0] = pathData.at(pathData.size() - 3);
+           col[1] = pathData.at(pathData.size() - 2);
+           col[2] = pathData.at(pathData.size() - 1);
+        }
 
         colours->InsertNextTuple(col); 
         // Call the update for the points

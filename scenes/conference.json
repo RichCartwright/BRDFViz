@@ -4,7 +4,7 @@
     "output-file": "conference.exr",
     "output-width": 512,
     "output-height": 512,
-    "recursion-max": 10,
+    "recursion-max": 8,
     "camera": {
         "position": [1200.0, 300.0, -150.0],
         "lookat": [500.0, -100.0, -150.0],
@@ -21,7 +21,7 @@
         { "position": [0.0, 400.0,  000.0], "color255": [200, 220, 255], "intensity": 250000.0, "size": 100.0 },
         { "position": [0.0, 400.0,  250.0], "color255": [200, 220, 255], "intensity": 250000.0, "size": 100.0 }
     ],
-    "multisample": 1,
+    "multisample": 2,
     "rounds": 1,
     "clamp": 5.0,
     "russian": 0.75,

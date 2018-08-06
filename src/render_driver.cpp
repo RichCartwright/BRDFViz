@@ -80,7 +80,7 @@ void RenderDriver::RenderFrame()
    
     qRegisterMetaType<std::vector<double>>("std::vector<double>");
     
-    std::vector<RenderTask> tasks = GenerateTaskList(512, cfg->xres, cfg->yres, midpoint);
+    std::vector<RenderTask> tasks = GenerateTaskList(cfg->xres * cfg->yres, cfg->xres, cfg->yres, midpoint);
     std::cout << "Rendering in " << tasks.size() << " tiles." << std::endl;
 
     unsigned int seedcount = 0, seedstart = 42;
