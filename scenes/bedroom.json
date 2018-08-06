@@ -1,0 +1,15 @@
+{
+    "model-file": "bedroom/iscv2.obj",
+    "output-width": 512,
+    "output-height": 512,
+    "output-file": "bedroom.png",
+    "recursion-max": 10, 
+    "russian": 0.75, 
+    "camera":{
+        "position": [-9.5, 1.5, -1.5],
+        "lookat" : [3.0, 3.0, -0.5],
+        "focal":1.6
+    },
+    "multisample": 1,
+    "rounds": 1 
+}

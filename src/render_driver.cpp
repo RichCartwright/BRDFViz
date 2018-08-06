@@ -71,20 +71,16 @@ void RenderDriver::RenderRound(const Scene& scene,
 
 void RenderDriver::RenderFrame()
 {
-    // Preapare output buffer
+    //  This whole method is kind of waste full, since we're not actually
+    //   rendering in tiles. But i'll leave it in in case I see a way to thread
+    
+    // Prepare output buffer
     EXRTexture total_ob(cfg->xres, cfg->yres);
-    total_ob.Write(output_file);
-    out::cout(2) << "Writing to file " << output_file << std::endl;
     // Split rendering into smaller (tile_size x tile_size) tasks.
     glm::vec2 midpoint(cfg->xres/2.0f, cfg->yres/2.0f);
-   
     qRegisterMetaType<std::vector<double>>("std::vector<double>");
-    
     std::vector<RenderTask> tasks = GenerateTaskList(cfg->xres * cfg->yres, cfg->xres, cfg->yres, midpoint);
-    std::cout << "Rendering in " << tasks.size() << " tiles." << std::endl;
-
     unsigned int seedcount = 0, seedstart = 42;
-    
     RenderRound(scene, cfg, camera, tasks, seedcount, seedstart, 1, total_ob);
     total_ob.Normalize(cfg->output_scale).Write(output_file);
     emit statusBarUpdate("Render finished");
@@ -93,12 +89,9 @@ void RenderDriver::RenderFrame()
 
 void RenderDriver::RecievePathData(std::vector<double> PathData)
 {
-    // This method recieves a FULL path. At the moment this
-    //  is restricted to just 5 path segments, each with their own
-    //  colour. There are no protections for this so VTK will
-    //  likely go tits-up. It might be worth checking the size of 
-    //  the container and gathering the path length from here.
-    //  However, this wont work with monte carlo when its variable...
-    //  Or will it? TODO 
+    // This method recieves a FULL path of a variable size.
+    // the first 3 elements (pixel x, pixel y, path size) are constant
+    // the last 3 elements (final rgb) are also constant
+    // the middle will and can vary in size due to monte carlo
     emit ReturnPathData(PathData);
 }

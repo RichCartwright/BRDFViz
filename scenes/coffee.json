@@ -1,13 +1,13 @@
 {
     // The coffee maker model can be downloaded from https://benedikt-bitterli.me/resources/
     "output-file": "coffee.exr",
-    "output-width": 800,
-    "output-height": 1000,
+    "output-width": 512,
+    "output-height": 512,
     "output-scale": 0.5,
-    "multisample": 200,
+    "multisample": 5,
     "russian": 0.75,
     "recursion-max": 10,
-    "rounds": 4,
+    "rounds": 1,
     "clamp": 3,
     "camera": {
         "position": [-0.00296, 0.19830, 0.82815],

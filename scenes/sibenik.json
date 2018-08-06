@@ -3,7 +3,7 @@
     "output-file": "sibenik.exr",
     "output-width": 512,
     "output-height": 512,
-    "recursion-max": 5, 
+    "recursion-max": 20, 
     "camera": {
         "position": [-12.0, -12.0, 2.0],
         "lookat": [0.0, -8.0, 0.0],
@@ -19,10 +19,10 @@
         "intensity": 0.8,
         "size": 0.8
     }],
-    "multisample": 1,
+    "multisample": 20,
     "rounds": 1,
     "bumpscale": 10,
-    "russian": 1,
-    "clamp": 0.4,
+    "russian": 0.75,
+    "clamp": 5,
     "brdf": "ltc_ggx"
 }
