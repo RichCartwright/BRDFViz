@@ -144,7 +144,9 @@ VTKWindow::VTKWindow()
 
 
     renderer = vtkSmartPointer<vtkRenderer>::New();
-    renderer->SetBackground(0.0, 0.0, 0.2);
+    renderer->GradientBackgroundOn();
+    renderer->SetBackground(0.1, 0.1, 0.12);
+    renderer->SetBackground2(0.1, 0.5, 0.4);
     this->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
 
     this->TextInformation->setReadOnly(true);
