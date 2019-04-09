@@ -28,7 +28,7 @@ find_package(assimp REQUIRED)
 
 # VTK
 find_package(VTK REQUIRED)
-include(${VTK_USE_FILE})
+#include(${VTK_USE_FILE})
 
 ## GLM
 set(GLM_FIND_REQUIRED TRUE)
@@ -60,11 +60,7 @@ find_package(JPEG REQUIRED)
 ## OpenEXR
 find_package(OpenEXR REQUIRED)
 
-if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
     set(CMAKE_AUTOMOC ON)
     find_package(Qt5Widgets REQUIRED)
-else()
-    message([FATAL_ERROR] "BRDFViz requires VTK 7 and QT 5 or higher. \n Exiting processing and generation") 
-endif()
 
 add_subdirectory(src)

@@ -140,14 +140,14 @@ VTKWindow::VTKWindow()
     this->setupUi(this);
 
     vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
-    qvtkWidget->SetRenderWindow(renderWindow);
+    qvtkWidget->setRenderWindow(renderWindow);
 
 
     renderer = vtkSmartPointer<vtkRenderer>::New();
     renderer->GradientBackgroundOn();
     renderer->SetBackground(0.1, 0.1, 0.12);
     renderer->SetBackground2(0.1, 0.5, 0.4);
-    this->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
+    this->qvtkWidget->renderWindow()->AddRenderer(renderer);
 
     this->TextInformation->setReadOnly(true);
     this->TextInformation->setFontPointSize(8);
@@ -186,7 +186,7 @@ VTKWindow::VTKWindow()
     interactorOverride->SetDefaultRenderer(renderer);
 
     // Sort the interactor, we have to refernece it then replace it
-    QVTKInteractor* interactor = this->qvtkWidget->GetInteractor();
+    QVTKInteractor* interactor = this->qvtkWidget->interactor();
     interactorOverride->PolyData = polyData;
     interactorOverride->WindowReference = this;
     interactorOverride->pathSize = &polyPathSize; 
@@ -401,7 +401,7 @@ void VTKWindow::SetupXYZCompass()
     widget->SetOrientationMarker(axes);
     
     // QVTK handles its own interaction - It can still be overriden with a style though
-    widget->SetInteractor(this->qvtkWidget->GetRenderWindow()->GetInteractor());
+    widget->SetInteractor(this->qvtkWidget->renderWindow()->GetInteractor());
     // Top right
     widget->SetViewport(0.75, 0.75, 1, 1);
     widget->SetEnabled(1); 

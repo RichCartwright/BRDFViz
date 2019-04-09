@@ -45,13 +45,9 @@ file(GLOB QT_WRAP
   ./*.h
   )
 
-if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
   message(STATUS "Wrapping the UI files")
   qt5_wrap_cpp(CPPSrcs ${QT_WRAP})
   qt5_wrap_ui(UISrcs ${UI_FILES})
-else()
-  message(FATAL "VTK 7 (or higher) and QT 5 (or higher) is needed")
-endif()
 
 add_executable(
   ${EXECUTABLE_NAME}
@@ -70,12 +66,8 @@ target_link_libraries(
   pthread
   )
 
-if(${VTK_VERSION} VERSION_GREATER "6" AND VTK_QT_VERSION VERSION_GREATER "4")
   message(STATUS "Linking QT")
   target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui Qt5::Widgets)
-else()
-  message(FATAL_ERROR "BRDFViz requires VTK 7 (or higher) and QT 5 (or higher)")
-endif()
 
 add_custom_command(
 	TARGET ${EXECUTABLE_NAME} POST_BUILD
